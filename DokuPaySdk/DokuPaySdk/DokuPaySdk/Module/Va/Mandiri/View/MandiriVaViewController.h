@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MandiriVaViewController : UIViewController<ToDoViewProtocol>
+@interface MandiriVaViewController : UIViewController<ToDoMandiriVaViewProtocol>
 
 @property (nonatomic, nullable) MandiriVaPresenter *presenter;
 

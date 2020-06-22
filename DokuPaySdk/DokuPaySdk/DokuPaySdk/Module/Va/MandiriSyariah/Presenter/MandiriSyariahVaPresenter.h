@@ -11,16 +11,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MandiriSyariahVaPresenter : NSObject<ToDoInteractorOutputProtocol>
+@interface MandiriSyariahVaPresenter : NSObject<ToDoMandiriSyariahInteractorOutputProtocol>
 
-@property (nonatomic, weak, nullable) id<ToDoViewProtocol> view;
-@property (nonatomic) id<ToDoInteractorInputProtocol> interactor;
-@property (nonatomic, weak) id<ToDoWireframeProtocol> router;
+@property (nonatomic, weak, nullable) id<ToDoMandiriSyariahViewProtocol> view;
+@property (nonatomic) id<ToDoMandiriSyariahInteractorInputProtocol> interactor;
+@property (nonatomic, weak) id<ToDoMandiriSyariahWireframeProtocol> router;
 
-- (instancetype)initWithInterface:(id<ToDoViewProtocol>)interface
-                       interactor:(id<ToDoInteractorInputProtocol>)interactor
-                           router:(id<ToDoWireframeProtocol>)router;
-- (void)addToDoItem:(NSString *)item;
+- (instancetype)initWithInterface:(id<ToDoMandiriSyariahViewProtocol>)interface
+                       interactor:(id<ToDoMandiriSyariahInteractorInputProtocol>)interactor
+                           router:(id<ToDoMandiriSyariahWireframeProtocol>)router;
+- (void)getPaymentCode:(MandiriVaParams *)item;
 
 @end
 

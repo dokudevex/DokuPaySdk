@@ -38,10 +38,6 @@ static int const kHeaderSectionTag = 6900;
     self.tableViewAccordion.rowHeight = UITableViewAutomaticDimension;
     self.tableViewAccordion.estimatedRowHeight = 100;
     self.expandedSectionHeaderNumber = -1;
-    
-    DokuPaySdk *doku = [DokuPaySdk sharedInstance];
-    [doku connectSdk];
-
 }
 
 #pragma mark - Table view data source
@@ -120,6 +116,17 @@ static int const kHeaderSectionTag = 6900;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSArray *section = [self.sectionItems objectAtIndex:indexPath.section];
+    NSString * menu = [section objectAtIndex:indexPath.row];
+    
+    if ([menu isEqualToString:@"Mandiri"]) {
+        self.channelCode = MandiriVa;
+    } else if ([menu isEqualToString:@"Mandiri Syariah"]) {
+        self.channelCode = MandiriSyariahVa;
+    }
+    
+    DokuPaySdk *doku = [DokuPaySdk sharedInstance];
+    [doku connect: (int)self.channelCode];
 }
 
 - (void)updateTableViewRowDisplay:(NSArray *)arrayOfIndexPaths {

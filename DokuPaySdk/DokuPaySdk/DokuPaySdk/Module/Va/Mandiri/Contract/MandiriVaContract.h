@@ -7,40 +7,45 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MandiriVaParams.h"
 
 #pragma mark - WireFrameProtocol
 
-@protocol ToDoWireframeProtocol <NSObject>
+@protocol ToDoMandiriVaWireframeProtocol <NSObject>
 
 @end
 
 #pragma mark - PresenterProtocol
 
-@protocol ToDoPresenterProtocol <NSObject>
+@protocol ToDoMandiriVaPresenterProtocol <NSObject>
 
 @end
 
 #pragma mark - InteractorProtocol
 
-@protocol ToDoInteractorOutputProtocol <NSObject>
+@protocol ToDoMandiriVaInteractorOutputProtocol <NSObject>
 
-- (void)sendAddedItem:(NSString *)item;
+- (void)successResponse:(NSString *)item;
+
+- (void)errorResponse:(NSString *)item;
 
 @end
 
-@protocol ToDoInteractorInputProtocol <NSObject>
+@protocol ToDoMandiriVaInteractorInputProtocol <NSObject>
 
-- (void)setOutput:(id<ToDoInteractorOutputProtocol>)output;
-- (id<ToDoInteractorOutputProtocol>)getOutputProtocol;
+- (void)setOutput:(id<ToDoMandiriVaInteractorOutputProtocol>)output;
+- (id<ToDoMandiriVaInteractorOutputProtocol>)getOutputProtocol;
 
-- (void)addToDoItem:(NSString *)item;
+- (void)getPaymentCode:(MandiriVaParams *)item;
 
 @end
 
 #pragma mark - ViewProtocol
 
-@protocol ToDoViewProtocol <NSObject>
+@protocol ToDoMandiriVaViewProtocol <NSObject>
 
-- (void)showAddedItem:(NSString *)item;
+- (void)showResponse:(NSString *)item;
+
+- (void)showError:(NSString *)response;
 
 @end

@@ -10,7 +10,7 @@
         <!--Mandiri Syariah Va View Controller-->
         <scene sceneID="EKs-jZ-fPX">
             <objects>
-                <viewController restorationIdentifier="mandiriSyariahVaViewController" storyboardIdentifier="mandiriSyariahVaViewController" modalPresentationStyle="fullScreen" id="maS-Qd-Tuw" customClass="MandiriSyariahVaViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MandiriSyariahVaViewController" modalPresentationStyle="fullScreen" id="maS-Qd-Tuw" customClass="MandiriSyariahVaViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y83-z7-Iuj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

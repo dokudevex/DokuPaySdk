@@ -16,9 +16,9 @@
 
 + (UIViewController *)createModule
 {
-    NSString *viewName = NSStringFromClass([MandiriSyariahVaViewController class]);
+    UIStoryboard *mandiriSyariahVaStoryboard = [UIStoryboard storyboardWithName:@"MandiriSyariahStoryboard" bundle:[NSBundle bundleForClass: MandiriSyariahVaViewController.class]];
+    MandiriSyariahVaViewController *viewController = [mandiriSyariahVaStoryboard instantiateViewControllerWithIdentifier:@"MandiriSyariahVaViewController"];
     
-    MandiriSyariahVaViewController *viewController = [[MandiriSyariahVaViewController alloc] initWithNibName:viewName bundle:nil];
     MandiriSyariahVaInteractor *interactor = [[MandiriSyariahVaInteractor alloc] init];
     
     MandiriSyariahVaRouter *router = [[MandiriSyariahVaRouter alloc] init];

@@ -7,22 +7,28 @@
 //
 
 #import "MandiriVaInteractor.h"
+#import "MandiriVaParams.h"
+#import "ApiMandiriVa.h"
 
 @implementation MandiriVaInteractor
 
-- (void)setOutput:(id<ToDoInteractorOutputProtocol>)output
+- (void)setOutput:(id<ToDoMandiriVaInteractorOutputProtocol>)output
 {
     _output = output;
 }
 
-- (id<ToDoInteractorOutputProtocol>)getOutputProtocol
+- (id<ToDoMandiriVaInteractorOutputProtocol>)getOutputProtocol
 {
     return self.output;
 }
 
-- (void)addToDoItem:(NSString *)item
+- (void)getPaymentCode:(MandiriVaParams *)item
 {
-    [self.output sendAddedItem:item];
+    [ApiMandiriVa getPaymentCode:item ifSucceed:^(NSString *response) {
+        [self.output successResponse: response];
+    } ifFailed:^(NSError *error) {
+        [self.output errorResponse: error.localizedDescription];
+    }];
 }
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IWB-j6-47V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--Mandiri Va View Controller-->
         <scene sceneID="hKa-W3-ijq">
             <objects>
-                <viewController restorationIdentifier="mandiriVaViewController" storyboardIdentifier="mandiriVaViewController" modalPresentationStyle="fullScreen" id="IWB-j6-47V" customClass="MandiriVaViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MandiriVaViewController" modalPresentationStyle="fullScreen" id="IWB-j6-47V" customClass="MandiriVaViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="At2-ay-3M2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,6 +56,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SBF-by-Q28"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aHQ-24-LCN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2u-Vb-VAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

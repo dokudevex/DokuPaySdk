@@ -7,12 +7,13 @@
 //
 
 #import "MandiriVaPresenter.h"
+#import "MandiriVaParams.h"
 
 @implementation MandiriVaPresenter
 
-- (instancetype)initWithInterface:(id<ToDoViewProtocol>)interface
-                       interactor:(id<ToDoInteractorInputProtocol>)interactor
-                           router:(id<ToDoWireframeProtocol>)router
+- (instancetype)initWithInterface:(id<ToDoMandiriVaViewProtocol>)interface
+                       interactor:(id<ToDoMandiriVaInteractorInputProtocol>)interactor
+                           router:(id<ToDoMandiriVaWireframeProtocol>)router
 {
     if (self = [super init])
     {
@@ -24,16 +25,21 @@
     return self;
 }
 
-- (void)addToDoItem:(NSString *)item
+- (void)getPaymentCode:(MandiriVaParams *)item
 {
-    [self.interactor addToDoItem:item];
+    [self.interactor getPaymentCode:item];
 }
 
 #pragma mark - ToDoInteractorOutputProtocol
 
-- (void)sendAddedItem:(NSString *)item
+- (void)successResponse:(NSString *)item
 {
-    [self.view showAddedItem:item];
+    [self.view showResponse:item];
 }
+
+- (void)errorResponse:(NSString *)item {
+    [self.view showError:item];
+}
+
 
 @end

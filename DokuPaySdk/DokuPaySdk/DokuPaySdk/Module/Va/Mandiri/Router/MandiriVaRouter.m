@@ -11,13 +11,15 @@
 #import "MandiriVaContract.h"
 #import "MandiriVaInteractor.h"
 #import "MandiriVaPresenter.h"
+#import <UIKit/UIKit.h>
 
 @implementation MandiriVaRouter
 
 + (UIViewController *)createModule
 {
-    NSString *viewName = NSStringFromClass([MandiriVaViewController class]);
-    MandiriVaViewController *viewController = [[MandiriVaViewController alloc] initWithNibName:viewName bundle:nil];
+    UIStoryboard *mandiriVaStoryboard = [UIStoryboard storyboardWithName:@"MandiriStoryboard" bundle:[NSBundle bundleForClass: MandiriVaViewController.class]];
+    MandiriVaViewController *viewController = [mandiriVaStoryboard instantiateViewControllerWithIdentifier:@"MandiriVaViewController"];
+    
     MandiriVaInteractor *interactor = [[MandiriVaInteractor alloc] init];
     MandiriVaRouter *router = [[MandiriVaRouter alloc] init];
     MandiriVaPresenter *presenter = [[MandiriVaPresenter alloc] initWithInterface:viewController interactor:interactor router:router];

@@ -7,22 +7,28 @@
 //
 
 #import "MandiriSyariahVaInteractor.h"
+#import "MandiriVaParams.h"
+#import "ApiMandiriSyariahVa.h"
 
 @implementation MandiriSyariahVaInteractor
 
-- (void)setOutput:(id<ToDoInteractorOutputProtocol>)output
+- (void)setOutput:(id<ToDoMandiriSyariahInteractorOutputProtocol>)output
 {
     _output = output;
 }
 
-- (id<ToDoInteractorOutputProtocol>)getOutputProtocol
+- (id<ToDoMandiriSyariahInteractorOutputProtocol>)getOutputProtocol
 {
     return self.output;
 }
 
-- (void)addToDoItem:(NSString *)item
+- (void)getPaymentCode:(MandiriVaParams *)item
 {
-    [self.output sendAddedItem:item];
+    [ApiMandiriSyariahVa getPaymentCode:item ifSucceed:^(NSString *response) {
+        [self.output successResponse: response];
+    } ifFailed:^(NSError *error) {
+        [self.output errorResponse: error.localizedDescription];
+    }];
 }
 
 @end

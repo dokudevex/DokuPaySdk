@@ -14,6 +14,8 @@
 		C3366EF3249390D40040C86C /* MandiriVaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EF1249390D40040C86C /* MandiriVaViewController.m */; };
 		C3366EF7249390F10040C86C /* MandiriSyariahVaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C3366EF5249390F10040C86C /* MandiriSyariahVaViewController.h */; };
 		C3366EF8249390F10040C86C /* MandiriSyariahVaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EF6249390F10040C86C /* MandiriSyariahVaViewController.m */; };
+		C35FD5AE24A069020083F47A /* DokuPayUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = C35FD5AC24A069020083F47A /* DokuPayUtils.h */; };
+		C35FD5AF24A069020083F47A /* DokuPayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FD5AD24A069020083F47A /* DokuPayUtils.m */; };
 		C3750C6424971B4800A34F6B /* MandiriSyariahVaInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C3750C6224971B4800A34F6B /* MandiriSyariahVaInteractor.h */; };
 		C3750C6524971B4800A34F6B /* MandiriSyariahVaInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = C3750C6324971B4800A34F6B /* MandiriSyariahVaInteractor.m */; };
 		C3750C6824971B5F00A34F6B /* MandiriSyariahVaPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = C3750C6624971B5F00A34F6B /* MandiriSyariahVaPresenter.h */; };
@@ -29,6 +31,40 @@
 		C384DEA924958D8D00EE124F /* MandiriVaRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C384DEA724958D8D00EE124F /* MandiriVaRouter.m */; };
 		C384DEAC24958F6700EE124F /* MandiriVaInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C384DEAA24958F6700EE124F /* MandiriVaInteractor.h */; };
 		C384DEAD24958F6700EE124F /* MandiriVaInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = C384DEAB24958F6700EE124F /* MandiriVaInteractor.m */; };
+		C39AC599249F04DE008CC641 /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC58B249F04DC008CC641 /* AFCompatibilityMacros.h */; };
+		C39AC59A249F04DE008CC641 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC58C249F04DC008CC641 /* AFURLRequestSerialization.h */; };
+		C39AC59B249F04DE008CC641 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC58D249F04DC008CC641 /* AFNetworking.h */; };
+		C39AC59C249F04DE008CC641 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC58E249F04DC008CC641 /* AFSecurityPolicy.m */; };
+		C39AC59D249F04DE008CC641 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC58F249F04DD008CC641 /* AFHTTPSessionManager.m */; };
+		C39AC59E249F04DE008CC641 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC590249F04DD008CC641 /* AFSecurityPolicy.h */; };
+		C39AC59F249F04DE008CC641 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC591249F04DD008CC641 /* AFURLSessionManager.h */; };
+		C39AC5A0249F04DE008CC641 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC592249F04DD008CC641 /* AFURLSessionManager.m */; };
+		C39AC5A1249F04DE008CC641 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC593249F04DD008CC641 /* AFNetworkReachabilityManager.m */; };
+		C39AC5A2249F04DE008CC641 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC594249F04DD008CC641 /* AFNetworkReachabilityManager.h */; };
+		C39AC5A3249F04DE008CC641 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC595249F04DD008CC641 /* AFURLRequestSerialization.m */; };
+		C39AC5A4249F04DE008CC641 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC596249F04DD008CC641 /* AFURLResponseSerialization.h */; };
+		C39AC5A5249F04DE008CC641 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC597249F04DD008CC641 /* AFHTTPSessionManager.h */; };
+		C39AC5A6249F04DE008CC641 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC598249F04DE008CC641 /* AFURLResponseSerialization.m */; };
+		C39AC5AE249F0707008CC641 /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC5AC249F0707008CC641 /* APIManager.h */; };
+		C39AC5AF249F0707008CC641 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC5AD249F0707008CC641 /* APIManager.m */; };
+		C39AC5B3249F0806008CC641 /* APIConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC5B1249F0806008CC641 /* APIConstant.h */; };
+		C39AC5B4249F0806008CC641 /* APIConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC5B2249F0806008CC641 /* APIConstant.m */; };
+		C39AC5C1249F15B3008CC641 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC5B7249F15B1008CC641 /* SVRadialGradientLayer.m */; };
+		C39AC5C2249F15B3008CC641 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC5B8249F15B1008CC641 /* SVProgressHUD.h */; };
+		C39AC5C3249F15B3008CC641 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC5B9249F15B2008CC641 /* SVIndefiniteAnimatedView.m */; };
+		C39AC5C4249F15B3008CC641 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC5BA249F15B2008CC641 /* SVRadialGradientLayer.h */; };
+		C39AC5C5249F15B3008CC641 /* SVProgressHUD-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C39AC5BB249F15B2008CC641 /* SVProgressHUD-Prefix.pch */; };
+		C39AC5C6249F15B3008CC641 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC5BC249F15B2008CC641 /* SVProgressAnimatedView.m */; };
+		C39AC5C7249F15B3008CC641 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC5BD249F15B2008CC641 /* SVProgressHUD.m */; };
+		C39AC5C8249F15B3008CC641 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C39AC5BE249F15B2008CC641 /* SVProgressHUD.bundle */; };
+		C39AC5C9249F15B3008CC641 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC5BF249F15B2008CC641 /* SVProgressAnimatedView.h */; };
+		C39AC5CA249F15B3008CC641 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC5C0249F15B3008CC641 /* SVIndefiniteAnimatedView.h */; };
+		C39AC5CE249F19EB008CC641 /* MandiriVaParams.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC5CC249F19EB008CC641 /* MandiriVaParams.h */; };
+		C39AC5CF249F19EB008CC641 /* MandiriVaParams.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC5CD249F19EB008CC641 /* MandiriVaParams.m */; };
+		C39AC5D3249F35D4008CC641 /* ApiMandiriVa.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC5D1249F35D4008CC641 /* ApiMandiriVa.h */; };
+		C39AC5D4249F35D4008CC641 /* ApiMandiriVa.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC5D2249F35D4008CC641 /* ApiMandiriVa.m */; };
+		C39AC5D9249F427C008CC641 /* ApiMandiriSyariahVa.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC5D7249F427C008CC641 /* ApiMandiriSyariahVa.h */; };
+		C39AC5DA249F427C008CC641 /* ApiMandiriSyariahVa.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC5D8249F427C008CC641 /* ApiMandiriSyariahVa.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +88,8 @@
 		C3366EF1249390D40040C86C /* MandiriVaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaViewController.m; sourceTree = "<group>"; };
 		C3366EF5249390F10040C86C /* MandiriSyariahVaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriSyariahVaViewController.h; sourceTree = "<group>"; };
 		C3366EF6249390F10040C86C /* MandiriSyariahVaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriSyariahVaViewController.m; sourceTree = "<group>"; };
+		C35FD5AC24A069020083F47A /* DokuPayUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DokuPayUtils.h; sourceTree = "<group>"; };
+		C35FD5AD24A069020083F47A /* DokuPayUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuPayUtils.m; sourceTree = "<group>"; };
 		C3750C6224971B4800A34F6B /* MandiriSyariahVaInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriSyariahVaInteractor.h; sourceTree = "<group>"; };
 		C3750C6324971B4800A34F6B /* MandiriSyariahVaInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriSyariahVaInteractor.m; sourceTree = "<group>"; };
 		C3750C6624971B5F00A34F6B /* MandiriSyariahVaPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriSyariahVaPresenter.h; sourceTree = "<group>"; };
@@ -69,6 +107,40 @@
 		C384DEA724958D8D00EE124F /* MandiriVaRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaRouter.m; sourceTree = "<group>"; };
 		C384DEAA24958F6700EE124F /* MandiriVaInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriVaInteractor.h; sourceTree = "<group>"; };
 		C384DEAB24958F6700EE124F /* MandiriVaInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaInteractor.m; sourceTree = "<group>"; };
+		C39AC58B249F04DC008CC641 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
+		C39AC58C249F04DC008CC641 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		C39AC58D249F04DC008CC641 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		C39AC58E249F04DC008CC641 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		C39AC58F249F04DD008CC641 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		C39AC590249F04DD008CC641 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		C39AC591249F04DD008CC641 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		C39AC592249F04DD008CC641 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		C39AC593249F04DD008CC641 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		C39AC594249F04DD008CC641 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		C39AC595249F04DD008CC641 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		C39AC596249F04DD008CC641 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		C39AC597249F04DD008CC641 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		C39AC598249F04DE008CC641 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		C39AC5AC249F0707008CC641 /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		C39AC5AD249F0707008CC641 /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		C39AC5B1249F0806008CC641 /* APIConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIConstant.h; sourceTree = "<group>"; };
+		C39AC5B2249F0806008CC641 /* APIConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIConstant.m; sourceTree = "<group>"; };
+		C39AC5B7249F15B1008CC641 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		C39AC5B8249F15B1008CC641 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		C39AC5B9249F15B2008CC641 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		C39AC5BA249F15B2008CC641 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		C39AC5BB249F15B2008CC641 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		C39AC5BC249F15B2008CC641 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		C39AC5BD249F15B2008CC641 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		C39AC5BE249F15B2008CC641 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		C39AC5BF249F15B2008CC641 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		C39AC5C0249F15B3008CC641 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		C39AC5CC249F19EB008CC641 /* MandiriVaParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriVaParams.h; sourceTree = "<group>"; };
+		C39AC5CD249F19EB008CC641 /* MandiriVaParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaParams.m; sourceTree = "<group>"; };
+		C39AC5D1249F35D4008CC641 /* ApiMandiriVa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiMandiriVa.h; sourceTree = "<group>"; };
+		C39AC5D2249F35D4008CC641 /* ApiMandiriVa.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiMandiriVa.m; sourceTree = "<group>"; };
+		C39AC5D7249F427C008CC641 /* ApiMandiriSyariahVa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiMandiriSyariahVa.h; sourceTree = "<group>"; };
+		C39AC5D8249F427C008CC641 /* ApiMandiriSyariahVa.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiMandiriSyariahVa.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +183,13 @@
 		C3366E9124938F6E0040C86C /* DokuPaySdk */ = {
 			isa = PBXGroup;
 			children = (
+				C39AC5CB249F191A008CC641 /* Model */,
+				C39AC5B5249F1523008CC641 /* Utils */,
+				C39AC5B0249F07F0008CC641 /* Constant */,
+				C39AC5A7249F0688008CC641 /* APIManager */,
+				C39AC587249F0347008CC641 /* Library */,
+				C39AC57F249EF714008CC641 /* Main */,
 				C3366EEA2493904B0040C86C /* Module */,
-				C3366E9224938F6E0040C86C /* DokuPaySdk.h */,
-				C3750C732497745400A34F6B /* DokuPaySdk.m */,
 				C3366E9324938F6E0040C86C /* Info.plist */,
 			);
 			path = DokuPaySdk;
@@ -259,6 +335,118 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		C39AC57F249EF714008CC641 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C3366E9224938F6E0040C86C /* DokuPaySdk.h */,
+				C3750C732497745400A34F6B /* DokuPaySdk.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C39AC587249F0347008CC641 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C39AC5B6249F1598008CC641 /* SVProgressHUD */,
+				C39AC58A249F0499008CC641 /* AFNetworking */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		C39AC58A249F0499008CC641 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				C39AC58B249F04DC008CC641 /* AFCompatibilityMacros.h */,
+				C39AC597249F04DD008CC641 /* AFHTTPSessionManager.h */,
+				C39AC58F249F04DD008CC641 /* AFHTTPSessionManager.m */,
+				C39AC58D249F04DC008CC641 /* AFNetworking.h */,
+				C39AC594249F04DD008CC641 /* AFNetworkReachabilityManager.h */,
+				C39AC593249F04DD008CC641 /* AFNetworkReachabilityManager.m */,
+				C39AC590249F04DD008CC641 /* AFSecurityPolicy.h */,
+				C39AC58E249F04DC008CC641 /* AFSecurityPolicy.m */,
+				C39AC58C249F04DC008CC641 /* AFURLRequestSerialization.h */,
+				C39AC595249F04DD008CC641 /* AFURLRequestSerialization.m */,
+				C39AC596249F04DD008CC641 /* AFURLResponseSerialization.h */,
+				C39AC598249F04DE008CC641 /* AFURLResponseSerialization.m */,
+				C39AC591249F04DD008CC641 /* AFURLSessionManager.h */,
+				C39AC592249F04DD008CC641 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		C39AC5A7249F0688008CC641 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				C39AC5D6249F425E008CC641 /* ApiMandiriSyariahVa */,
+				C39AC5D0249F359F008CC641 /* ApiMandiriVa */,
+				C39AC5AC249F0707008CC641 /* APIManager.h */,
+				C39AC5AD249F0707008CC641 /* APIManager.m */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		C39AC5B0249F07F0008CC641 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				C39AC5B1249F0806008CC641 /* APIConstant.h */,
+				C39AC5B2249F0806008CC641 /* APIConstant.m */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		C39AC5B5249F1523008CC641 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C35FD5AC24A069020083F47A /* DokuPayUtils.h */,
+				C35FD5AD24A069020083F47A /* DokuPayUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C39AC5B6249F1598008CC641 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C39AC5C0249F15B3008CC641 /* SVIndefiniteAnimatedView.h */,
+				C39AC5B9249F15B2008CC641 /* SVIndefiniteAnimatedView.m */,
+				C39AC5BF249F15B2008CC641 /* SVProgressAnimatedView.h */,
+				C39AC5BC249F15B2008CC641 /* SVProgressAnimatedView.m */,
+				C39AC5BB249F15B2008CC641 /* SVProgressHUD-Prefix.pch */,
+				C39AC5BE249F15B2008CC641 /* SVProgressHUD.bundle */,
+				C39AC5B8249F15B1008CC641 /* SVProgressHUD.h */,
+				C39AC5BD249F15B2008CC641 /* SVProgressHUD.m */,
+				C39AC5BA249F15B2008CC641 /* SVRadialGradientLayer.h */,
+				C39AC5B7249F15B1008CC641 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		C39AC5CB249F191A008CC641 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C39AC5CC249F19EB008CC641 /* MandiriVaParams.h */,
+				C39AC5CD249F19EB008CC641 /* MandiriVaParams.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C39AC5D0249F359F008CC641 /* ApiMandiriVa */ = {
+			isa = PBXGroup;
+			children = (
+				C39AC5D1249F35D4008CC641 /* ApiMandiriVa.h */,
+				C39AC5D2249F35D4008CC641 /* ApiMandiriVa.m */,
+			);
+			path = ApiMandiriVa;
+			sourceTree = "<group>";
+		};
+		C39AC5D6249F425E008CC641 /* ApiMandiriSyariahVa */ = {
+			isa = PBXGroup;
+			children = (
+				C39AC5D7249F427C008CC641 /* ApiMandiriSyariahVa.h */,
+				C39AC5D8249F427C008CC641 /* ApiMandiriSyariahVa.m */,
+			);
+			path = ApiMandiriSyariahVa;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -266,15 +454,34 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C39AC59F249F04DE008CC641 /* AFURLSessionManager.h in Headers */,
+				C39AC5AE249F0707008CC641 /* APIManager.h in Headers */,
+				C39AC59A249F04DE008CC641 /* AFURLRequestSerialization.h in Headers */,
+				C39AC5D9249F427C008CC641 /* ApiMandiriSyariahVa.h in Headers */,
 				C3750C71249739AE00A34F6B /* MandiriSyariahVaRouter.h in Headers */,
+				C39AC5B3249F0806008CC641 /* APIConstant.h in Headers */,
+				C39AC5CE249F19EB008CC641 /* MandiriVaParams.h in Headers */,
 				C3366EF7249390F10040C86C /* MandiriSyariahVaViewController.h in Headers */,
 				C3750C6424971B4800A34F6B /* MandiriSyariahVaInteractor.h in Headers */,
+				C39AC599249F04DE008CC641 /* AFCompatibilityMacros.h in Headers */,
 				C384DE9E2494C8FE00EE124F /* MandiriVaPresenter.h in Headers */,
 				C384DEA824958D8D00EE124F /* MandiriVaRouter.h in Headers */,
+				C39AC5C4249F15B3008CC641 /* SVRadialGradientLayer.h in Headers */,
 				C3750C6824971B5F00A34F6B /* MandiriSyariahVaPresenter.h in Headers */,
+				C35FD5AE24A069020083F47A /* DokuPayUtils.h in Headers */,
+				C39AC5A4249F04DE008CC641 /* AFURLResponseSerialization.h in Headers */,
+				C39AC5C2249F15B3008CC641 /* SVProgressHUD.h in Headers */,
 				C3366EA024938F6E0040C86C /* DokuPaySdk.h in Headers */,
+				C39AC59E249F04DE008CC641 /* AFSecurityPolicy.h in Headers */,
 				C3366EF2249390D40040C86C /* MandiriVaViewController.h in Headers */,
+				C39AC5C9249F15B3008CC641 /* SVProgressAnimatedView.h in Headers */,
+				C39AC5A5249F04DE008CC641 /* AFHTTPSessionManager.h in Headers */,
+				C39AC5A2249F04DE008CC641 /* AFNetworkReachabilityManager.h in Headers */,
 				C384DEAC24958F6700EE124F /* MandiriVaInteractor.h in Headers */,
+				C39AC59B249F04DE008CC641 /* AFNetworking.h in Headers */,
+				C39AC5D3249F35D4008CC641 /* ApiMandiriVa.h in Headers */,
+				C39AC5CA249F15B3008CC641 /* SVIndefiniteAnimatedView.h in Headers */,
+				C39AC5C5249F15B3008CC641 /* SVProgressHUD-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C384DE962494BE5200EE124F /* MandiriStoryboard.storyboard in Resources */,
+				C39AC5C8249F15B3008CC641 /* SVProgressHUD.bundle in Resources */,
 				C384DE942494BD9200EE124F /* MandiriSyariahStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,13 +586,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3750C742497745400A34F6B /* DokuPaySdk.m in Sources */,
+				C39AC5C1249F15B3008CC641 /* SVRadialGradientLayer.m in Sources */,
+				C39AC5C3249F15B3008CC641 /* SVIndefiniteAnimatedView.m in Sources */,
+				C39AC5A1249F04DE008CC641 /* AFNetworkReachabilityManager.m in Sources */,
+				C39AC5D4249F35D4008CC641 /* ApiMandiriVa.m in Sources */,
 				C384DEA924958D8D00EE124F /* MandiriVaRouter.m in Sources */,
+				C39AC5DA249F427C008CC641 /* ApiMandiriSyariahVa.m in Sources */,
+				C35FD5AF24A069020083F47A /* DokuPayUtils.m in Sources */,
+				C39AC5CF249F19EB008CC641 /* MandiriVaParams.m in Sources */,
 				C3366EF8249390F10040C86C /* MandiriSyariahVaViewController.m in Sources */,
+				C39AC5A6249F04DE008CC641 /* AFURLResponseSerialization.m in Sources */,
 				C3750C6924971B5F00A34F6B /* MandiriSyariahVaPresenter.m in Sources */,
+				C39AC5A3249F04DE008CC641 /* AFURLRequestSerialization.m in Sources */,
 				C384DE9F2494C8FE00EE124F /* MandiriVaPresenter.m in Sources */,
+				C39AC59D249F04DE008CC641 /* AFHTTPSessionManager.m in Sources */,
+				C39AC5C6249F15B3008CC641 /* SVProgressAnimatedView.m in Sources */,
 				C3366EF3249390D40040C86C /* MandiriVaViewController.m in Sources */,
+				C39AC59C249F04DE008CC641 /* AFSecurityPolicy.m in Sources */,
 				C384DEAD24958F6700EE124F /* MandiriVaInteractor.m in Sources */,
+				C39AC5AF249F0707008CC641 /* APIManager.m in Sources */,
+				C39AC5A0249F04DE008CC641 /* AFURLSessionManager.m in Sources */,
+				C39AC5C7249F15B3008CC641 /* SVProgressHUD.m in Sources */,
 				C3750C6524971B4800A34F6B /* MandiriSyariahVaInteractor.m in Sources */,
+				C39AC5B4249F0806008CC641 /* APIConstant.m in Sources */,
 				C3750C72249739AE00A34F6B /* MandiriSyariahVaRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
