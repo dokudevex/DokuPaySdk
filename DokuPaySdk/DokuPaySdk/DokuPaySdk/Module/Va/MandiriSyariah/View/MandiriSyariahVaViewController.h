@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MandiriSyariahVaViewController : UIViewController<ToDoMandiriSyariahViewProtocol>
+@interface MandiriSyariahVaViewController : UIViewController<ToDoMandiriSyariahVaViewProtocol>
 
 @property (nonatomic, nullable) MandiriSyariahVaPresenter *presenter;
 

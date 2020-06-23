@@ -8,6 +8,8 @@
 
 #import "MandiriVaViewController.h"
 #import "SVProgressHUD.h"
+#import "ResultPageViewController.h"
+#import "ResultPageRouter.h"
 
 @interface MandiriVaViewController ()
 
@@ -29,11 +31,14 @@
 - (void)showResponse:(NSString *)item
 {
     [SVProgressHUD dismiss];
-    NSLog(@"Dedye Response : %@", item);
+    //[self.presenter gotoResultPage: item];
+    NSLog(@"Mandiri Va show response : %@", item);
+    ResultPageViewController *todoViewController = (ResultPageViewController *) [ResultPageRouter createModule];
+    [self presentViewController: todoViewController animated:YES completion: nil];
 }
 
 - (void)showError:(NSString *)response {
     [SVProgressHUD dismiss];
-    NSLog(@"Dedye Response : %@", response);
+    NSLog(@"Mandiri Va error response : %@", response);
 }
 @end

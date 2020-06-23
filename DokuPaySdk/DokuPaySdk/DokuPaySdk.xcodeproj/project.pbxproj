@@ -16,6 +16,18 @@
 		C3366EF8249390F10040C86C /* MandiriSyariahVaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EF6249390F10040C86C /* MandiriSyariahVaViewController.m */; };
 		C35FD5AE24A069020083F47A /* DokuPayUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = C35FD5AC24A069020083F47A /* DokuPayUtils.h */; };
 		C35FD5AF24A069020083F47A /* DokuPayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FD5AD24A069020083F47A /* DokuPayUtils.m */; };
+		C35FD5B824A096E90083F47A /* ResultPageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C35FD5B624A096E90083F47A /* ResultPageViewController.h */; };
+		C35FD5B924A096E90083F47A /* ResultPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FD5B724A096E90083F47A /* ResultPageViewController.m */; };
+		C35FD5BB24A097160083F47A /* ResultPageViewControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35FD5BA24A097160083F47A /* ResultPageViewControllerStoryboard.storyboard */; };
+		C35FD5BE24A099BB0083F47A /* ResultPageContract.h in Headers */ = {isa = PBXBuildFile; fileRef = C35FD5BC24A099BB0083F47A /* ResultPageContract.h */; };
+		C35FD5C224A09A730083F47A /* ResultPageInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C35FD5C024A09A730083F47A /* ResultPageInteractor.h */; };
+		C35FD5C324A09A730083F47A /* ResultPageInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FD5C124A09A730083F47A /* ResultPageInteractor.m */; };
+		C35FD5C624A09AA20083F47A /* ResultPagePresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = C35FD5C424A09AA20083F47A /* ResultPagePresenter.h */; };
+		C35FD5C724A09AA20083F47A /* ResultPagePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FD5C524A09AA20083F47A /* ResultPagePresenter.m */; };
+		C35FD5CA24A09AB30083F47A /* ResultPageRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = C35FD5C824A09AB30083F47A /* ResultPageRouter.h */; };
+		C35FD5CB24A09AB30083F47A /* ResultPageRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FD5C924A09AB30083F47A /* ResultPageRouter.m */; };
+		C35FD5CF24A0ADE30083F47A /* ApiResultPage.h in Headers */ = {isa = PBXBuildFile; fileRef = C35FD5CD24A0ADE30083F47A /* ApiResultPage.h */; };
+		C35FD5D024A0ADE30083F47A /* ApiResultPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C35FD5CE24A0ADE30083F47A /* ApiResultPage.m */; };
 		C3750C6424971B4800A34F6B /* MandiriSyariahVaInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C3750C6224971B4800A34F6B /* MandiriSyariahVaInteractor.h */; };
 		C3750C6524971B4800A34F6B /* MandiriSyariahVaInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = C3750C6324971B4800A34F6B /* MandiriSyariahVaInteractor.m */; };
 		C3750C6824971B5F00A34F6B /* MandiriSyariahVaPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = C3750C6624971B5F00A34F6B /* MandiriSyariahVaPresenter.h */; };
@@ -90,6 +102,18 @@
 		C3366EF6249390F10040C86C /* MandiriSyariahVaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriSyariahVaViewController.m; sourceTree = "<group>"; };
 		C35FD5AC24A069020083F47A /* DokuPayUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DokuPayUtils.h; sourceTree = "<group>"; };
 		C35FD5AD24A069020083F47A /* DokuPayUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuPayUtils.m; sourceTree = "<group>"; };
+		C35FD5B624A096E90083F47A /* ResultPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultPageViewController.h; sourceTree = "<group>"; };
+		C35FD5B724A096E90083F47A /* ResultPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultPageViewController.m; sourceTree = "<group>"; };
+		C35FD5BA24A097160083F47A /* ResultPageViewControllerStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultPageViewControllerStoryboard.storyboard; sourceTree = "<group>"; };
+		C35FD5BC24A099BB0083F47A /* ResultPageContract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultPageContract.h; sourceTree = "<group>"; };
+		C35FD5C024A09A730083F47A /* ResultPageInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultPageInteractor.h; sourceTree = "<group>"; };
+		C35FD5C124A09A730083F47A /* ResultPageInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultPageInteractor.m; sourceTree = "<group>"; };
+		C35FD5C424A09AA20083F47A /* ResultPagePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultPagePresenter.h; sourceTree = "<group>"; };
+		C35FD5C524A09AA20083F47A /* ResultPagePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultPagePresenter.m; sourceTree = "<group>"; };
+		C35FD5C824A09AB30083F47A /* ResultPageRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultPageRouter.h; sourceTree = "<group>"; };
+		C35FD5C924A09AB30083F47A /* ResultPageRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultPageRouter.m; sourceTree = "<group>"; };
+		C35FD5CD24A0ADE30083F47A /* ApiResultPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiResultPage.h; sourceTree = "<group>"; };
+		C35FD5CE24A0ADE30083F47A /* ApiResultPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiResultPage.m; sourceTree = "<group>"; };
 		C3750C6224971B4800A34F6B /* MandiriSyariahVaInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriSyariahVaInteractor.h; sourceTree = "<group>"; };
 		C3750C6324971B4800A34F6B /* MandiriSyariahVaInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriSyariahVaInteractor.m; sourceTree = "<group>"; };
 		C3750C6624971B5F00A34F6B /* MandiriSyariahVaPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriSyariahVaPresenter.h; sourceTree = "<group>"; };
@@ -207,6 +231,7 @@
 		C3366EEA2493904B0040C86C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				C35FD5B024A08DA60083F47A /* ResultPayment */,
 				C3366EEB2493906F0040C86C /* Va */,
 			);
 			path = Module;
@@ -263,6 +288,72 @@
 				C384DE932494BD9200EE124F /* MandiriSyariahStoryboard.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C35FD5B024A08DA60083F47A /* ResultPayment */ = {
+			isa = PBXGroup;
+			children = (
+				C35FD5B524A08DFC0083F47A /* View */,
+				C35FD5B424A08DF30083F47A /* Interactor */,
+				C35FD5B324A08DEA0083F47A /* Contract */,
+				C35FD5B224A08DE10083F47A /* Presenter */,
+				C35FD5B124A08DD80083F47A /* Router */,
+			);
+			path = ResultPayment;
+			sourceTree = "<group>";
+		};
+		C35FD5B124A08DD80083F47A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C35FD5C824A09AB30083F47A /* ResultPageRouter.h */,
+				C35FD5C924A09AB30083F47A /* ResultPageRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C35FD5B224A08DE10083F47A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C35FD5C424A09AA20083F47A /* ResultPagePresenter.h */,
+				C35FD5C524A09AA20083F47A /* ResultPagePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C35FD5B324A08DEA0083F47A /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				C35FD5BC24A099BB0083F47A /* ResultPageContract.h */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		C35FD5B424A08DF30083F47A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C35FD5C024A09A730083F47A /* ResultPageInteractor.h */,
+				C35FD5C124A09A730083F47A /* ResultPageInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C35FD5B524A08DFC0083F47A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C35FD5B624A096E90083F47A /* ResultPageViewController.h */,
+				C35FD5B724A096E90083F47A /* ResultPageViewController.m */,
+				C35FD5BA24A097160083F47A /* ResultPageViewControllerStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C35FD5CC24A0ADBD0083F47A /* ApiResultPage */ = {
+			isa = PBXGroup;
+			children = (
+				C35FD5CD24A0ADE30083F47A /* ApiResultPage.h */,
+				C35FD5CE24A0ADE30083F47A /* ApiResultPage.m */,
+			);
+			path = ApiResultPage;
 			sourceTree = "<group>";
 		};
 		C3750C5E24971AF500A34F6B /* Interactor */ = {
@@ -377,6 +468,7 @@
 		C39AC5A7249F0688008CC641 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
+				C35FD5CC24A0ADBD0083F47A /* ApiResultPage */,
 				C39AC5D6249F425E008CC641 /* ApiMandiriSyariahVa */,
 				C39AC5D0249F359F008CC641 /* ApiMandiriVa */,
 				C39AC5AC249F0707008CC641 /* APIManager.h */,
@@ -455,6 +547,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C39AC59F249F04DE008CC641 /* AFURLSessionManager.h in Headers */,
+				C35FD5B824A096E90083F47A /* ResultPageViewController.h in Headers */,
+				C35FD5CA24A09AB30083F47A /* ResultPageRouter.h in Headers */,
 				C39AC5AE249F0707008CC641 /* APIManager.h in Headers */,
 				C39AC59A249F04DE008CC641 /* AFURLRequestSerialization.h in Headers */,
 				C39AC5D9249F427C008CC641 /* ApiMandiriSyariahVa.h in Headers */,
@@ -467,7 +561,9 @@
 				C384DE9E2494C8FE00EE124F /* MandiriVaPresenter.h in Headers */,
 				C384DEA824958D8D00EE124F /* MandiriVaRouter.h in Headers */,
 				C39AC5C4249F15B3008CC641 /* SVRadialGradientLayer.h in Headers */,
+				C35FD5BE24A099BB0083F47A /* ResultPageContract.h in Headers */,
 				C3750C6824971B5F00A34F6B /* MandiriSyariahVaPresenter.h in Headers */,
+				C35FD5C224A09A730083F47A /* ResultPageInteractor.h in Headers */,
 				C35FD5AE24A069020083F47A /* DokuPayUtils.h in Headers */,
 				C39AC5A4249F04DE008CC641 /* AFURLResponseSerialization.h in Headers */,
 				C39AC5C2249F15B3008CC641 /* SVProgressHUD.h in Headers */,
@@ -479,9 +575,11 @@
 				C39AC5A2249F04DE008CC641 /* AFNetworkReachabilityManager.h in Headers */,
 				C384DEAC24958F6700EE124F /* MandiriVaInteractor.h in Headers */,
 				C39AC59B249F04DE008CC641 /* AFNetworking.h in Headers */,
+				C35FD5CF24A0ADE30083F47A /* ApiResultPage.h in Headers */,
 				C39AC5D3249F35D4008CC641 /* ApiMandiriVa.h in Headers */,
 				C39AC5CA249F15B3008CC641 /* SVIndefiniteAnimatedView.h in Headers */,
 				C39AC5C5249F15B3008CC641 /* SVProgressHUD-Prefix.pch in Headers */,
+				C35FD5C624A09AA20083F47A /* ResultPagePresenter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +663,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35FD5BB24A097160083F47A /* ResultPageViewControllerStoryboard.storyboard in Resources */,
 				C384DE962494BE5200EE124F /* MandiriStoryboard.storyboard in Resources */,
 				C39AC5C8249F15B3008CC641 /* SVProgressHUD.bundle in Resources */,
 				C384DE942494BD9200EE124F /* MandiriSyariahStoryboard.storyboard in Resources */,
@@ -585,10 +684,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35FD5D024A0ADE30083F47A /* ApiResultPage.m in Sources */,
 				C3750C742497745400A34F6B /* DokuPaySdk.m in Sources */,
 				C39AC5C1249F15B3008CC641 /* SVRadialGradientLayer.m in Sources */,
 				C39AC5C3249F15B3008CC641 /* SVIndefiniteAnimatedView.m in Sources */,
 				C39AC5A1249F04DE008CC641 /* AFNetworkReachabilityManager.m in Sources */,
+				C35FD5C724A09AA20083F47A /* ResultPagePresenter.m in Sources */,
 				C39AC5D4249F35D4008CC641 /* ApiMandiriVa.m in Sources */,
 				C384DEA924958D8D00EE124F /* MandiriVaRouter.m in Sources */,
 				C39AC5DA249F427C008CC641 /* ApiMandiriSyariahVa.m in Sources */,
@@ -599,12 +700,15 @@
 				C3750C6924971B5F00A34F6B /* MandiriSyariahVaPresenter.m in Sources */,
 				C39AC5A3249F04DE008CC641 /* AFURLRequestSerialization.m in Sources */,
 				C384DE9F2494C8FE00EE124F /* MandiriVaPresenter.m in Sources */,
+				C35FD5B924A096E90083F47A /* ResultPageViewController.m in Sources */,
 				C39AC59D249F04DE008CC641 /* AFHTTPSessionManager.m in Sources */,
+				C35FD5C324A09A730083F47A /* ResultPageInteractor.m in Sources */,
 				C39AC5C6249F15B3008CC641 /* SVProgressAnimatedView.m in Sources */,
 				C3366EF3249390D40040C86C /* MandiriVaViewController.m in Sources */,
 				C39AC59C249F04DE008CC641 /* AFSecurityPolicy.m in Sources */,
 				C384DEAD24958F6700EE124F /* MandiriVaInteractor.m in Sources */,
 				C39AC5AF249F0707008CC641 /* APIManager.m in Sources */,
+				C35FD5CB24A09AB30083F47A /* ResultPageRouter.m in Sources */,
 				C39AC5A0249F04DE008CC641 /* AFURLSessionManager.m in Sources */,
 				C39AC5C7249F15B3008CC641 /* SVProgressHUD.m in Sources */,
 				C3750C6524971B4800A34F6B /* MandiriSyariahVaInteractor.m in Sources */,

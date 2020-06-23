@@ -13,11 +13,15 @@
 
 @protocol ToDoMandiriVaWireframeProtocol <NSObject>
 
+- (void)gotoResultPage:(NSString *)responseData;
+
 @end
 
 #pragma mark - PresenterProtocol
 
 @protocol ToDoMandiriVaPresenterProtocol <NSObject>
+
+- (void)gotoResultPage:(NSString *)responseData;
 
 @end
 

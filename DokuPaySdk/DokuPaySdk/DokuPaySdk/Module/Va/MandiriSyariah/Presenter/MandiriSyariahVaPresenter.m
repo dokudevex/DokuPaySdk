@@ -11,16 +11,19 @@
 
 @implementation MandiriSyariahVaPresenter
 
-- (instancetype)initWithInterface:(id<ToDoMandiriSyariahViewProtocol>)interface
-                       interactor:(id<ToDoMandiriSyariahInteractorInputProtocol>)interactor
-                           router:(id<ToDoMandiriSyariahWireframeProtocol>)router
+- (instancetype)initWithInterface:(id<ToDoMandiriSyariahVaViewProtocol>)interface
+                       interactor:(id<ToDoMandiriSyariahVaInteractorInputProtocol>)interactor
+                           router:(id<ToDoMandiriSyariahVaWireframeProtocol>)router
 {
     if (self = [super init])
     {
+        NSLog(@"Dedye Presenter interface %@",interface);
+        NSLog(@"Dedye Presenter router %@",router);
+        
         self.view = interface;
         self.interactor = interactor;
-        self.router = router;
         [self.interactor setOutput:self];
+        self.router = router;
     }
     return self;
 }
@@ -41,5 +44,14 @@
     [self.view showError: item];
 }
 
+#pragma mark - PresenterProtocol
+
+- (void)gotoResultPage:(NSString *)responseData {
+    NSLog(@"Dedye Presenter");
+    [self.router gotoResultPage: responseData];
+    NSLog(@"Dedye Presenter router %@",self.router);
+    NSLog(@"Dedye Presenter view %@",self.view);
+    NSLog(@"Dedye Presenter interactor %@",self.interactor);
+}
 
 @end

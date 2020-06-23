@@ -41,5 +41,10 @@
     [self.view showError:item];
 }
 
+#pragma mark - PresenterProtocol
+
+- (void)gotoResultPage:(NSString *)responseData {
+    [self.router gotoResultPage: responseData];
+}
 
 @end

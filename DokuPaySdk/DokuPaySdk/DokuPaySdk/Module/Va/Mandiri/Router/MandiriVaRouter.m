@@ -11,11 +11,13 @@
 #import "MandiriVaContract.h"
 #import "MandiriVaInteractor.h"
 #import "MandiriVaPresenter.h"
+#import "ResultPageRouter.h"
 #import <UIKit/UIKit.h>
 
 @implementation MandiriVaRouter
 
 + (UIViewController *)createModule
+
 {
     UIStoryboard *mandiriVaStoryboard = [UIStoryboard storyboardWithName:@"MandiriStoryboard" bundle:[NSBundle bundleForClass: MandiriVaViewController.class]];
     MandiriVaViewController *viewController = [mandiriVaStoryboard instantiateViewControllerWithIdentifier:@"MandiriVaViewController"];
@@ -26,6 +28,11 @@
     viewController.presenter = presenter;
     router.viewController = viewController;
     return viewController;
+}
+
+- (void)gotoResultPage:(NSString *)responseData {
+    ResultPageViewController *todoViewController = (ResultPageViewController *) [ResultPageRouter createModule];
+    [self.viewController presentViewController: todoViewController animated:YES completion: nil];
 }
 
 @end

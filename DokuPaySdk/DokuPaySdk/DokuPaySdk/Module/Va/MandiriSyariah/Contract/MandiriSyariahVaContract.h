@@ -11,19 +11,23 @@
 
 #pragma mark - WireFrameProtocol
 
-@protocol ToDoMandiriSyariahWireframeProtocol <NSObject>
+@protocol ToDoMandiriSyariahVaWireframeProtocol <NSObject>
+
+- (void)gotoResultPage:(NSString *)responseData;
 
 @end
 
 #pragma mark - PresenterProtocol
 
-@protocol ToDoMandiriSyariahPresenterProtocol <NSObject>
+@protocol ToDoMandiriSyariahVaPresenterProtocol <NSObject>
+
+- (void)gotoResultPage:(NSString *)responseData;
 
 @end
 
 #pragma mark - InteractorProtocol
 
-@protocol ToDoMandiriSyariahInteractorOutputProtocol <NSObject>
+@protocol ToDoMandiriSyariahVaInteractorOutputProtocol <NSObject>
 
 - (void)successResponse:(NSString *)item;
 
@@ -31,10 +35,10 @@
 
 @end
 
-@protocol ToDoMandiriSyariahInteractorInputProtocol <NSObject>
+@protocol ToDoMandiriSyariahVaInteractorInputProtocol <NSObject>
 
-- (void)setOutput:(id<ToDoMandiriSyariahInteractorOutputProtocol>)output;
-- (id<ToDoMandiriSyariahInteractorOutputProtocol>)getOutputProtocol;
+- (void)setOutput:(id<ToDoMandiriSyariahVaInteractorOutputProtocol>)output;
+- (id<ToDoMandiriSyariahVaInteractorOutputProtocol>)getOutputProtocol;
 
 - (void)getPaymentCode:(MandiriVaParams *)item;
 
@@ -42,7 +46,7 @@
 
 #pragma mark - ViewProtocol
 
-@protocol ToDoMandiriSyariahViewProtocol <NSObject>
+@protocol ToDoMandiriSyariahVaViewProtocol <NSObject>
 
 - (void)showResponse:(NSString *)item;
 

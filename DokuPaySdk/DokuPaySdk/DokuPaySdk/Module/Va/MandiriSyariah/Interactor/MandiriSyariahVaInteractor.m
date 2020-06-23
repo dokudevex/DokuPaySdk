@@ -12,12 +12,12 @@
 
 @implementation MandiriSyariahVaInteractor
 
-- (void)setOutput:(id<ToDoMandiriSyariahInteractorOutputProtocol>)output
+- (void)setOutput:(id<ToDoMandiriSyariahVaInteractorOutputProtocol>)output
 {
     _output = output;
 }
 
-- (id<ToDoMandiriSyariahInteractorOutputProtocol>)getOutputProtocol
+- (id<ToDoMandiriSyariahVaInteractorOutputProtocol>)getOutputProtocol
 {
     return self.output;
 }

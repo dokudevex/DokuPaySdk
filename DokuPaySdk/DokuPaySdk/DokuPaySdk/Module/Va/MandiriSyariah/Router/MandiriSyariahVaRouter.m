@@ -11,6 +11,7 @@
 #import "MandiriSyariahVaContract.h"
 #import "MandiriSyariahVaInteractor.h"
 #import "MandiriSyariahVaPresenter.h"
+#import "ResultPageRouter.h"
 
 @implementation MandiriSyariahVaRouter
 
@@ -24,10 +25,15 @@
     MandiriSyariahVaRouter *router = [[MandiriSyariahVaRouter alloc] init];
     
     MandiriSyariahVaPresenter *presenter = [[MandiriSyariahVaPresenter alloc] initWithInterface:viewController interactor:interactor router:router];
-    
     viewController.presenter = presenter;
     router.viewController = viewController;
     return viewController;
+}
+
+- (void)gotoResultPage:(NSString *)responseData {
+    NSLog(@"Dedye Router");
+    ResultPageViewController *todoViewController = (ResultPageViewController *) [ResultPageRouter createModule];
+    [self.viewController presentViewController: todoViewController animated:YES completion: nil];
 }
 
 @end
