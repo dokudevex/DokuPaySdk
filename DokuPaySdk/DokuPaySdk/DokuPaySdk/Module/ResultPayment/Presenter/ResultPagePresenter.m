@@ -8,26 +8,29 @@
 
 #import "ResultPagePresenter.h"
 #import "MandiriVaParams.h"
+#import "MandiriVaResponse.h"
 
 @implementation ResultPagePresenter
 
 - (instancetype)initWithInterface:(id<ToDoResultPageViewProtocol>)interface
                        interactor:(id<ToDoResultPageInteractorInputProtocol>)interactor
                            router:(id<ToDoResultPageWireframeProtocol>)router
+                            data:(MandiriVaResponse *)data
 {
     if (self = [super init])
     {
         self.view = interface;
         self.interactor = interactor;
         self.router = router;
+        self.mandiriVaResponse = data;
         [self.interactor setOutput:self];
     }
     return self;
 }
 
-- (void)getHowToInstruction:(NSString *)noVa
+- (void)getHowToInstruction:(NSString *)url
 {
-    [self.interactor getHowToInstruction:noVa];
+    [self.interactor getHowToInstruction:url];
 }
 
 #pragma mark - ToDoResultPageInteractorOutputProtocol
@@ -40,4 +43,9 @@
 - (void)errorResponse:(NSString *)item {
     [self.view showError: item];
 }
+
+- (void)initData {
+    [self.view initData: self.mandiriVaResponse];
+}
+
 @end

@@ -7,13 +7,18 @@
 //
 
 #import "ResultPageViewController.h"
-
+#import "DokuPayUtils.h"
 
 static int const kHeaderSectionTag = 6900;
 
 @interface ResultPageViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewInstruction;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewOrder;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewAmount;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewVaChannel;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewVaNumber;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewLogoChannel;
 @property (assign) NSInteger expandedSectionHeaderNumber;
 @property (assign) UITableViewHeaderFooterView *expandedSectionHeader;
 @property (strong) NSArray *sectionItems;
@@ -25,17 +30,16 @@ static int const kHeaderSectionTag = 6900;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.presenter getHowToInstruction:@"1234000000000048"];
-    
     self.sectionNames = @[ @"Mandiri Syariah Mobile (MSM)", @"Mandiri Syariah Internet Banking (MSIB)"];
     self.sectionItems = @[ @[@"1. Buka aplikasi", @"2. Pilih menu Pembayaran", @"3. Pilih E-Commerce", @"4. Pilih Merchant Growth Store", @"5. Masukan nomor pembayaran 1234000000000048", @"6. Masukan Pin", @"7. Konfirmasi Transaksi", @"8. Transaksi Berhasil"],
-                           @[@"1. Buka aplikasi", @"2. Pilih menu Pembayaran", @"3. Pilih E-Commerce", @"4. Pilih Merchant Growth Store", @"5. Masukan nomor pembayaran 1234000000000048", @"6. Masukan Pin", @"7. Konfirmasi Transaksi", @"8. Transaksi Berhasil"]
+                           @[@"1. Buka aplikasi", @"2. Pilih menu Pembayaran", @"3. Pilih E-Commerce", @"4. Pilih Merchant Growth Store", @"5. Masukan nomor pembayaran 8123400000000050", @"6. Masukan Pin", @"7. Konfirmasi Transaksi", @"8. Transaksi Berhasil"]
                          ];
     // configure the tableview
     self.tableViewInstruction.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableViewInstruction.rowHeight = UITableViewAutomaticDimension;
     self.tableViewInstruction.estimatedRowHeight = 100;
     self.expandedSectionHeaderNumber = -1;
+    [self.presenter initData];
 }
 
 #pragma mark - Table view data source
@@ -194,6 +198,20 @@ static int const kHeaderSectionTag = 6900;
 
 - (void)showResponse:(NSString *)item {
     NSLog(@"Result Page show response : %@", item);
+}
+
+- (void)initData:(MandiriVaResponse *)data {
+    if ([data.channelId isEqualToString:@"1"]) {
+        [self.imageViewLogoChannel setImage: [DokuPayUtils getIcon: data.channelId]];
+        [self.labelViewVaChannel setText:@"Mandiri"];
+    } else if ([data.channelId isEqualToString:@"2"]) {
+        [self.imageViewLogoChannel setImage: [DokuPayUtils getIcon: data.channelId]];
+        [self.labelViewVaChannel setText:@"Mandiri Syariah"];
+    }
+    [self.labelViewOrder setText: data.invoiceNumber];
+    [self.labelViewAmount setText: data.amount];
+    [self.labelViewVaNumber setText: data.vaNumber];
+    [self.presenter getHowToInstruction: data.howToPayApi];
 }
 
 @end

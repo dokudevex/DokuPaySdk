@@ -21,9 +21,9 @@
     return self.output;
 }
 
-- (void)getHowToInstruction:(NSString *)noVa
+- (void)getHowToInstruction:(NSString *)url
 {
-    [ApiResultPage getHowToInstruction:noVa ifSucceed:^(NSString *response) {
+    [ApiResultPage getHowToInstruction:url ifSucceed:^(NSString *response) {
         [self.output successResponse: response];
     } ifFailed:^(NSError *error) {
         [self.output errorResponse: error.localizedDescription];

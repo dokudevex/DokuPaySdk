@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MandiriVaResponse.h"
 
 #pragma mark - WireFrameProtocol
 
@@ -17,6 +18,8 @@
 #pragma mark - PresenterProtocol
 
 @protocol ToDoResultPagePresenterProtocol <NSObject>
+
+- (void)initData;
 
 @end
 
@@ -35,7 +38,7 @@
 - (void)setOutput:(id<ToDoResultPageInteractorOutputProtocol>)output;
 - (id<ToDoResultPageInteractorOutputProtocol>)getOutputProtocol;
 
-- (void)getHowToInstruction:(NSString *)noVa;
+- (void)getHowToInstruction:(NSString *)url;
 
 @end
 
@@ -46,5 +49,7 @@
 - (void)showResponse:(NSString *)item;
 
 - (void)showError:(NSString *)response;
+
+- (void)initData:(MandiriVaResponse *)data;
 
 @end

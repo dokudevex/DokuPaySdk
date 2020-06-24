@@ -9,7 +9,7 @@
 #import "APIConstant.h"
 
 #ifdef DEBUG
-    NSString * const ApiBaseUrl = @"http://dev.dokupay.com/";
+    NSString * const ApiBaseUrl = @"http://app-sit.doku.com/";
 #else
-    NSString * const ApiBaseUrl = @"https://dokupay.com/";
+    NSString * const ApiBaseUrl = @"https://app-sit.doku.com/";
 #endif

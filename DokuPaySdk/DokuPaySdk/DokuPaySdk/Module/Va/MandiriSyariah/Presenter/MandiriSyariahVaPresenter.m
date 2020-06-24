@@ -8,6 +8,7 @@
 
 #import "MandiriSyariahVaPresenter.h"
 #import "MandiriVaParams.h"
+#import "MandiriVaResponse.h"
 
 @implementation MandiriSyariahVaPresenter
 
@@ -17,13 +18,10 @@
 {
     if (self = [super init])
     {
-        NSLog(@"Dedye Presenter interface %@",interface);
-        NSLog(@"Dedye Presenter router %@",router);
-        
         self.view = interface;
         self.interactor = interactor;
-        [self.interactor setOutput:self];
         self.router = router;
+        [self.interactor setOutput:self];
     }
     return self;
 }
@@ -46,12 +44,8 @@
 
 #pragma mark - PresenterProtocol
 
-- (void)gotoResultPage:(NSString *)responseData {
-    NSLog(@"Dedye Presenter");
+- (void)gotoResultPage:(MandiriVaResponse *)responseData {
     [self.router gotoResultPage: responseData];
-    NSLog(@"Dedye Presenter router %@",self.router);
-    NSLog(@"Dedye Presenter view %@",self.view);
-    NSLog(@"Dedye Presenter interactor %@",self.interactor);
 }
 
 @end

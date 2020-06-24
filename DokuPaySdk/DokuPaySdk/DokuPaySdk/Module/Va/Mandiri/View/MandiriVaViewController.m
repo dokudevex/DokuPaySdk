@@ -10,6 +10,7 @@
 #import "SVProgressHUD.h"
 #import "ResultPageViewController.h"
 #import "ResultPageRouter.h"
+#import "MandiriVaResponse.h"
 
 @interface MandiriVaViewController ()
 
@@ -21,9 +22,9 @@
     [super viewDidLoad];
     [SVProgressHUD show];
     
-    MandiriVaParams *item = [[MandiriVaParams alloc] initWithText:@"123-abc" amount:@"10000" invoiceNumber:@"DEMOSDK-1234567892" reusableStatus:@"false" expiredTime:@"60" info1:@"" info2:@"" info3:@"" email:@"demosdk@doku.com" name:@"demosdk" checkSum:@"9dda463a35d2c55212a5aa8e6b6bf17735e606224702f0722ae55a578e96213e"];
+    self.mandiriVaParams = [[MandiriVaParams alloc] initWithText:@"123-abc" amount:@"10000" invoiceNumber:@"DEMOSDK-1434531892" reusableStatus:@"false" expiredTime:@"60" info1:@"" info2:@"" info3:@"" email:@"demosdk@doku.com" name:@"demosdk" checkSum:@"a59e9920a535d7607110a1d9411d8eadce9b21b6b65c43e3084163430a3ed88c"];
     
-    [self.presenter getPaymentCode:item];
+    [self.presenter getPaymentCode: self.mandiriVaParams];
 }
 
 #pragma mark - WireFrameProtocol
@@ -31,10 +32,9 @@
 - (void)showResponse:(NSString *)item
 {
     [SVProgressHUD dismiss];
-    //[self.presenter gotoResultPage: item];
-    NSLog(@"Mandiri Va show response : %@", item);
-    ResultPageViewController *todoViewController = (ResultPageViewController *) [ResultPageRouter createModule];
-    [self presentViewController: todoViewController animated:YES completion: nil];
+    MandiriVaResponse *data = [[MandiriVaResponse alloc] initWithData: item amount:self.mandiriVaParams.amount channelId: @"1" isProduction: @"false" merchantName: @"Toko Pak Edi"];
+    
+    [self.presenter gotoResultPage: data];
 }
 
 - (void)showError:(NSString *)response {

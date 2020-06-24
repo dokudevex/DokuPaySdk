@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) ResultPageViewController *viewController;
 
-+ (UIViewController *)createModule;
++ (UIViewController *)createModule: (MandiriVaResponse *)data;
 
 @end
 

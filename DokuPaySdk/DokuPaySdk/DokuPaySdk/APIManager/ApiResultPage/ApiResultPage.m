@@ -13,13 +13,10 @@
 
 @implementation ApiResultPage
 
-+ (void)getHowToInstruction:(NSString *)noVa ifSucceed:(void (^)(NSString *))succeed ifFailed:(void (^)(NSError *))failed {
++ (void)getHowToInstruction:(NSString *)url ifSucceed:(void (^)(NSString *))succeed ifFailed:(void (^)(NSError *))failed {
     
     APIManager *manager = [APIManager sharedManager];
-    
-    NSDictionary *param = @{ @"noVa" : noVa};
-
-    [manager GET:@"bsm-virtual-account/v1/how-to-pay-api/" parameters:param headers: nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager GET:url parameters: nil headers: nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSError *error;
         NSMutableDictionary *response = [[NSMutableDictionary alloc] initWithDictionary:responseObject];
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:response

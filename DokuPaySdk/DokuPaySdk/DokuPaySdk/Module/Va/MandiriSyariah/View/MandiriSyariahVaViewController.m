@@ -22,9 +22,9 @@
     [super viewDidLoad];
     [SVProgressHUD show];
     
-    MandiriVaParams *item = [[MandiriVaParams alloc] initWithText:@"MCH-1103200003" amount:@"10000" invoiceNumber:@"DEMOSDK-1234567892" reusableStatus:@"false" expiredTime:@"60" info1:@"" info2:@"" info3:@"" email:@"demosdk@doku.com" name:@"demosdk" checkSum:@"673940c827ffdd6a8ab7b82ec12adfe703e75273e06379156724f0a83a5477ba"];
+    self.mandiriVaParams = [[MandiriVaParams alloc] initWithText:@"MCH-1103200003" amount:@"10000" invoiceNumber:@"DEMOSDK-89234557892" reusableStatus:@"false" expiredTime:@"60" info1:@"" info2:@"" info3:@"" email:@"demosdk@doku.com" name:@"demosdk" checkSum:@"2161a4d923e51bde0c71a0e7f6a7560acff35e87233b245cff37c672eaaca3bf"];
     
-    [self.presenter getPaymentCode:item];
+    [self.presenter getPaymentCode: self.mandiriVaParams];
 
 }
 
@@ -33,10 +33,9 @@
 - (void)showResponse:(NSString *)item
 {
     [SVProgressHUD dismiss];
-    NSLog(@"Mandiri Syariah Va show response : %@", item);
-    //[self.presenter gotoResultPage: item];
-    ResultPageViewController *todoViewController = (ResultPageViewController *) [ResultPageRouter createModule];
-    [self presentViewController: todoViewController animated:YES completion: nil];
+    MandiriVaResponse *data = [[MandiriVaResponse alloc] initWithData: item amount:self.mandiriVaParams.amount channelId: @"2" isProduction: @"false" merchantName: @"Toko Pak Edi"];
+    
+    [self.presenter gotoResultPage: data];
 }
 
 - (void)showError:(NSString *)response {

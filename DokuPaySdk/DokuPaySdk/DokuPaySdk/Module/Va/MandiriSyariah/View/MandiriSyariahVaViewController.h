@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, nullable) MandiriSyariahVaPresenter *presenter;
 
+@property (nonatomic, nullable) MandiriVaParams *mandiriVaParams;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -14,8 +14,7 @@
 
 @implementation ResultPageRouter
 
-+ (UIViewController *)createModule
-{
++ (UIViewController *)createModule: (MandiriVaResponse *)data {
     UIStoryboard *resultPageViewControllerStoryboard = [UIStoryboard storyboardWithName:@"ResultPageViewControllerStoryboard" bundle:[NSBundle bundleForClass: ResultPageViewController.class]];
     ResultPageViewController *viewController = [resultPageViewControllerStoryboard instantiateViewControllerWithIdentifier:@"ResultPageViewController"];
     
@@ -23,7 +22,7 @@
     
     ResultPageRouter *router = [[ResultPageRouter alloc] init];
     
-    ResultPagePresenter *presenter = [[ResultPagePresenter alloc] initWithInterface:viewController interactor:interactor router:router];
+    ResultPagePresenter *presenter = [[ResultPagePresenter alloc] initWithInterface:viewController interactor:interactor router:router data: data];
     
     viewController.presenter = presenter;
     router.viewController = viewController;

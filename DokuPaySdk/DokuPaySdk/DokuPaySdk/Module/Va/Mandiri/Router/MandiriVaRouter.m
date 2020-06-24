@@ -30,8 +30,8 @@
     return viewController;
 }
 
-- (void)gotoResultPage:(NSString *)responseData {
-    ResultPageViewController *todoViewController = (ResultPageViewController *) [ResultPageRouter createModule];
+- (void)gotoResultPage:(MandiriVaResponse *)responseData {
+    ResultPageViewController *todoViewController = (ResultPageViewController *) [ResultPageRouter createModule: responseData];
     [self.viewController presentViewController: todoViewController animated:YES completion: nil];
 }
 

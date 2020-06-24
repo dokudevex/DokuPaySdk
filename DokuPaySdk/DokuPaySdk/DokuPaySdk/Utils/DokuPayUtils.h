@@ -8,12 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import "MandiriVaParams.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DokuPayUtils : NSObject
 
 +(NSMutableDictionary*)createMandiriParams:(MandiriVaParams*)params;
+
++(NSData *)nsStringToNsData:(NSString *)data;
+
++(NSData *)nsMutableDictionayToNsData:(NSMutableDictionary *)data;
+
++(NSDictionary *)nsDataToDictionary:(NSData *)data;
+
++(UIImage*)getIcon:(NSString*)channelCode;
+
 
 @end
 

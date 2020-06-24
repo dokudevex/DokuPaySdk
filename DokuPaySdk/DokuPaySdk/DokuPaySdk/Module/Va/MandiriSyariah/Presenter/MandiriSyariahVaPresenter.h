@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak, nullable) id<ToDoMandiriSyariahVaViewProtocol> view;
 @property (nonatomic) id<ToDoMandiriSyariahVaInteractorInputProtocol> interactor;
-@property (nonatomic, weak) id<ToDoMandiriSyariahVaWireframeProtocol> router;
+@property (nonatomic) id<ToDoMandiriSyariahVaWireframeProtocol> router;
 
 - (instancetype)initWithInterface:(id<ToDoMandiriSyariahVaViewProtocol>)interface
                        interactor:(id<ToDoMandiriSyariahVaInteractorInputProtocol>)interactor

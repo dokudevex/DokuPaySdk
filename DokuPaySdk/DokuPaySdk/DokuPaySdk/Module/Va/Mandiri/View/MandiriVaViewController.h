@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "MandiriVaPresenter.h"
 #import "MandiriVaContract.h"
+#import "MandiriVaParams.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MandiriVaViewController : UIViewController<ToDoMandiriVaViewProtocol>
 
 @property (nonatomic, nullable) MandiriVaPresenter *presenter;
+
+@property (nonatomic, nullable) MandiriVaParams *mandiriVaParams;
 
 @end
 

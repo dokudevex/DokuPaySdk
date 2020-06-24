@@ -8,6 +8,7 @@
 
 #import "MandiriVaPresenter.h"
 #import "MandiriVaParams.h"
+#import "MandiriVaResponse.h"
 
 @implementation MandiriVaPresenter
 
@@ -43,7 +44,7 @@
 
 #pragma mark - PresenterProtocol
 
-- (void)gotoResultPage:(NSString *)responseData {
+- (void)gotoResultPage:(MandiriVaResponse *)responseData {
     [self.router gotoResultPage: responseData];
 }
 

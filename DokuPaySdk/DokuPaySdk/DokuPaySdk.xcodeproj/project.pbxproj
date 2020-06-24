@@ -43,6 +43,9 @@
 		C384DEA924958D8D00EE124F /* MandiriVaRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C384DEA724958D8D00EE124F /* MandiriVaRouter.m */; };
 		C384DEAC24958F6700EE124F /* MandiriVaInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C384DEAA24958F6700EE124F /* MandiriVaInteractor.h */; };
 		C384DEAD24958F6700EE124F /* MandiriVaInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = C384DEAB24958F6700EE124F /* MandiriVaInteractor.m */; };
+		C38D044C24A316BB00C83F34 /* MandiriVaResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = C38D044A24A316BB00C83F34 /* MandiriVaResponse.h */; };
+		C38D044D24A316BB00C83F34 /* MandiriVaResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D044B24A316BB00C83F34 /* MandiriVaResponse.m */; };
+		C38D044F24A34C3800C83F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38D044E24A34C3800C83F34 /* Assets.xcassets */; };
 		C39AC599249F04DE008CC641 /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC58B249F04DC008CC641 /* AFCompatibilityMacros.h */; };
 		C39AC59A249F04DE008CC641 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC58C249F04DC008CC641 /* AFURLRequestSerialization.h */; };
 		C39AC59B249F04DE008CC641 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC58D249F04DC008CC641 /* AFNetworking.h */; };
@@ -131,6 +134,9 @@
 		C384DEA724958D8D00EE124F /* MandiriVaRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaRouter.m; sourceTree = "<group>"; };
 		C384DEAA24958F6700EE124F /* MandiriVaInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriVaInteractor.h; sourceTree = "<group>"; };
 		C384DEAB24958F6700EE124F /* MandiriVaInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaInteractor.m; sourceTree = "<group>"; };
+		C38D044A24A316BB00C83F34 /* MandiriVaResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriVaResponse.h; sourceTree = "<group>"; };
+		C38D044B24A316BB00C83F34 /* MandiriVaResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaResponse.m; sourceTree = "<group>"; };
+		C38D044E24A34C3800C83F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C39AC58B249F04DC008CC641 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		C39AC58C249F04DC008CC641 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		C39AC58D249F04DC008CC641 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -215,6 +221,7 @@
 				C39AC57F249EF714008CC641 /* Main */,
 				C3366EEA2493904B0040C86C /* Module */,
 				C3366E9324938F6E0040C86C /* Info.plist */,
+				C38D044E24A34C3800C83F34 /* Assets.xcassets */,
 			);
 			path = DokuPaySdk;
 			sourceTree = "<group>";
@@ -517,6 +524,8 @@
 			children = (
 				C39AC5CC249F19EB008CC641 /* MandiriVaParams.h */,
 				C39AC5CD249F19EB008CC641 /* MandiriVaParams.m */,
+				C38D044A24A316BB00C83F34 /* MandiriVaResponse.h */,
+				C38D044B24A316BB00C83F34 /* MandiriVaResponse.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -552,6 +561,7 @@
 				C39AC5AE249F0707008CC641 /* APIManager.h in Headers */,
 				C39AC59A249F04DE008CC641 /* AFURLRequestSerialization.h in Headers */,
 				C39AC5D9249F427C008CC641 /* ApiMandiriSyariahVa.h in Headers */,
+				C38D044C24A316BB00C83F34 /* MandiriVaResponse.h in Headers */,
 				C3750C71249739AE00A34F6B /* MandiriSyariahVaRouter.h in Headers */,
 				C39AC5B3249F0806008CC641 /* APIConstant.h in Headers */,
 				C39AC5CE249F19EB008CC641 /* MandiriVaParams.h in Headers */,
@@ -667,6 +677,7 @@
 				C384DE962494BE5200EE124F /* MandiriStoryboard.storyboard in Resources */,
 				C39AC5C8249F15B3008CC641 /* SVProgressHUD.bundle in Resources */,
 				C384DE942494BD9200EE124F /* MandiriSyariahStoryboard.storyboard in Resources */,
+				C38D044F24A34C3800C83F34 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +708,7 @@
 				C39AC5CF249F19EB008CC641 /* MandiriVaParams.m in Sources */,
 				C3366EF8249390F10040C86C /* MandiriSyariahVaViewController.m in Sources */,
 				C39AC5A6249F04DE008CC641 /* AFURLResponseSerialization.m in Sources */,
+				C38D044D24A316BB00C83F34 /* MandiriVaResponse.m in Sources */,
 				C3750C6924971B5F00A34F6B /* MandiriSyariahVaPresenter.m in Sources */,
 				C39AC5A3249F04DE008CC641 /* AFURLRequestSerialization.m in Sources */,
 				C384DE9F2494C8FE00EE124F /* MandiriVaPresenter.m in Sources */,

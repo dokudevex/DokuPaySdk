@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "MandiriVaParams.h"
+#import "MandiriVaResponse.h"
 
 #pragma mark - WireFrameProtocol
 
 @protocol ToDoMandiriVaWireframeProtocol <NSObject>
 
-- (void)gotoResultPage:(NSString *)responseData;
+- (void)gotoResultPage:(MandiriVaResponse *)responseData;
 
 @end
 
@@ -21,7 +22,7 @@
 
 @protocol ToDoMandiriVaPresenterProtocol <NSObject>
 
-- (void)gotoResultPage:(NSString *)responseData;
+- (void)gotoResultPage:(MandiriVaResponse *)responseData;
 
 @end
 

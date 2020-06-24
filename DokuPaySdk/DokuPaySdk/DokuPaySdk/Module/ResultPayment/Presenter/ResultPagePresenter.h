@@ -11,17 +11,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ResultPagePresenter : NSObject<ToDoResultPageInteractorOutputProtocol>
+@interface ResultPagePresenter : NSObject<ToDoResultPageInteractorOutputProtocol, ToDoResultPagePresenterProtocol>
 
 @property (nonatomic, weak, nullable) id<ToDoResultPageViewProtocol> view;
 @property (nonatomic) id<ToDoResultPageInteractorInputProtocol> interactor;
-@property (nonatomic, weak) id<ToDoResultPageWireframeProtocol> router;
+@property (nonatomic) id<ToDoResultPageWireframeProtocol> router;
 
 - (instancetype)initWithInterface:(id<ToDoResultPageViewProtocol>)interface
                        interactor:(id<ToDoResultPageInteractorInputProtocol>)interactor
-                           router:(id<ToDoResultPageWireframeProtocol>)router;
+                           router:(id<ToDoResultPageWireframeProtocol>)router
+                            data:(MandiriVaResponse *)data;
 
 - (void)getHowToInstruction:(NSString *)noVa;
+
+@property (nonatomic, nullable) MandiriVaResponse *mandiriVaResponse;
 
 @end
 

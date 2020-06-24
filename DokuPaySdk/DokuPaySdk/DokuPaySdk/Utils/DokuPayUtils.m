@@ -7,6 +7,7 @@
 //
 
 #import "DokuPayUtils.h"
+#import <UIKit/UIKit.h>
 
 @implementation DokuPayUtils
 
@@ -37,6 +38,41 @@
     object[@"security"] = security;
     
     return object;
+}
+
++(NSData *)nsStringToNsData:(NSString *)data {
+    NSData *nsData = [data dataUsingEncoding:NSUTF8StringEncoding];
+    return nsData;
+}
+
++(NSData*)nsMutableDictionayToNsData:(NSMutableDictionary *)data {
+    NSError *error;
+    NSData *nsData = [NSJSONSerialization dataWithJSONObject:data
+                        options:NSJSONWritingPrettyPrinted
+                        error:&error];
+    
+    return nsData;
+}
+
++(NSDictionary*)nsDataToDictionary:(NSData *)data {
+   NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data
+                                               options:NSJSONReadingMutableContainers
+                                                 error:nil];
+    return dict;
+}
+
++ (UIImage*)getIcon:(NSString*)channelCode
+{
+    UIImage *image = nil;
+    
+    if ([channelCode isEqualToString:@"1"]) {
+        image = [UIImage imageNamed:@"icon_mandiri" inBundle: [NSBundle bundleForClass:self.class]
+        compatibleWithTraitCollection:nil];
+    } else if ([channelCode isEqualToString:@"2"]) {
+        image = [UIImage imageNamed:@"icon_mandiri_syariah" inBundle: [NSBundle bundleForClass:self.class]
+        compatibleWithTraitCollection:nil];
+    }
+    return image;
 }
 
 @end
