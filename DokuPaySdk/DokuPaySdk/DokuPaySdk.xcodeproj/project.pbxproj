@@ -46,6 +46,8 @@
 		C38D044C24A316BB00C83F34 /* MandiriVaResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = C38D044A24A316BB00C83F34 /* MandiriVaResponse.h */; };
 		C38D044D24A316BB00C83F34 /* MandiriVaResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D044B24A316BB00C83F34 /* MandiriVaResponse.m */; };
 		C38D044F24A34C3800C83F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38D044E24A34C3800C83F34 /* Assets.xcassets */; };
+		C397DED524A43DB5002C6E93 /* MandiriVaHowToInstruction.h in Headers */ = {isa = PBXBuildFile; fileRef = C397DED324A43DB5002C6E93 /* MandiriVaHowToInstruction.h */; };
+		C397DED624A43DB5002C6E93 /* MandiriVaHowToInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = C397DED424A43DB5002C6E93 /* MandiriVaHowToInstruction.m */; };
 		C39AC599249F04DE008CC641 /* AFCompatibilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC58B249F04DC008CC641 /* AFCompatibilityMacros.h */; };
 		C39AC59A249F04DE008CC641 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC58C249F04DC008CC641 /* AFURLRequestSerialization.h */; };
 		C39AC59B249F04DE008CC641 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC58D249F04DC008CC641 /* AFNetworking.h */; };
@@ -137,6 +139,8 @@
 		C38D044A24A316BB00C83F34 /* MandiriVaResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriVaResponse.h; sourceTree = "<group>"; };
 		C38D044B24A316BB00C83F34 /* MandiriVaResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaResponse.m; sourceTree = "<group>"; };
 		C38D044E24A34C3800C83F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C397DED324A43DB5002C6E93 /* MandiriVaHowToInstruction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriVaHowToInstruction.h; sourceTree = "<group>"; };
+		C397DED424A43DB5002C6E93 /* MandiriVaHowToInstruction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaHowToInstruction.m; sourceTree = "<group>"; };
 		C39AC58B249F04DC008CC641 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		C39AC58C249F04DC008CC641 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		C39AC58D249F04DC008CC641 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -526,6 +530,8 @@
 				C39AC5CD249F19EB008CC641 /* MandiriVaParams.m */,
 				C38D044A24A316BB00C83F34 /* MandiriVaResponse.h */,
 				C38D044B24A316BB00C83F34 /* MandiriVaResponse.m */,
+				C397DED324A43DB5002C6E93 /* MandiriVaHowToInstruction.h */,
+				C397DED424A43DB5002C6E93 /* MandiriVaHowToInstruction.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -558,6 +564,7 @@
 				C39AC59F249F04DE008CC641 /* AFURLSessionManager.h in Headers */,
 				C35FD5B824A096E90083F47A /* ResultPageViewController.h in Headers */,
 				C35FD5CA24A09AB30083F47A /* ResultPageRouter.h in Headers */,
+				C397DED524A43DB5002C6E93 /* MandiriVaHowToInstruction.h in Headers */,
 				C39AC5AE249F0707008CC641 /* APIManager.h in Headers */,
 				C39AC59A249F04DE008CC641 /* AFURLRequestSerialization.h in Headers */,
 				C39AC5D9249F427C008CC641 /* ApiMandiriSyariahVa.h in Headers */,
@@ -699,6 +706,7 @@
 				C3750C742497745400A34F6B /* DokuPaySdk.m in Sources */,
 				C39AC5C1249F15B3008CC641 /* SVRadialGradientLayer.m in Sources */,
 				C39AC5C3249F15B3008CC641 /* SVIndefiniteAnimatedView.m in Sources */,
+				C397DED624A43DB5002C6E93 /* MandiriVaHowToInstruction.m in Sources */,
 				C39AC5A1249F04DE008CC641 /* AFNetworkReachabilityManager.m in Sources */,
 				C35FD5C724A09AA20083F47A /* ResultPagePresenter.m in Sources */,
 				C39AC5D4249F35D4008CC641 /* ApiMandiriVa.m in Sources */,

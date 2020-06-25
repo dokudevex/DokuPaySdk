@@ -8,6 +8,8 @@
 
 #import "ResultPageViewController.h"
 #import "DokuPayUtils.h"
+#import "MandiriVaHowToInstruction.h"
+#import "MandiriVaHowToInstruction.h"
 
 static int const kHeaderSectionTag = 6900;
 
@@ -30,11 +32,6 @@ static int const kHeaderSectionTag = 6900;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.sectionNames = @[ @"Mandiri Syariah Mobile (MSM)", @"Mandiri Syariah Internet Banking (MSIB)"];
-    self.sectionItems = @[ @[@"1. Buka aplikasi", @"2. Pilih menu Pembayaran", @"3. Pilih E-Commerce", @"4. Pilih Merchant Growth Store", @"5. Masukan nomor pembayaran 1234000000000048", @"6. Masukan Pin", @"7. Konfirmasi Transaksi", @"8. Transaksi Berhasil"],
-                           @[@"1. Buka aplikasi", @"2. Pilih menu Pembayaran", @"3. Pilih E-Commerce", @"4. Pilih Merchant Growth Store", @"5. Masukan nomor pembayaran 8123400000000050", @"6. Masukan Pin", @"7. Konfirmasi Transaksi", @"8. Transaksi Berhasil"]
-                         ];
-    // configure the tableview
     self.tableViewInstruction.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableViewInstruction.rowHeight = UITableViewAutomaticDimension;
     self.tableViewInstruction.estimatedRowHeight = 100;
@@ -198,6 +195,18 @@ static int const kHeaderSectionTag = 6900;
 
 - (void)showResponse:(NSString *)item {
     NSLog(@"Result Page show response : %@", item);
+    MandiriVaHowToInstruction *data = [[MandiriVaHowToInstruction alloc] initWithData: item];
+    
+    NSMutableArray *listSectionName = [[NSMutableArray alloc] init];
+    NSMutableArray *listSectionItem = [[NSMutableArray alloc] init];
+    
+    for(NSDictionary *item in data.howToPay) {
+        [listSectionName addObject:[item objectForKey:@"channel"]];
+        [listSectionItem addObject:[item objectForKey:@"step"]];
+    }
+    self.sectionNames = listSectionName;
+    self.sectionItems = listSectionItem;
+    [self.tableViewInstruction reloadData];
 }
 
 - (void)initData:(MandiriVaResponse *)data {
