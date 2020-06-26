@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <DokuPaySdk/DokuPaySdk.h>
+#import "SettingPageViewViewController.h"
 
 static int const kHeaderSectionTag = 6900;
 
@@ -38,6 +39,21 @@ static int const kHeaderSectionTag = 6900;
     self.tableViewAccordion.rowHeight = UITableViewAutomaticDimension;
     self.tableViewAccordion.estimatedRowHeight = 100;
     self.expandedSectionHeaderNumber = -1;
+}
+
+ -(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"SET" style: UIBarButtonItemStyleDone target:self action:@selector(ActionSet)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+}
+
+- (IBAction)ActionSet
+{
+    SettingPageViewViewController *popViewController = [[SettingPageViewViewController alloc]
+                                             initWithNibName:@"SettingPageViewViewController" bundle: [NSBundle bundleForClass: SettingPageViewViewController.class]];
+    [popViewController setTitle:@"This is a popup view"];
+    [popViewController showInView: self.view animated:YES];
 }
 
 #pragma mark - Table view data source
@@ -126,7 +142,17 @@ static int const kHeaderSectionTag = 6900;
     }
     
     DokuPaySdk *doku = [DokuPaySdk sharedInstance];
-    [doku connect: (int)self.channelCode];
+    [doku connectVa:(int) self.channelCode
+       merchantName:@"Toko Pak Edi"
+      customerEmail:@"demosdk@doku.com"
+       customerName:@"demosdk"
+         dataAmount:@"10000"
+          dataWords:@""
+        expiredTime:@"60"
+      invoiceNumber:@""
+       isProduction:@""
+     reusableStatus:@"false"
+      usePageResult:@""];
 }
 
 - (void)updateTableViewRowDisplay:(NSArray *)arrayOfIndexPaths {

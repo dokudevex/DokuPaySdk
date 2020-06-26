@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ApiResultPage : NSObject
 
-+ (void)getHowToInstruction:(NSString *)noVa ifSucceed:(void (^)(NSString *response))succeed ifFailed:(void (^)(NSError *error))failed;
++ (void)getHowToInstruction:(NSString *)url ifSucceed:(void (^)(NSString *response))succeed ifFailed:(void (^)(NSError *error))failed;
 
 @end
 

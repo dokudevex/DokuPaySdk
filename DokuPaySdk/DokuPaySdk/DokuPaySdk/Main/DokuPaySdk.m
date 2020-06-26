@@ -15,10 +15,21 @@
 static DokuPaySdk *sharedInstance = nil;
 @implementation DokuPaySdk
 
--(void)connect :(int)channelCode{
-    if (channelCode == MandiriVa) {
+-(void) connectVa:(int)paymentChannel
+     merchantName:(NSString *_Nonnull)merchantName
+    customerEmail:(NSString *_Nonnull)customerEmail
+     customerName:(NSString *_Nonnull)customerName
+       dataAmount:(NSString *_Nonnull)dataAmount
+        dataWords:(NSString *_Nonnull)dataWords
+      expiredTime:(NSString *_Nonnull)expiredTime
+    invoiceNumber:(NSString *_Nonnull)invoiceNumber
+     isProduction:(NSString *_Nonnull)isProduction
+   reusableStatus:(NSString *_Nonnull)reusableStatus
+    usePageResult:(NSString *_Nonnull)usePageResult {
+    
+    if (paymentChannel == MandiriVa) {
         [self createViewMandiriVa];
-    } else if (channelCode == MandiriSyariahVa) {
+    } else if (paymentChannel == MandiriSyariahVa) {
         [self createViewMandiriSyariahVa];
     }
 }

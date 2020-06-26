@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
                            router:(id<ToDoResultPageWireframeProtocol>)router
                             data:(MandiriVaResponse *)data;
 
-- (void)getHowToInstruction:(NSString *)noVa;
+- (void)getHowToInstruction:(NSString *)url;
 
 @property (nonatomic, nullable) MandiriVaResponse *mandiriVaResponse;
 

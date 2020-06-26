@@ -17,6 +17,9 @@
 		C3366EDD24938FB20040C86C /* DokuPayDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EDC24938FB20040C86C /* DokuPayDemoUITests.m */; };
 		C3366F03249391550040C86C /* DokuPaySdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3366F02249391550040C86C /* DokuPaySdk.framework */; };
 		C3366F04249391550040C86C /* DokuPaySdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3366F02249391550040C86C /* DokuPaySdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C33D668324A5FC3D00FF776A /* SettingPageViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D668124A5FC3D00FF776A /* SettingPageViewViewController.m */; };
+		C33D668424A5FC3D00FF776A /* SettingPageViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33D668224A5FC3D00FF776A /* SettingPageViewViewController.xib */; };
+		C3691ABD24A5140A00AC1DE5 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C3691ABC24A5140A00AC1DE5 /* Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,13 @@
 		C3366EDC24938FB20040C86C /* DokuPayDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuPayDemoUITests.m; sourceTree = "<group>"; };
 		C3366EDE24938FB20040C86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3366F02249391550040C86C /* DokuPaySdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DokuPaySdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33D668024A5FC3D00FF776A /* SettingPageViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingPageViewViewController.h; sourceTree = "<group>"; };
+		C33D668124A5FC3D00FF776A /* SettingPageViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingPageViewViewController.m; sourceTree = "<group>"; };
+		C33D668224A5FC3D00FF776A /* SettingPageViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingPageViewViewController.xib; sourceTree = "<group>"; };
+		C3691ABB24A5140A00AC1DE5 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		C3691ABC24A5140A00AC1DE5 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		C3691ABE24A516EA00AC1DE5 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		C3691ABF24A516FB00AC1DE5 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,8 @@
 		C3366EB424938FAF0040C86C /* DokuPayDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C361463524A59AD700FD64BF /* Views */,
+				C3691ABA24A513F300AC1DE5 /* Utils */,
 				C3366EB524938FAF0040C86C /* AppDelegate.h */,
 				C3366EB624938FAF0040C86C /* AppDelegate.m */,
 				C3366EBB24938FAF0040C86C /* ViewController.h */,
@@ -154,9 +166,30 @@
 		C3366EF92493912B0040C86C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3691ABF24A516FB00AC1DE5 /* libicucore.A.tbd */,
+				C3691ABE24A516EA00AC1DE5 /* libicucore.tbd */,
 				C3366F02249391550040C86C /* DokuPaySdk.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C361463524A59AD700FD64BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C33D668024A5FC3D00FF776A /* SettingPageViewViewController.h */,
+				C33D668124A5FC3D00FF776A /* SettingPageViewViewController.m */,
+				C33D668224A5FC3D00FF776A /* SettingPageViewViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C3691ABA24A513F300AC1DE5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C3691ABB24A5140A00AC1DE5 /* Utils.h */,
+				C3691ABC24A5140A00AC1DE5 /* Utils.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3366EC524938FB20040C86C /* LaunchScreen.storyboard in Resources */,
+				C33D668424A5FC3D00FF776A /* SettingPageViewViewController.xib in Resources */,
 				C3366EC224938FB20040C86C /* Assets.xcassets in Resources */,
 				C3366EC024938FAF0040C86C /* Main.storyboard in Resources */,
 			);
@@ -291,8 +325,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3366EBD24938FAF0040C86C /* ViewController.m in Sources */,
+				C33D668324A5FC3D00FF776A /* SettingPageViewViewController.m in Sources */,
 				C3366EB724938FAF0040C86C /* AppDelegate.m in Sources */,
 				C3366EC824938FB20040C86C /* main.m in Sources */,
+				C3691ABD24A5140A00AC1DE5 /* Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

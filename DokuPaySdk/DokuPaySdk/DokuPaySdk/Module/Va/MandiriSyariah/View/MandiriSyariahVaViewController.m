@@ -11,6 +11,7 @@
 #import "MandiriVaParams.h"
 #import "ResultPageViewController.h"
 #import "ResultPageRouter.h"
+#import "DokuPayUtils.h"
 
 @interface MandiriSyariahVaViewController ()
 
@@ -22,7 +23,16 @@
     [super viewDidLoad];
     [SVProgressHUD show];
     
-    self.mandiriVaParams = [[MandiriVaParams alloc] initWithText:@"MCH-1103200003" amount:@"10000" invoiceNumber:@"DEMOSDK-89234457892" reusableStatus:@"false" expiredTime:@"60" info1:@"" info2:@"" info3:@"" email:@"demosdk@doku.com" name:@"demosdk" checkSum:@"9fe57a03b5321c5b76c9e2efc65eff6c8e0a5fceea0e5de42a19aa1f4169e0a4"];
+    self.mandiriVaParams = [[MandiriVaParams alloc] initWithText:@"MCH-1103200003"
+                                                          amount:@"10000"
+                                                   invoiceNumber:@"DEMOSDK-89234457892"
+                                                  reusableStatus:@"false" expiredTime:@"60"
+                                                           info1:@""
+                                                           info2:@""
+                                                           info3:@""
+                                                           email:@"demosdk@doku.com"
+                                                            name:@"demosdk"
+                                                        checkSum:@"9fe57a03b5321c5b76c9e2efc65eff6c8e0a5fceea0e5de42a19aa1f4169e0a4"];
     
     [self.presenter getPaymentCode: self.mandiriVaParams];
 
@@ -40,7 +50,8 @@
 
 - (void)showError:(NSString *)response {
     [SVProgressHUD dismiss];
-    NSLog(@"Mandiri Syariah Va error response : %@", response);
+    UIAlertController *alertControl = [DokuPayUtils alertView:response withTitle:@"Info"];
+    [self presentViewController:alertControl animated:YES completion:nil];
 }
 
 @end

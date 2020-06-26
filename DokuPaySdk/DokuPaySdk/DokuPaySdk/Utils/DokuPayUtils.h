@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(UIImage*)getIcon:(NSString*)channelCode;
 
++(UIAlertController*)alertView:(NSString *)message withTitle:(NSString *)title;
+
 
 @end
 

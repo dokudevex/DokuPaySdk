@@ -24,7 +24,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString *isProduction;
 @property (nonatomic) NSString *merchantName;
 
-- (instancetype)initWithData:(NSString *)data amount:(NSString *)amount channelId:(NSString *)channelId isProduction:(NSString *)isProduction merchantName:(NSString *)merchantName;
+- (instancetype)initWithData:(NSString *)data
+                      amount:(NSString *)amount
+                   channelId:(NSString *)channelId
+                isProduction:(NSString *)isProduction
+                merchantName:(NSString *)merchantName;
 
 @end
 

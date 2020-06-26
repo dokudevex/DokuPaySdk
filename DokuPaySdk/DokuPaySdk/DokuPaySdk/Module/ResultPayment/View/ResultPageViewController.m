@@ -73,7 +73,6 @@ static int const kHeaderSectionTag = 6900;
     if (self.sectionNames.count) {
         return [self.sectionNames objectAtIndex:section];
     }
-    
     return @"";
 }
 
@@ -190,7 +189,8 @@ static int const kHeaderSectionTag = 6900;
 }
 
 - (void)showError:(NSString *)response {
-    NSLog(@"Result Page error response : %@", response);
+    UIAlertController *alertControl = [DokuPayUtils alertView:response withTitle:@"Info"];
+    [self presentViewController:alertControl animated:YES completion:nil];
 }
 
 - (void)showResponse:(NSString *)item {

@@ -11,7 +11,11 @@
 
 @implementation MandiriVaResponse
 
-- (instancetype)initWithData:(NSString *)data amount:(NSString *)amount channelId:(NSString *)channelId isProduction:(NSString *)isProduction merchantName:(NSString *)merchantName {
+- (instancetype)initWithData:(NSString *)data
+                      amount:(NSString *)amount
+                   channelId:(NSString *)channelId
+                isProduction:(NSString *)isProduction
+                merchantName:(NSString *)merchantName {
     
     if (self = [super init]) {
         NSData *nsData = [data dataUsingEncoding:NSUTF8StringEncoding];

@@ -75,4 +75,25 @@
     return image;
 }
 
++(UIAlertController*)alertView:(NSString *)message withTitle:(NSString *)title
+{
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:title
+                                          message:message
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction
+                               actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *action)
+                               {
+                                   [alertController dismissViewControllerAnimated:YES completion:nil];
+                               }];
+    
+    
+    [alertController addAction:okAction];
+    
+    return alertController;
+}
+
 @end

@@ -24,7 +24,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *checkSum;
 
-- (instancetype)initWithText:(NSString *)clientId amount:(NSString *)amount invoiceNumber:(NSString *)invoiceNumber reusableStatus:(NSString *)reusableStatus expiredTime:(NSString *)expiredTime info1:(NSString *)info1 info2:(NSString *)info2 info3:(NSString *)info3 email:(NSString *)email name:(NSString *)name checkSum:(NSString *)checkSum;
+- (instancetype)initWithText:(NSString *)clientId
+                      amount:(NSString *)amount
+               invoiceNumber:(NSString *)invoiceNumber
+              reusableStatus:(NSString *)reusableStatus
+                 expiredTime:(NSString *)expiredTime
+                       info1:(NSString *)info1
+                       info2:(NSString *)info2
+                       info3:(NSString *)info3
+                       email:(NSString *)email
+                        name:(NSString *)name
+                    checkSum:(NSString *)checkSum;
 
 @end
 
