@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MandiriVaParams : NSObject
 
 @property (nonatomic) NSString *clientId;
+@property (nonatomic) NSString *merchantName;
+@property (nonatomic) NSString *isProduction;
+@property (nonatomic) NSString *channelId;
 @property (nonatomic) NSString *amount;
 @property (nonatomic) NSString *invoiceNumber;
 @property (nonatomic) NSString *reusableStatus;
@@ -25,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString *checkSum;
 
 - (instancetype)initWithText:(NSString *)clientId
+                merchantName:(NSString *)merchantName
+                   channelId:(NSString *)channelId
+                isProduction:(NSString *)isProduction
                       amount:(NSString *)amount
                invoiceNumber:(NSString *)invoiceNumber
               reusableStatus:(NSString *)reusableStatus

@@ -15,12 +15,14 @@
 - (instancetype)initWithInterface:(id<ToDoMandiriSyariahVaViewProtocol>)interface
                        interactor:(id<ToDoMandiriSyariahVaInteractorInputProtocol>)interactor
                            router:(id<ToDoMandiriSyariahVaWireframeProtocol>)router
+                             data:(MandiriVaParams *)data;
 {
     if (self = [super init])
     {
         self.view = interface;
         self.interactor = interactor;
         self.router = router;
+        self.mandiriVaParams = data;
         [self.interactor setOutput:self];
     }
     return self;
@@ -47,5 +49,10 @@
 - (void)gotoResultPage:(MandiriVaResponse *)responseData {
     [self.router gotoResultPage: responseData];
 }
+
+- (void)initData {
+    [self.view initData: self.mandiriVaParams];
+}
+
 
 @end

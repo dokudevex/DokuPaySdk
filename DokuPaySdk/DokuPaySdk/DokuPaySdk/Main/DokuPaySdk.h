@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, ChannelCode) {
 @property (strong, nonatomic) UIWindow * _Nonnull window;
 
 - (void) connectVa:(int)paymentChannel
+          clientId:(NSString *_Nonnull)clientId
       merchantName:(NSString *_Nonnull)merchantName
      customerEmail:(NSString *_Nonnull)customerEmail
       customerName:(NSString *_Nonnull)customerName

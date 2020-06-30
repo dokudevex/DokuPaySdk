@@ -8,16 +8,20 @@
 
 #import "ViewController.h"
 #import <DokuPaySdk/DokuPaySdk.h>
-#import "SettingPageViewViewController.h"
+#import "SettingPageViewController.h"
+#import <ActionSheetPicker.h>
+#import "DokuUtils.h"
+#import "DokuConstants.h"
 
 static int const kHeaderSectionTag = 6900;
 
-@interface ViewController ()
+@interface ViewController () 
 
 @property (assign) NSInteger expandedSectionHeaderNumber;
 @property (assign) UITableViewHeaderFooterView *expandedSectionHeader;
 @property (strong) NSArray *sectionItems;
 @property (strong) NSArray *sectionNames;
+@property (strong, nonatomic) SettingPageViewController *settingPageViewController;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewAccordion;
 
 @end
@@ -26,6 +30,9 @@ static int const kHeaderSectionTag = 6900;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *getMerchantName = [DokuUtils getValueFromNSUserDefaultForKey:merchantName];
+    self.title = getMerchantName;
+    
     self.sectionNames = @[ @"Credit Card", @"E-Money", @"Transfer Virtual Account", @"Convenience Store", @"Internet Banking", @"Personal Financing" ];
     self.sectionItems = @[ @[@""],
                            @[@""],
@@ -34,11 +41,25 @@ static int const kHeaderSectionTag = 6900;
                            @[@""],
                            @[@""]
                          ];
-    // configure the tableview
+    
     self.tableViewAccordion.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableViewAccordion.rowHeight = UITableViewAutomaticDimension;
     self.tableViewAccordion.estimatedRowHeight = 100;
     self.expandedSectionHeaderNumber = -1;
+}
+
+- (void)SubmitTapped:(id)sender {
+    NSString *dataClientId = self.settingPageViewController.textFieldClientId.text;
+    NSString *dataMerchantName = self.settingPageViewController.textFieldMerchantName.text;
+    NSString *dataSharedKey = self.settingPageViewController.textFieldSharedkey.text;
+    NSString *dataEnvironmentServer = self.settingPageViewController.textFieldEnvironmentServer.text;
+    NSString *dataActivePageResult = self.settingPageViewController.textFieldActiveResultPage.text;
+    
+    [DokuUtils saveValueAtNSUserDefault:dataClientId forKey:clientId];
+    [DokuUtils saveValueAtNSUserDefault:dataMerchantName forKey:merchantName];
+    [DokuUtils saveValueAtNSUserDefault:dataSharedKey forKey:sharedKey];
+    [DokuUtils saveValueAtNSUserDefault:dataEnvironmentServer forKey:environmentServer];
+    [DokuUtils saveValueAtNSUserDefault:dataActivePageResult forKey:activePageResult];
 }
 
  -(void)viewWillAppear:(BOOL)animated
@@ -50,10 +71,9 @@ static int const kHeaderSectionTag = 6900;
 
 - (IBAction)ActionSet
 {
-    SettingPageViewViewController *popViewController = [[SettingPageViewViewController alloc]
-                                             initWithNibName:@"SettingPageViewViewController" bundle: [NSBundle bundleForClass: SettingPageViewViewController.class]];
-    [popViewController setTitle:@"This is a popup view"];
-    [popViewController showInView: self.view animated:YES];
+    self.settingPageViewController = [[SettingPageViewController alloc] init];
+    [self.settingPageViewController.buttonSubmit addTarget:self action:@selector(SubmitTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.settingPageViewController show];
 }
 
 #pragma mark - Table view data source
@@ -141,18 +161,50 @@ static int const kHeaderSectionTag = 6900;
         self.channelCode = MandiriSyariahVa;
     }
     
+    NSString *getClientId = [DokuUtils getValueFromNSUserDefaultForKey:clientId];
+    NSString *getMerchantName = [DokuUtils getValueFromNSUserDefaultForKey:merchantName];
+    NSString *getSharedKey = [DokuUtils getValueFromNSUserDefaultForKey:sharedKey];
+    
+    
+    NSString *getEnvironmentServer = [DokuUtils getValueFromNSUserDefaultForKey:environmentServer];
+    NSString * getValueEnvironmentServer;
+    if ([getEnvironmentServer isEqualToString: @"SandBox"]) {
+        getValueEnvironmentServer = @"no";
+    } else if ([getEnvironmentServer isEqualToString: @"Production"]) {
+        getValueEnvironmentServer = @"yes";
+    }
+    
+    NSString *getActivePageResult = [DokuUtils getValueFromNSUserDefaultForKey:activePageResult];
+    NSString * getValueActivePageResult;
+    if ([getActivePageResult isEqualToString: @"YES"]) {
+        getValueActivePageResult = @"yes";
+    } else if ([getActivePageResult isEqualToString: @"NO"]) {
+        getValueActivePageResult = @"no";
+    }
+    
+    NSString * email = @"demosdk@doku.com";
+    NSString * name = @"demosdk";
+    NSString * amount = @"10000";
+    NSString * expiredTime = @"60";
+    NSString * reusableStatus = @"false";
+    NSString * invoiceNumber = [NSString stringWithFormat:@"%@%@",@"DEMOSDK-", [DokuUtils getRandomInvoiceNumbertring:10]];
+    NSString * dataWords = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@", getClientId, email, name, amount, invoiceNumber, expiredTime, reusableStatus, getSharedKey];
+    
+    NSString * Words = [DokuUtils sha256HashFor: dataWords];
+    
     DokuPaySdk *doku = [DokuPaySdk sharedInstance];
     [doku connectVa:(int) self.channelCode
-       merchantName:@"Toko Pak Edi"
-      customerEmail:@"demosdk@doku.com"
-       customerName:@"demosdk"
-         dataAmount:@"10000"
-          dataWords:@""
-        expiredTime:@"60"
-      invoiceNumber:@""
-       isProduction:@""
-     reusableStatus:@"false"
-      usePageResult:@""];
+           clientId: getClientId
+       merchantName: getMerchantName
+      customerEmail: email
+       customerName: name
+         dataAmount: amount
+          dataWords: Words
+        expiredTime: expiredTime
+      invoiceNumber: invoiceNumber
+       isProduction: getValueEnvironmentServer
+     reusableStatus: reusableStatus
+      usePageResult: getValueActivePageResult];
 }
 
 - (void)updateTableViewRowDisplay:(NSArray *)arrayOfIndexPaths {

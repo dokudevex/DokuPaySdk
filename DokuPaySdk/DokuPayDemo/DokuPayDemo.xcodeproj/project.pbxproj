@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A47466C50E5CAE978328FE85 /* libPods-DokuPayDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC94A8E6FB1F5375514D21E8 /* libPods-DokuPayDemo.a */; };
 		C3366EB724938FAF0040C86C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EB624938FAF0040C86C /* AppDelegate.m */; };
 		C3366EBD24938FAF0040C86C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EBC24938FAF0040C86C /* ViewController.m */; };
 		C3366EC024938FAF0040C86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3366EBE24938FAF0040C86C /* Main.storyboard */; };
@@ -17,9 +18,16 @@
 		C3366EDD24938FB20040C86C /* DokuPayDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EDC24938FB20040C86C /* DokuPayDemoUITests.m */; };
 		C3366F03249391550040C86C /* DokuPaySdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3366F02249391550040C86C /* DokuPaySdk.framework */; };
 		C3366F04249391550040C86C /* DokuPaySdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3366F02249391550040C86C /* DokuPaySdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C33D668324A5FC3D00FF776A /* SettingPageViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D668124A5FC3D00FF776A /* SettingPageViewViewController.m */; };
-		C33D668424A5FC3D00FF776A /* SettingPageViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33D668224A5FC3D00FF776A /* SettingPageViewViewController.xib */; };
-		C3691ABD24A5140A00AC1DE5 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C3691ABC24A5140A00AC1DE5 /* Utils.m */; };
+		C33D668324A5FC3D00FF776A /* SettingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D668124A5FC3D00FF776A /* SettingPageViewController.m */; };
+		C33D668424A5FC3D00FF776A /* SettingPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33D668224A5FC3D00FF776A /* SettingPageViewController.xib */; };
+		C3631EA624AA87A00021A36C /* DokuConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C3631EA524AA87A00021A36C /* DokuConstants.m */; };
+		C3691ABD24A5140A00AC1DE5 /* DokuUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C3691ABC24A5140A00AC1DE5 /* DokuUtils.m */; };
+		C3DB301824A9C67100992C32 /* DokuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301224A9C67000992C32 /* DokuView.m */; };
+		C3DB301924A9C67100992C32 /* DokuLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301424A9C67000992C32 /* DokuLabel.m */; };
+		C3DB301A24A9C67100992C32 /* DokuTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301624A9C67100992C32 /* DokuTextField.m */; };
+		C3DB301F24A9C6D500992C32 /* UIColor+DokuColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301B24A9C6D400992C32 /* UIColor+DokuColor.m */; };
+		C3DB302024A9C6D500992C32 /* UIFont+DokuFont.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301C24A9C6D400992C32 /* UIFont+DokuFont.m */; };
+		C3DB302824A9D52600992C32 /* DokuAlertButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB302724A9D52600992C32 /* DokuAlertButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		338B8795F6804AA5A5915458 /* Pods-DokuPayDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokuPayDemo.release.xcconfig"; path = "Target Support Files/Pods-DokuPayDemo/Pods-DokuPayDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C081C4D2AB786719A041CD5D /* Pods-DokuPayDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokuPayDemo.debug.xcconfig"; path = "Target Support Files/Pods-DokuPayDemo/Pods-DokuPayDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C3366EB224938FAF0040C86C /* DokuPayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DokuPayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3366EB524938FAF0040C86C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C3366EB624938FAF0040C86C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,13 +81,28 @@
 		C3366EDC24938FB20040C86C /* DokuPayDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuPayDemoUITests.m; sourceTree = "<group>"; };
 		C3366EDE24938FB20040C86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3366F02249391550040C86C /* DokuPaySdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DokuPaySdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C33D668024A5FC3D00FF776A /* SettingPageViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingPageViewViewController.h; sourceTree = "<group>"; };
-		C33D668124A5FC3D00FF776A /* SettingPageViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingPageViewViewController.m; sourceTree = "<group>"; };
-		C33D668224A5FC3D00FF776A /* SettingPageViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingPageViewViewController.xib; sourceTree = "<group>"; };
-		C3691ABB24A5140A00AC1DE5 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		C3691ABC24A5140A00AC1DE5 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		C33D668024A5FC3D00FF776A /* SettingPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingPageViewController.h; sourceTree = "<group>"; };
+		C33D668124A5FC3D00FF776A /* SettingPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingPageViewController.m; sourceTree = "<group>"; };
+		C33D668224A5FC3D00FF776A /* SettingPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingPageViewController.xib; sourceTree = "<group>"; };
+		C3631EA424AA87A00021A36C /* DokuConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DokuConstants.h; sourceTree = "<group>"; };
+		C3631EA524AA87A00021A36C /* DokuConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuConstants.m; sourceTree = "<group>"; };
+		C3691ABB24A5140A00AC1DE5 /* DokuUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DokuUtils.h; sourceTree = "<group>"; };
+		C3691ABC24A5140A00AC1DE5 /* DokuUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuUtils.m; sourceTree = "<group>"; };
 		C3691ABE24A516EA00AC1DE5 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		C3691ABF24A516FB00AC1DE5 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
+		C3DB301224A9C67000992C32 /* DokuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DokuView.m; sourceTree = "<group>"; };
+		C3DB301324A9C67000992C32 /* DokuLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DokuLabel.h; sourceTree = "<group>"; };
+		C3DB301424A9C67000992C32 /* DokuLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DokuLabel.m; sourceTree = "<group>"; };
+		C3DB301524A9C67100992C32 /* DokuTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DokuTextField.h; sourceTree = "<group>"; };
+		C3DB301624A9C67100992C32 /* DokuTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DokuTextField.m; sourceTree = "<group>"; };
+		C3DB301724A9C67100992C32 /* DokuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DokuView.h; sourceTree = "<group>"; };
+		C3DB301B24A9C6D400992C32 /* UIColor+DokuColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DokuColor.m"; sourceTree = "<group>"; };
+		C3DB301C24A9C6D400992C32 /* UIFont+DokuFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+DokuFont.m"; sourceTree = "<group>"; };
+		C3DB301D24A9C6D400992C32 /* UIColor+DokuColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DokuColor.h"; sourceTree = "<group>"; };
+		C3DB301E24A9C6D500992C32 /* UIFont+DokuFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+DokuFont.h"; sourceTree = "<group>"; };
+		C3DB302624A9D52600992C32 /* DokuAlertButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DokuAlertButton.h; sourceTree = "<group>"; };
+		C3DB302724A9D52600992C32 /* DokuAlertButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DokuAlertButton.m; sourceTree = "<group>"; };
+		CC94A8E6FB1F5375514D21E8 /* libPods-DokuPayDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DokuPayDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3366F03249391550040C86C /* DokuPaySdk.framework in Frameworks */,
+				A47466C50E5CAE978328FE85 /* libPods-DokuPayDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +132,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C0F00E5256100CE5E00EDB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C081C4D2AB786719A041CD5D /* Pods-DokuPayDemo.debug.xcconfig */,
+				338B8795F6804AA5A5915458 /* Pods-DokuPayDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		C3366EA924938FAF0040C86C = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +150,7 @@
 				C3366EDB24938FB20040C86C /* DokuPayDemoUITests */,
 				C3366EB324938FAF0040C86C /* Products */,
 				C3366EF92493912B0040C86C /* Frameworks */,
+				5C0F00E5256100CE5E00EDB2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,17 +167,12 @@
 		C3366EB424938FAF0040C86C /* DokuPayDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C3631EA324AA87710021A36C /* Constants */,
+				C3DB302B24A9E4F100992C32 /* Extension */,
+				C3DB302A24A9E49400992C32 /* Main */,
+				C3DB302924A9E48800992C32 /* Resources */,
 				C361463524A59AD700FD64BF /* Views */,
 				C3691ABA24A513F300AC1DE5 /* Utils */,
-				C3366EB524938FAF0040C86C /* AppDelegate.h */,
-				C3366EB624938FAF0040C86C /* AppDelegate.m */,
-				C3366EBB24938FAF0040C86C /* ViewController.h */,
-				C3366EBC24938FAF0040C86C /* ViewController.m */,
-				C3366EBE24938FAF0040C86C /* Main.storyboard */,
-				C3366EC124938FB20040C86C /* Assets.xcassets */,
-				C3366EC324938FB20040C86C /* LaunchScreen.storyboard */,
-				C3366EC624938FB20040C86C /* Info.plist */,
-				C3366EC724938FB20040C86C /* main.m */,
 			);
 			path = DokuPayDemo;
 			sourceTree = "<group>";
@@ -169,6 +201,7 @@
 				C3691ABF24A516FB00AC1DE5 /* libicucore.A.tbd */,
 				C3691ABE24A516EA00AC1DE5 /* libicucore.tbd */,
 				C3366F02249391550040C86C /* DokuPaySdk.framework */,
+				CC94A8E6FB1F5375514D21E8 /* libPods-DokuPayDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -176,20 +209,71 @@
 		C361463524A59AD700FD64BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C33D668024A5FC3D00FF776A /* SettingPageViewViewController.h */,
-				C33D668124A5FC3D00FF776A /* SettingPageViewViewController.m */,
-				C33D668224A5FC3D00FF776A /* SettingPageViewViewController.xib */,
+				C33D668024A5FC3D00FF776A /* SettingPageViewController.h */,
+				C33D668124A5FC3D00FF776A /* SettingPageViewController.m */,
+				C33D668224A5FC3D00FF776A /* SettingPageViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C3631EA324AA87710021A36C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C3631EA424AA87A00021A36C /* DokuConstants.h */,
+				C3631EA524AA87A00021A36C /* DokuConstants.m */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		C3691ABA24A513F300AC1DE5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C3691ABB24A5140A00AC1DE5 /* Utils.h */,
-				C3691ABC24A5140A00AC1DE5 /* Utils.m */,
+				C3691ABB24A5140A00AC1DE5 /* DokuUtils.h */,
+				C3691ABC24A5140A00AC1DE5 /* DokuUtils.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C3DB302924A9E48800992C32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3366EB524938FAF0040C86C /* AppDelegate.h */,
+				C3366EB624938FAF0040C86C /* AppDelegate.m */,
+				C3366EC124938FB20040C86C /* Assets.xcassets */,
+				C3366EC624938FB20040C86C /* Info.plist */,
+				C3366EC724938FB20040C86C /* main.m */,
+				C3366EC324938FB20040C86C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C3DB302A24A9E49400992C32 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C3366EBB24938FAF0040C86C /* ViewController.h */,
+				C3366EBC24938FAF0040C86C /* ViewController.m */,
+				C3366EBE24938FAF0040C86C /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C3DB302B24A9E4F100992C32 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C3DB302624A9D52600992C32 /* DokuAlertButton.h */,
+				C3DB302724A9D52600992C32 /* DokuAlertButton.m */,
+				C3DB301D24A9C6D400992C32 /* UIColor+DokuColor.h */,
+				C3DB301B24A9C6D400992C32 /* UIColor+DokuColor.m */,
+				C3DB301E24A9C6D500992C32 /* UIFont+DokuFont.h */,
+				C3DB301C24A9C6D400992C32 /* UIFont+DokuFont.m */,
+				C3DB301324A9C67000992C32 /* DokuLabel.h */,
+				C3DB301424A9C67000992C32 /* DokuLabel.m */,
+				C3DB301524A9C67100992C32 /* DokuTextField.h */,
+				C3DB301624A9C67100992C32 /* DokuTextField.m */,
+				C3DB301724A9C67100992C32 /* DokuView.h */,
+				C3DB301224A9C67000992C32 /* DokuView.m */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +283,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3366EE124938FB20040C86C /* Build configuration list for PBXNativeTarget "DokuPayDemo" */;
 			buildPhases = (
+				6EA0644EE9F29EFF47FEE7AB /* [CP] Check Pods Manifest.lock */,
 				C3366EAE24938FAF0040C86C /* Sources */,
 				C3366EAF24938FAF0040C86C /* Frameworks */,
 				C3366EB024938FAF0040C86C /* Resources */,
@@ -297,7 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3366EC524938FB20040C86C /* LaunchScreen.storyboard in Resources */,
-				C33D668424A5FC3D00FF776A /* SettingPageViewViewController.xib in Resources */,
+				C33D668424A5FC3D00FF776A /* SettingPageViewController.xib in Resources */,
 				C3366EC224938FB20040C86C /* Assets.xcassets in Resources */,
 				C3366EC024938FAF0040C86C /* Main.storyboard in Resources */,
 			);
@@ -319,16 +404,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6EA0644EE9F29EFF47FEE7AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DokuPayDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C3366EAE24938FAF0040C86C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DB301F24A9C6D500992C32 /* UIColor+DokuColor.m in Sources */,
+				C3DB301924A9C67100992C32 /* DokuLabel.m in Sources */,
+				C3DB302824A9D52600992C32 /* DokuAlertButton.m in Sources */,
 				C3366EBD24938FAF0040C86C /* ViewController.m in Sources */,
-				C33D668324A5FC3D00FF776A /* SettingPageViewViewController.m in Sources */,
+				C33D668324A5FC3D00FF776A /* SettingPageViewController.m in Sources */,
+				C3DB302024A9C6D500992C32 /* UIFont+DokuFont.m in Sources */,
+				C3631EA624AA87A00021A36C /* DokuConstants.m in Sources */,
 				C3366EB724938FAF0040C86C /* AppDelegate.m in Sources */,
+				C3DB301824A9C67100992C32 /* DokuView.m in Sources */,
 				C3366EC824938FB20040C86C /* main.m in Sources */,
-				C3691ABD24A5140A00AC1DE5 /* Utils.m in Sources */,
+				C3DB301A24A9C67100992C32 /* DokuTextField.m in Sources */,
+				C3691ABD24A5140A00AC1DE5 /* DokuUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,10 +612,12 @@
 		};
 		C3366EE224938FB20040C86C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C081C4D2AB786719A041CD5D /* Pods-DokuPayDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DokuPayDemo/Info.plist;
+				INFOPLIST_FILE = DokuPayDemo/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -511,10 +630,12 @@
 		};
 		C3366EE324938FB20040C86C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338B8795F6804AA5A5915458 /* Pods-DokuPayDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DokuPayDemo/Info.plist;
+				INFOPLIST_FILE = DokuPayDemo/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) MandiriVaViewController *viewController;
 
-+ (UIViewController *)createModule;
++ (UIViewController *)createModule: (MandiriVaParams *)data;
 
 @end
 

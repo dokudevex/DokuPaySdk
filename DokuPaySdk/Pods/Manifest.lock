@@ -1,0 +1,24 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.5.0)
+  - JVFloatLabeledTextField (1.2.2)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 2.5.0)
+  - JVFloatLabeledTextField (~> 1.2.2)
+  - Masonry (~> 1.1.0)
+
+SPEC REPOS:
+  trunk:
+    - ActionSheetPicker-3.0
+    - JVFloatLabeledTextField
+    - Masonry
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 6d79f6f3b98e2b21d218dd65a39f634ff37a27e5
+  JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 0e658b195546cdffc75d71aa662aa2d8931bca3e
+
+COCOAPODS: 1.9.3

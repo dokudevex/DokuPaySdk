@@ -15,8 +15,7 @@
 
 @implementation MandiriSyariahVaRouter
 
-+ (UIViewController *)createModule
-{
++ (UIViewController *)createModule: (MandiriVaParams *)data {
     UIStoryboard *mandiriSyariahVaStoryboard = [UIStoryboard storyboardWithName:@"MandiriSyariahStoryboard" bundle:[NSBundle bundleForClass: MandiriSyariahVaViewController.class]];
     MandiriSyariahVaViewController *viewController = [mandiriSyariahVaStoryboard instantiateViewControllerWithIdentifier:@"MandiriSyariahVaViewController"];
     
@@ -24,7 +23,7 @@
     
     MandiriSyariahVaRouter *router = [[MandiriSyariahVaRouter alloc] init];
     
-    MandiriSyariahVaPresenter *presenter = [[MandiriSyariahVaPresenter alloc] initWithInterface:viewController interactor:interactor router:router];
+    MandiriSyariahVaPresenter *presenter = [[MandiriSyariahVaPresenter alloc] initWithInterface:viewController interactor:interactor router:router data: data];
     viewController.presenter = presenter;
     router.viewController = viewController;
     return viewController;

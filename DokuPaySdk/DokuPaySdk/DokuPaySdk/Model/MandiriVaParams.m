@@ -11,6 +11,9 @@
 @implementation MandiriVaParams
 
 - (instancetype)initWithText:(NSString *)clientId
+                merchantName:(NSString *)merchantName
+                   channelId:(NSString *)channelId
+                isProduction:(NSString *)isProduction
                       amount:(NSString *)amount
                invoiceNumber:(NSString *)invoiceNumber
               reusableStatus:(NSString *)reusableStatus
@@ -25,6 +28,9 @@
     if (self = [super init])
     {
         self.clientId = clientId;
+        self.merchantName = merchantName;
+        self.channelId = channelId;
+        self.isProduction = isProduction;
         self.amount = amount;
         self.invoiceNumber = invoiceNumber;
         self.reusableStatus = reusableStatus;

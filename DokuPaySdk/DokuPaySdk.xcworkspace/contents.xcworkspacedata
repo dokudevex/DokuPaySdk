@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:DokuPaySdk/DokuPaySdk.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DokuPayDemo/DokuPayDemo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DokuPaySdk/DokuPaySdk.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

@@ -24,6 +24,8 @@
 
 - (void)gotoResultPage:(MandiriVaResponse *)responseData;
 
+- (void)initData;
+
 @end
 
 #pragma mark - InteractorProtocol
@@ -52,5 +54,7 @@
 - (void)showResponse:(NSString *)item;
 
 - (void)showError:(NSString *)response;
+
+- (void)initData:(MandiriVaParams *)data;
 
 @end

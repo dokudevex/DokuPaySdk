@@ -19,9 +19,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithInterface:(id<ToDoMandiriSyariahVaViewProtocol>)interface
                        interactor:(id<ToDoMandiriSyariahVaInteractorInputProtocol>)interactor
-                           router:(id<ToDoMandiriSyariahVaWireframeProtocol>)router;
+                           router:(id<ToDoMandiriSyariahVaWireframeProtocol>)router
+                             data:(MandiriVaParams *)data;
 
 - (void)getPaymentCode:(MandiriVaParams *)item;
+
+@property (nonatomic, nullable) MandiriVaParams *mandiriVaParams;
 
 @end
 

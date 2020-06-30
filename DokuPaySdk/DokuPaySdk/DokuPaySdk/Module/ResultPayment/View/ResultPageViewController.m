@@ -21,6 +21,7 @@ static int const kHeaderSectionTag = 6900;
 @property (weak, nonatomic) IBOutlet UILabel *labelViewVaChannel;
 @property (weak, nonatomic) IBOutlet UILabel *labelViewVaNumber;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewLogoChannel;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewTitle;
 @property (assign) NSInteger expandedSectionHeaderNumber;
 @property (assign) UITableViewHeaderFooterView *expandedSectionHeader;
 @property (strong) NSArray *sectionItems;
@@ -217,6 +218,8 @@ static int const kHeaderSectionTag = 6900;
         [self.imageViewLogoChannel setImage: [DokuPayUtils getIcon: data.channelId]];
         [self.labelViewVaChannel setText:@"Mandiri Syariah"];
     }
+    
+    [self.labelViewTitle setText: data.merchantName];
     [self.labelViewOrder setText: data.invoiceNumber];
     [self.labelViewAmount setText: data.amount];
     [self.labelViewVaNumber setText: data.vaNumber];
