@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DokuView : UIView
+@interface DokuView: UIView
 
 @end

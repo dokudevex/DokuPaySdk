@@ -12,21 +12,20 @@
 
 @implementation MandiriVaInteractor
 
-- (void)setOutput:(id<ToDoMandiriVaInteractorOutputProtocol>)output
-{
+- (void)setOutput: (id<ToDoMandiriVaInteractorOutputProtocol>)output {
     _output = output;
 }
 
-- (id<ToDoMandiriVaInteractorOutputProtocol>)getOutputProtocol
-{
+- (id<ToDoMandiriVaInteractorOutputProtocol>)getOutputProtocol {
     return self.output;
 }
 
-- (void)getPaymentCode:(MandiriVaParams *)item
-{
-    [ApiMandiriVa getPaymentCode:item ifSucceed:^(NSString *response) {
+- (void)getPaymentCode:(MandiriVaParams *)item url:(NSString *)url {
+    [ApiMandiriVa getPaymentCode: item
+                             url: (NSString *) url
+                       ifSucceed: ^(NSString *response) {
         [self.output successResponse: response];
-    } ifFailed:^(NSError *error) {
+    } ifFailed: ^(NSError *error) {
         [self.output errorResponse: error.localizedDescription];
     }];
 }

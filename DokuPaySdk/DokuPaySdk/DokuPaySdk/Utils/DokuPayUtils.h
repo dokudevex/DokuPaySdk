@@ -12,19 +12,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DokuPayUtils : NSObject
+@interface DokuPayUtils: NSObject
 
-+(NSMutableDictionary*)createMandiriParams:(MandiriVaParams*)params;
++(NSMutableDictionary*)createMandiriParams: (MandiriVaParams*)params;
 
 +(NSData *)nsStringToNsData:(NSString *)data;
 
-+(NSData *)nsMutableDictionayToNsData:(NSMutableDictionary *)data;
++(NSData *)nsMutableDictionayToNsData: (NSMutableDictionary *)data;
 
-+(NSDictionary *)nsDataToDictionary:(NSData *)data;
++(NSDictionary *)nsDataToDictionary: (NSData *)data;
 
-+(UIImage*)getIcon:(NSString*)channelCode;
++(UIImage*)getIcon: (NSString*)channelCode;
 
-+(UIAlertController*)alertView:(NSString *)message withTitle:(NSString *)title;
++(UIAlertController*)alertView: (NSString *)message
+                     withTitle: (NSString *)title;
 
 
 @end

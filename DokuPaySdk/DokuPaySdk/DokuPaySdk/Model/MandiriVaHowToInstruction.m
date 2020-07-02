@@ -15,7 +15,9 @@
     if (self = [super init]) {
         NSError *error;
         NSData *nsData = [data dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:nsData options:kNilOptions error:&error];
+        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData: nsData
+                                                                 options: kNilOptions
+                                                                   error: &error];
         NSArray *fetchedData = [jsonData objectForKey:@"payment_instruction"];
         self.howToPay = fetchedData;
     }

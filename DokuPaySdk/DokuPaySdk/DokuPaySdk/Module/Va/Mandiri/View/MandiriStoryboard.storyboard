@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,8 +22,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsE-e2-CLd">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mandiri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYK-Ve-ky4">
-                                                <rect key="frame" x="178.5" y="398.5" width="57" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Wait" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYK-Ve-ky4">
+                                                <rect key="frame" x="162.5" y="398.5" width="89" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -44,8 +45,6 @@
                                     <constraint firstItem="KsE-e2-CLd" firstAttribute="width" secondItem="IJ6-Jk-ugf" secondAttribute="width" id="seg-bx-BSf"/>
                                     <constraint firstItem="KsE-e2-CLd" firstAttribute="top" secondItem="IJ6-Jk-ugf" secondAttribute="top" id="yk0-ok-eTM"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="2Wt-NE-isn"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="yxb-6K-TmH"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -58,6 +57,9 @@
                         <viewLayoutGuide key="safeArea" id="SBF-by-Q28"/>
                     </view>
                     <navigationItem key="navigationItem" id="aHQ-24-LCN"/>
+                    <connections>
+                        <outlet property="labelViewInfo" destination="mYK-Ve-ky4" id="FmG-M4-vYX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2u-Vb-VAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

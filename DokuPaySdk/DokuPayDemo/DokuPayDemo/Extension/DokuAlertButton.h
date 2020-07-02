@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DokuAlertButton : UIButton
+@interface DokuAlertButton: UIButton
 
 @end

@@ -8,6 +8,7 @@
 
 #import "APIManager.h"
 #import <APIConstant.h>
+#import <AFNetworkActivityLogger.h>
 
 @implementation APIManager
 
@@ -16,10 +17,13 @@
     static dispatch_once_t onceToken;
 
     dispatch_once(&onceToken, ^{
-        sharedManagerSingleton = [[APIManager alloc] initWithBaseURL:[NSURL URLWithString:ApiBaseUrl]];
-        [sharedManagerSingleton.requestSerializer setValue:@"Lang" forHTTPHeaderField:@"Accept-Language"];
-        sharedManagerSingleton.requestSerializer.timeoutInterval = 60 * 2; //2 menit
+        sharedManagerSingleton = [[APIManager alloc] initWithBaseURL: [NSURL URLWithString: ApiBaseUrlSandbox]];
+        [sharedManagerSingleton.requestSerializer setValue: @"Lang"
+                                        forHTTPHeaderField: @"Accept-Language"];
+        sharedManagerSingleton.requestSerializer.timeoutInterval = 60 * 1; //1 menit
     });
+    
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
 
     return sharedManagerSingleton;
 }

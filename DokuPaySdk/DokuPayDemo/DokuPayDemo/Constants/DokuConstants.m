@@ -8,9 +8,9 @@
 
 #import "DokuConstants.h"
 
-NSString* const merchantName = @"MERCHANT_NAME";
-NSString* const clientId = @"CLIENT_ID";
-NSString* const sharedKey = @"SHARED_KEY";
-NSString* const environmentServer = @"ENVIRONMENT_SERVER";
-NSString* const activePageResult = @"ACTIVE_PAGE_RESULT";
+NSString *const merchantName = @"MERCHANT_NAME";
+NSString *const clientId = @"CLIENT_ID";
+NSString *const sharedKey = @"SHARED_KEY";
+NSString *const environmentServer = @"ENVIRONMENT_SERVER";
+NSString *const activePageResult = @"ACTIVE_PAGE_RESULT";
 

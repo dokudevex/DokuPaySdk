@@ -14,7 +14,7 @@
 
 @protocol ToDoMandiriVaWireframeProtocol <NSObject>
 
-- (void)gotoResultPage:(MandiriVaResponse *)responseData;
+- (void)gotoResultPage: (MandiriVaResponse *)responseData;
 
 @end
 
@@ -22,7 +22,7 @@
 
 @protocol ToDoMandiriVaPresenterProtocol <NSObject>
 
-- (void)gotoResultPage:(MandiriVaResponse *)responseData;
+- (void)gotoResultPage: (MandiriVaResponse *)responseData;
 
 - (void)initData;
 
@@ -32,18 +32,20 @@
 
 @protocol ToDoMandiriVaInteractorOutputProtocol <NSObject>
 
-- (void)successResponse:(NSString *)item;
+- (void)successResponse: (NSString *)item;
 
-- (void)errorResponse:(NSString *)item;
+- (void)errorResponse: (NSString *)item;
 
 @end
 
 @protocol ToDoMandiriVaInteractorInputProtocol <NSObject>
 
-- (void)setOutput:(id<ToDoMandiriVaInteractorOutputProtocol>)output;
+- (void)setOutput: (id<ToDoMandiriVaInteractorOutputProtocol>)output;
+
 - (id<ToDoMandiriVaInteractorOutputProtocol>)getOutputProtocol;
 
-- (void)getPaymentCode:(MandiriVaParams *)item;
+- (void)getPaymentCode: (MandiriVaParams *)item
+                   url: (NSString *) url;
 
 @end
 
@@ -51,10 +53,10 @@
 
 @protocol ToDoMandiriVaViewProtocol <NSObject>
 
-- (void)showResponse:(NSString *)item;
+- (void)showResponse: (NSString *)item;
 
-- (void)showError:(NSString *)response;
+- (void)showError: (NSString *)response;
 
-- (void)initData:(MandiriVaParams *)data;
+- (void)initData: (MandiriVaParams *)data;
 
 @end

@@ -1,0 +1,5 @@
+.DS_Store
+DokuPaySdk/Pods/
+DokuPaySdk.xcworkspace/xcuserdata/
+Pods/Pods.xcodeproj/xcuserdata/
+Pods/

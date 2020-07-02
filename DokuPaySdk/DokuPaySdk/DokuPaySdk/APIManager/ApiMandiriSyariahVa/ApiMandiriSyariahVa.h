@@ -11,9 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ApiMandiriSyariahVa : NSObject
+@interface ApiMandiriSyariahVa: NSObject
 
-+ (void)getPaymentCode:(MandiriVaParams *)params ifSucceed:(void (^)(NSString *response))succeed ifFailed:(void (^)(NSError *error))failed;
++ (void)getPaymentCode: (MandiriVaParams *)params
+                   url: (NSString *) url
+             ifSucceed: (void (^)(NSString *response))succeed
+              ifFailed: (void (^)(NSError *error))failed;
 
 @end
 

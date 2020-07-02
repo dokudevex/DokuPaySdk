@@ -17,7 +17,7 @@
 
 @implementation DokuView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame: (CGRect)frame {
     self = [super initWithFrame:frame];
 
     if (self) {
@@ -27,8 +27,8 @@
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)coder {
-    self = [super initWithCoder:coder];
+- (instancetype)initWithCoder: (NSCoder *)coder {
+    self = [super initWithCoder: coder];
 
     if (self) {
         [self xibSetup];
@@ -38,21 +38,26 @@
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver: self];
 }
 
 - (void)xibSetup {
-    UIView *view = [[[UINib nibWithNibName:NSStringFromClass([self class]) bundle:[NSBundle bundleForClass:self.class]] instantiateWithOwner:self options:nil] firstObject];
-    [self addSubview:view];
+    UIView *view = [[[UINib nibWithNibName: NSStringFromClass([self class])
+                                    bundle: [NSBundle bundleForClass:self.class]] instantiateWithOwner: self options: nil] firstObject];
+    [self addSubview: view];
     view.frame = self.bounds;
 
     // Setup dismiss keyboard by tapping empty place
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self
+                                                                                    action: @selector(dismissKeyboard)];
     tapRecognizer.cancelsTouchesInView = NO;
-    [self addGestureRecognizer:tapRecognizer];
+    [self addGestureRecognizer: tapRecognizer];
 
     // Setup keyboard notification
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrameNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(keyboardWillChangeFrameNotification:)
+                                                 name: UIKeyboardWillChangeFrameNotification
+                                               object: nil];
 }
 
 - (void)dismissKeyboard {
@@ -61,20 +66,20 @@
 
 #pragma mark - DokuTextFieldDelegate
 
-- (void)dokuTextFieldDidBeginEditing:(DokuTextField *)textField {
+- (void)dokuTextFieldDidBeginEditing: (DokuTextField *)textField {
     self.activeTextField = textField;
 }
 
-- (void)dokuTextFieldDidEndEditing:(DokuTextField *)textField {
+- (void)dokuTextFieldDidEndEditing: (DokuTextField *)textField {
     self.activeTextField = nil;
 }
 
 #pragma mark - Notification
 
-- (void)keyboardWillChangeFrameNotification:(NSNotification *)notification {
+- (void)keyboardWillChangeFrameNotification: (NSNotification *)notification {
     CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
 
-    if ([self respondsToSelector:NSSelectorFromString(@"scrollView")]) {
+    if ([self respondsToSelector: NSSelectorFromString(@"scrollView")]) {
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
         UIScrollView *scrollView = [self valueForKey:@"scrollView"];
         CGFloat keyboardRealHeightOnScreen = CGRectGetHeight(window.frame) - CGRectGetMinY(keyboardFrame);

@@ -13,9 +13,8 @@ typedef NS_ENUM(NSInteger, ChannelCode) {
     MandiriSyariahVa = 2 
 };
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ViewController: UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (assign, nonatomic) ChannelCode channelCode;
 
 @end
-

@@ -11,19 +11,17 @@
 
 @implementation ResultPageInteractor
 
-- (void)setOutput:(id<ToDoResultPageInteractorOutputProtocol>)output
-{
+- (void)setOutput: (id<ToDoResultPageInteractorOutputProtocol>)output {
     _output = output;
 }
 
-- (id<ToDoResultPageInteractorOutputProtocol>)getOutputProtocol
-{
+- (id<ToDoResultPageInteractorOutputProtocol>)getOutputProtocol {
     return self.output;
 }
 
-- (void)getHowToInstruction:(NSString *)url
-{
-    [ApiResultPage getHowToInstruction:url ifSucceed:^(NSString *response) {
+- (void)getHowToInstruction: (NSString *)url {
+    [ApiResultPage getHowToInstruction: url
+                             ifSucceed: ^(NSString *response) {
         [self.output successResponse: response];
     } ifFailed:^(NSError *error) {
         [self.output errorResponse: error.localizedDescription];

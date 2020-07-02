@@ -17,20 +17,27 @@
 @implementation MandiriVaRouter
 
 + (UIViewController *)createModule: (MandiriVaParams *)data {
-    UIStoryboard *mandiriVaStoryboard = [UIStoryboard storyboardWithName:@"MandiriStoryboard" bundle:[NSBundle bundleForClass: MandiriVaViewController.class]];
-    MandiriVaViewController *viewController = [mandiriVaStoryboard instantiateViewControllerWithIdentifier:@"MandiriVaViewController"];
+    UIStoryboard *mandiriVaStoryboard = [UIStoryboard storyboardWithName: @"MandiriStoryboard"
+                                                                  bundle: [NSBundle bundleForClass: MandiriVaViewController.class]];
+    MandiriVaViewController *viewController = [mandiriVaStoryboard instantiateViewControllerWithIdentifier: @"MandiriVaViewController"];
     
     MandiriVaInteractor *interactor = [[MandiriVaInteractor alloc] init];
     MandiriVaRouter *router = [[MandiriVaRouter alloc] init];
-    MandiriVaPresenter *presenter = [[MandiriVaPresenter alloc] initWithInterface:viewController interactor:interactor router:router data: data];
+    MandiriVaPresenter *presenter = [[MandiriVaPresenter alloc] initWithInterface: viewController
+                                                                       interactor: interactor
+                                                                           router: router
+                                                                             data: data];
     viewController.presenter = presenter;
     router.viewController = viewController;
     return viewController;
 }
 
 - (void)gotoResultPage:(MandiriVaResponse *)responseData {
+    
     ResultPageViewController *todoViewController = (ResultPageViewController *) [ResultPageRouter createModule: responseData];
-    [self.viewController presentViewController: todoViewController animated:YES completion: nil];
+    [self.viewController presentViewController: todoViewController
+                                      animated: YES
+                                    completion: nil];
 }
 
 @end

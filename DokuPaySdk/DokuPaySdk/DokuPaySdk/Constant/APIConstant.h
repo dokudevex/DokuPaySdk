@@ -8,4 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const ApiBaseUrl;
+extern NSString * const ApiBaseUrlSandbox;
+
+extern NSString * const ApiBaseUrlProduction;
+
+extern NSString * const UrlVaMandiri;
+
+extern NSString * const UrlVaMandiriSyariah;

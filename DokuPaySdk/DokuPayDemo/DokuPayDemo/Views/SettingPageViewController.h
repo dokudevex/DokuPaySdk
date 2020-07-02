@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SettingPageViewController : DokuView <DokuTextFieldDelegate>
+@interface SettingPageViewController: DokuView <DokuTextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet DokuAlertButton *buttonSubmit;
 @property (weak, nonatomic) IBOutlet DokuTextField *textFieldMerchantName;

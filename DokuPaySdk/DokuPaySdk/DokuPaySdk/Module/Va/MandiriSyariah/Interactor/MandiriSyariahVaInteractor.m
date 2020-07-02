@@ -12,21 +12,20 @@
 
 @implementation MandiriSyariahVaInteractor
 
-- (void)setOutput:(id<ToDoMandiriSyariahVaInteractorOutputProtocol>)output
-{
+- (void)setOutput: (id<ToDoMandiriSyariahVaInteractorOutputProtocol>)output {
     _output = output;
 }
 
-- (id<ToDoMandiriSyariahVaInteractorOutputProtocol>)getOutputProtocol
-{
+- (id<ToDoMandiriSyariahVaInteractorOutputProtocol>)getOutputProtocol {
     return self.output;
 }
 
-- (void)getPaymentCode:(MandiriVaParams *)item
-{
-    [ApiMandiriSyariahVa getPaymentCode:item ifSucceed:^(NSString *response) {
+- (void)getPaymentCode:(MandiriVaParams *)item url:(NSString *)url {
+    [ApiMandiriSyariahVa getPaymentCode: item
+                                    url: (NSString *) url
+                              ifSucceed: ^(NSString *response) {
         [self.output successResponse: response];
-    } ifFailed:^(NSError *error) {
+    } ifFailed: ^(NSError *error) {
         [self.output errorResponse: error.localizedDescription];
     }];
 }

@@ -12,10 +12,10 @@
 
 @implementation MandiriVaPresenter
 
-- (instancetype)initWithInterface:(id<ToDoMandiriVaViewProtocol>)interface
-                       interactor:(id<ToDoMandiriVaInteractorInputProtocol>)interactor
-                           router:(id<ToDoMandiriVaWireframeProtocol>)router
-                             data:(MandiriVaParams *)data;
+- (instancetype)initWithInterface: (id<ToDoMandiriVaViewProtocol>)interface
+                       interactor: (id<ToDoMandiriVaInteractorInputProtocol>)interactor
+                           router: (id<ToDoMandiriVaWireframeProtocol>)router
+                             data: (MandiriVaParams *)data;
 {
     if (self = [super init])
     {
@@ -28,25 +28,24 @@
     return self;
 }
 
-- (void)getPaymentCode:(MandiriVaParams *)item
-{
-    [self.interactor getPaymentCode:item];
+- (void)getPaymentCode: (MandiriVaParams *)item
+                   url: (NSString *) url {
+    [self.interactor getPaymentCode: item url: url];
 }
 
 #pragma mark - ToDoInteractorOutputProtocol
 
-- (void)successResponse:(NSString *)item
-{
-    [self.view showResponse:item];
+- (void)successResponse: (NSString *)item {
+    [self.view showResponse: item];
 }
 
-- (void)errorResponse:(NSString *)item {
-    [self.view showError:item];
+- (void)errorResponse: (NSString *)item {
+    [self.view showError: item];
 }
 
 #pragma mark - PresenterProtocol
 
-- (void)gotoResultPage:(MandiriVaResponse *)responseData {
+- (void)gotoResultPage: (MandiriVaResponse *)responseData {
     [self.router gotoResultPage: responseData];
 }
 

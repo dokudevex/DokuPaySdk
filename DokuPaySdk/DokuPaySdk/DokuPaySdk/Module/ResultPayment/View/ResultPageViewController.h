@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ResultPageViewController : UIViewController<ToDoResultPageViewProtocol>
+@interface ResultPageViewController: UIViewController<ToDoResultPageViewProtocol>
 
 @property (nonatomic, nullable) ResultPagePresenter *presenter;
 

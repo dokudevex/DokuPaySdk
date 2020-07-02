@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MandiriSyariahVaInteractor : NSObject<ToDoMandiriSyariahVaInteractorInputProtocol>
+@interface MandiriSyariahVaInteractor: NSObject<ToDoMandiriSyariahVaInteractorInputProtocol>
 
 @property (nonatomic, weak, nullable) id<ToDoMandiriSyariahVaInteractorOutputProtocol> output;
 

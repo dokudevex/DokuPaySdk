@@ -11,18 +11,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MandiriVaPresenter : NSObject<ToDoMandiriVaInteractorOutputProtocol, ToDoMandiriVaPresenterProtocol>
+@interface MandiriVaPresenter: NSObject<ToDoMandiriVaInteractorOutputProtocol, ToDoMandiriVaPresenterProtocol>
 
 @property (nonatomic, weak, nullable) id<ToDoMandiriVaViewProtocol> view;
 @property (nonatomic) id<ToDoMandiriVaInteractorInputProtocol> interactor;
 @property (nonatomic) id<ToDoMandiriVaWireframeProtocol> router;
 
-- (instancetype)initWithInterface:(id<ToDoMandiriVaViewProtocol>)interface
-                       interactor:(id<ToDoMandiriVaInteractorInputProtocol>)interactor
-                           router:(id<ToDoMandiriVaWireframeProtocol>)router
-                             data:(MandiriVaParams *)data;
+- (instancetype)initWithInterface: (id<ToDoMandiriVaViewProtocol>)interface
+                       interactor: (id<ToDoMandiriVaInteractorInputProtocol>)interactor
+                           router: (id<ToDoMandiriVaWireframeProtocol>)router
+                             data: (MandiriVaParams *)data;
 
-- (void)getPaymentCode:(MandiriVaParams *)item;
+- (void)getPaymentCode: (MandiriVaParams *)item
+                   url: (NSString *) url;
 
 @property (nonatomic, nullable) MandiriVaParams *mandiriVaParams;
 

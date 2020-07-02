@@ -12,10 +12,10 @@
 
 @implementation MandiriSyariahVaPresenter
 
-- (instancetype)initWithInterface:(id<ToDoMandiriSyariahVaViewProtocol>)interface
-                       interactor:(id<ToDoMandiriSyariahVaInteractorInputProtocol>)interactor
-                           router:(id<ToDoMandiriSyariahVaWireframeProtocol>)router
-                             data:(MandiriVaParams *)data;
+- (instancetype)initWithInterface: (id<ToDoMandiriSyariahVaViewProtocol>)interface
+                       interactor: (id<ToDoMandiriSyariahVaInteractorInputProtocol>)interactor
+                           router: (id<ToDoMandiriSyariahVaWireframeProtocol>)router
+                             data: (MandiriVaParams *)data;
 {
     if (self = [super init])
     {
@@ -23,30 +23,29 @@
         self.interactor = interactor;
         self.router = router;
         self.mandiriVaParams = data;
-        [self.interactor setOutput:self];
+        [self.interactor setOutput: self];
     }
     return self;
 }
 
-- (void)getPaymentCode:(MandiriVaParams *)item
-{
-    [self.interactor getPaymentCode:item];
+- (void)getPaymentCode: (MandiriVaParams *)item
+                   url: (NSString *) url {
+    [self.interactor getPaymentCode: item url: url];
 }
 
 #pragma mark - ToDoMandiriSyariahInteractorOutputProtocol
 
-- (void)successResponse:(NSString *)item
-{
-    [self.view showResponse:item];
+- (void)successResponse: (NSString *)item {
+    [self.view showResponse: item];
 }
 
-- (void)errorResponse:(NSString *)item {
+- (void)errorResponse: (NSString *)item {
     [self.view showError: item];
 }
 
 #pragma mark - PresenterProtocol
 
-- (void)gotoResultPage:(MandiriVaResponse *)responseData {
+- (void)gotoResultPage: (MandiriVaResponse *)responseData {
     [self.router gotoResultPage: responseData];
 }
 

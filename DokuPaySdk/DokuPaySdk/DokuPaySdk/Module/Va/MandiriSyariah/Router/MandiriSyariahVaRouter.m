@@ -16,14 +16,18 @@
 @implementation MandiriSyariahVaRouter
 
 + (UIViewController *)createModule: (MandiriVaParams *)data {
-    UIStoryboard *mandiriSyariahVaStoryboard = [UIStoryboard storyboardWithName:@"MandiriSyariahStoryboard" bundle:[NSBundle bundleForClass: MandiriSyariahVaViewController.class]];
+    UIStoryboard *mandiriSyariahVaStoryboard = [UIStoryboard storyboardWithName: @"MandiriSyariahStoryboard"
+                                                                         bundle: [NSBundle bundleForClass: MandiriSyariahVaViewController.class]];
     MandiriSyariahVaViewController *viewController = [mandiriSyariahVaStoryboard instantiateViewControllerWithIdentifier:@"MandiriSyariahVaViewController"];
     
     MandiriSyariahVaInteractor *interactor = [[MandiriSyariahVaInteractor alloc] init];
     
     MandiriSyariahVaRouter *router = [[MandiriSyariahVaRouter alloc] init];
     
-    MandiriSyariahVaPresenter *presenter = [[MandiriSyariahVaPresenter alloc] initWithInterface:viewController interactor:interactor router:router data: data];
+    MandiriSyariahVaPresenter *presenter = [[MandiriSyariahVaPresenter alloc] initWithInterface: viewController
+                                                                                     interactor: interactor
+                                                                                         router: router
+                                                                                           data: data];
     viewController.presenter = presenter;
     router.viewController = viewController;
     return viewController;
@@ -31,7 +35,9 @@
 
 - (void)gotoResultPage:(MandiriVaResponse *)responseData {
     ResultPageViewController *todoViewController = (ResultPageViewController *) [ResultPageRouter createModule: responseData];
-    [self.viewController presentViewController: todoViewController animated:YES completion: nil];
+    [self.viewController presentViewController: todoViewController
+                                      animated: YES
+                                    completion: nil];
 }
 
 @end

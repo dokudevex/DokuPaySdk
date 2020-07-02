@@ -8,11 +8,11 @@
 
 #import "DokuUtils.h"
 #import <CommonCrypto/CommonDigest.h>
+#import <UIKit/UIKit.h>
 
 @implementation DokuUtils
 
-+ (NSString*)sha256HashFor:(NSString*)input
-{
++ (NSString*)sha256HashFor:(NSString*)input {
     const char* str = [input UTF8String];
     unsigned char result[CC_SHA256_DIGEST_LENGTH];
     CC_SHA256(str, (CC_LONG)strlen(str), result);
@@ -39,13 +39,11 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-+ (NSString *)getRandomInvoiceNumbertring:(NSInteger)length
-{
++ (NSString *)getRandomInvoiceNumbertring:(NSInteger)length {
     NSMutableString *returnString = [NSMutableString stringWithCapacity:length];
 
     NSString *numbers = @"0123456789";
 
-    // First number cannot be 0
     [returnString appendFormat:@"%C", [numbers characterAtIndex:(arc4random() % ([numbers length]-1))+1]];
 
     for (int i = 1; i < length; i++)
@@ -54,6 +52,28 @@
     }
 
     return returnString;
+}
+
++ (NSDictionary*)nsDataToDictionary: (NSData *)data {
+   NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:nil];
+    return dict;
+}
+
++ (UIImage*)getIcon: (NSString*)channelCode {
+    UIImage *image = nil;
+    
+    if ([channelCode isEqualToString:@"1"]) {
+        image = [UIImage imageNamed: @"icon_mandiri"
+                           inBundle: [NSBundle bundleForClass:self.class]
+        compatibleWithTraitCollection:nil];
+    } else if ([channelCode isEqualToString:@"2"]) {
+        image = [UIImage imageNamed: @"icon_mandiri_syariah"
+                           inBundle: [NSBundle bundleForClass:self.class]
+        compatibleWithTraitCollection:nil];
+    }
+    return image;
 }
 
 @end

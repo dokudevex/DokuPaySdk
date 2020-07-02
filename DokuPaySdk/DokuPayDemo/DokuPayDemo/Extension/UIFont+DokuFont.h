@@ -10,7 +10,7 @@
 
 @interface UIFont (DokuFont)
 
-+ (UIFont *)dokuLightFontWithSize:(CGFloat)size;
-+ (UIFont *)dokuRegularFontWithSize:(CGFloat)size;
++ (UIFont *)dokuLightFontWithSize: (CGFloat)size;
++ (UIFont *)dokuRegularFontWithSize: (CGFloat)size;
 
 @end

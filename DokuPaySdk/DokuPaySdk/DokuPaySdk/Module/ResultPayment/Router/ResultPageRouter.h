@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ResultPageRouter : NSObject<ToDoResultPageWireframeProtocol>
+@interface ResultPageRouter: NSObject<ToDoResultPageWireframeProtocol>
 
 @property (nonatomic, weak) ResultPageViewController *viewController;
 

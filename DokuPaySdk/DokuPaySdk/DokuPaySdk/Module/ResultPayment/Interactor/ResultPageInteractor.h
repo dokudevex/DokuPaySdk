@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ResultPageInteractor : NSObject<ToDoResultPageInteractorInputProtocol>
+@interface ResultPageInteractor: NSObject<ToDoResultPageInteractorInputProtocol>
 
 @property (nonatomic, weak, nullable) id<ToDoResultPageInteractorOutputProtocol> output;
 

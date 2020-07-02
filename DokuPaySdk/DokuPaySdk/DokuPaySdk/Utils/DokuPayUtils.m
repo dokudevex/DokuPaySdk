@@ -11,7 +11,7 @@
 
 @implementation DokuPayUtils
 
-+(NSMutableDictionary*)createMandiriParams:(MandiriVaParams*)params {
++ (NSMutableDictionary*)createMandiriParams: (MandiriVaParams*)params {
     
     NSMutableDictionary *object = [NSMutableDictionary dictionary];
     NSMutableDictionary *client = [NSMutableDictionary dictionary];
@@ -40,58 +40,46 @@
     return object;
 }
 
-+(NSData *)nsStringToNsData:(NSString *)data {
++ (NSData *)nsStringToNsData: (NSString *)data {
     NSData *nsData = [data dataUsingEncoding:NSUTF8StringEncoding];
     return nsData;
 }
 
-+(NSData*)nsMutableDictionayToNsData:(NSMutableDictionary *)data {
++ (NSData*)nsMutableDictionayToNsData: (NSMutableDictionary *)data {
     NSError *error;
     NSData *nsData = [NSJSONSerialization dataWithJSONObject:data
-                        options:NSJSONWritingPrettyPrinted
-                        error:&error];
+                                                     options:NSJSONWritingPrettyPrinted
+                                                       error:&error];
     
     return nsData;
 }
 
-+(NSDictionary*)nsDataToDictionary:(NSData *)data {
++ (NSDictionary*)nsDataToDictionary: (NSData *)data {
    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data
-                                               options:NSJSONReadingMutableContainers
-                                                 error:nil];
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:nil];
     return dict;
 }
 
-+ (UIImage*)getIcon:(NSString*)channelCode
-{
++ (UIImage*)getIcon: (NSString*)channelCode {
     UIImage *image = nil;
     
     if ([channelCode isEqualToString:@"1"]) {
-        image = [UIImage imageNamed:@"icon_mandiri" inBundle: [NSBundle bundleForClass:self.class]
+        image = [UIImage imageNamed: @"icon_mandiri"
+                           inBundle: [NSBundle bundleForClass:self.class]
         compatibleWithTraitCollection:nil];
     } else if ([channelCode isEqualToString:@"2"]) {
-        image = [UIImage imageNamed:@"icon_mandiri_syariah" inBundle: [NSBundle bundleForClass:self.class]
+        image = [UIImage imageNamed: @"icon_mandiri_syariah"
+                           inBundle: [NSBundle bundleForClass:self.class]
         compatibleWithTraitCollection:nil];
     }
     return image;
 }
 
-+(UIAlertController*)alertView:(NSString *)message withTitle:(NSString *)title
-{
-    UIAlertController *alertController = [UIAlertController
-                                          alertControllerWithTitle:title
-                                          message:message
-                                          preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *okAction = [UIAlertAction
-                               actionWithTitle:NSLocalizedString(@"OK", @"OK action")
-                               style:UIAlertActionStyleDefault
-                               handler:^(UIAlertAction *action)
-                               {
-                                   [alertController dismissViewControllerAnimated:YES completion:nil];
-                               }];
-    
-    
-    [alertController addAction:okAction];
++ (UIAlertController*)alertView:(NSString *)message withTitle:(NSString *)title {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle: title
+                                                                             message: message
+                                                                      preferredStyle: UIAlertControllerStyleAlert];
     
     return alertController;
 }

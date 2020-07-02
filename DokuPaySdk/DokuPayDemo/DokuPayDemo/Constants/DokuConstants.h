@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString* const merchantName;
-extern NSString* const clientId;
-extern NSString* const sharedKey;
-extern NSString* const environmentServer;
-extern NSString* const activePageResult;
+extern NSString *const merchantName;
+extern NSString *const clientId;
+extern NSString *const sharedKey;
+extern NSString *const environmentServer;
+extern NSString *const activePageResult;

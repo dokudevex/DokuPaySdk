@@ -27,18 +27,19 @@
 
 @protocol ToDoResultPageInteractorOutputProtocol <NSObject>
 
-- (void)successResponse:(NSString *)item;
+- (void)successResponse: (NSString *)item;
 
-- (void)errorResponse:(NSString *)item;
+- (void)errorResponse: (NSString *)item;
 
 @end
 
 @protocol ToDoResultPageInteractorInputProtocol <NSObject>
 
-- (void)setOutput:(id<ToDoResultPageInteractorOutputProtocol>)output;
+- (void)setOutput: (id<ToDoResultPageInteractorOutputProtocol>)output;
+
 - (id<ToDoResultPageInteractorOutputProtocol>)getOutputProtocol;
 
-- (void)getHowToInstruction:(NSString *)url;
+- (void)getHowToInstruction: (NSString *)url;
 
 @end
 
@@ -46,10 +47,10 @@
 
 @protocol ToDoResultPageViewProtocol <NSObject>
 
-- (void)showResponse:(NSString *)item;
+- (void)showResponse: (NSString *)item;
 
-- (void)showError:(NSString *)response;
+- (void)showError: (NSString *)response;
 
-- (void)initData:(MandiriVaResponse *)data;
+- (void)initData: (MandiriVaResponse *)data;
 
 @end

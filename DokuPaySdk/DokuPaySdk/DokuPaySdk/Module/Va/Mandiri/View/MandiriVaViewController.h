@@ -10,10 +10,11 @@
 #import "MandiriVaPresenter.h"
 #import "MandiriVaContract.h"
 #import "MandiriVaParams.h"
+#import <DokuPaySdk/DokuPaySdk.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MandiriVaViewController : UIViewController<ToDoMandiriVaViewProtocol>
+@interface MandiriVaViewController: UIViewController<ToDoMandiriVaViewProtocol>
 
 @property (nonatomic, nullable) MandiriVaPresenter *presenter;
 

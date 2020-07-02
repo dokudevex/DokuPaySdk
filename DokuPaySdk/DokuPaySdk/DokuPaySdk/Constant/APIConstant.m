@@ -8,8 +8,11 @@
 
 #import "APIConstant.h"
 
-#ifdef DEBUG
-    NSString * const ApiBaseUrl = @"http://app-sit.doku.com/";
-#else
-    NSString * const ApiBaseUrl = @"https://app-sit.doku.com/";
-#endif
+NSString *const ApiBaseUrlSandbox = @"http://app-sit.doku.com/";
+
+NSString *const ApiBaseUrlProduction = @"https://app-sit.doku.com/";
+
+NSString *const UrlVaMandiri = @"mandiri-virtual-account/v1/payment-code";
+
+NSString *const UrlVaMandiriSyariah = @"bsm-virtual-account/v1/payment-code";
+

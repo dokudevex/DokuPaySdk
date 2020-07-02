@@ -13,25 +13,38 @@
 
 @implementation ApiMandiriSyariahVa
 
-+ (void)getPaymentCode:(MandiriVaParams *)params ifSucceed:(void (^)(NSString *))succeed ifFailed:(void (^)(NSError *))failed {
++ (void)getPaymentCode: (MandiriVaParams *)params
+                   url: (NSString *) url
+             ifSucceed: (void (^)(NSString *))succeed
+              ifFailed: (void (^)(NSError *))failed {
     
     APIManager *manager = [APIManager sharedManager];
     
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
 
-    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept" ];
-    [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type" ];
+    [manager.requestSerializer setValue: @"application/json"
+                     forHTTPHeaderField: @"Accept" ];
     
-    NSData *jsonDataParam = [DokuPayUtils nsMutableDictionayToNsData: [DokuPayUtils createMandiriParams:params]];
-    NSString * data = [[NSString alloc] initWithData:jsonDataParam encoding:NSUTF8StringEncoding];
+    [manager.requestSerializer setValue: @"application/json; charset=utf-8"
+                     forHTTPHeaderField: @"Content-Type" ];
+    
+    NSData *jsonDataParam = [DokuPayUtils nsMutableDictionayToNsData: [DokuPayUtils createMandiriParams: params]];
+    NSString * data = [[NSString alloc] initWithData: jsonDataParam
+                                            encoding: NSUTF8StringEncoding];
     NSDictionary *dict = [DokuPayUtils nsDataToDictionary: jsonDataParam];
     NSLog(@"params json Mandiri Syariah Va %@",data);
 
-    [manager POST:@"bsm-virtual-account/v1/payment-code" parameters:dict headers: nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager POST: url
+       parameters: dict
+          headers: nil
+         progress: nil
+          success: ^(NSURLSessionDataTask *task, id responseObject) {
+        
         NSMutableDictionary *response = [[NSMutableDictionary alloc] initWithDictionary:responseObject];
         NSData *jsonDataResponse = [DokuPayUtils nsMutableDictionayToNsData: response];
-        NSString *data = [[NSString alloc] initWithData:jsonDataResponse encoding:NSUTF8StringEncoding];
+        NSString *data = [[NSString alloc] initWithData: jsonDataResponse
+                                               encoding: NSUTF8StringEncoding];
         if (succeed) {
             succeed(data);
         }

@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MandiriSyariahVaRouter : NSObject<ToDoMandiriSyariahVaWireframeProtocol>
+@interface MandiriSyariahVaRouter: NSObject<ToDoMandiriSyariahVaWireframeProtocol>
 
 @property (nonatomic, weak) MandiriSyariahVaViewController *viewController;
 

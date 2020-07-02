@@ -11,8 +11,8 @@
 
 @implementation DokuAlertButton
 
-- (void)setHighlighted:(BOOL)highlighted {
-    [super setHighlighted:highlighted];
+- (void)setHighlighted: (BOOL)highlighted {
+    [super setHighlighted: highlighted];
 
     if (highlighted) {
         self.backgroundColor = [UIColor dokuGrayBackground];

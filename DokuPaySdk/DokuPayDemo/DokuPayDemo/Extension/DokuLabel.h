@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DokuLabel : UILabel
+@interface DokuLabel: UILabel
 
 @end

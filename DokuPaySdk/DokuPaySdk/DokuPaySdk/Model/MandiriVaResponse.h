@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MandiriVaResponse : NSObject
+@interface MandiriVaResponse: NSObject
 
 @property (nonatomic) NSString *clientId;
 @property (nonatomic) NSString *invoiceNumber;
@@ -24,11 +24,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString *isProduction;
 @property (nonatomic) NSString *merchantName;
 
-- (instancetype)initWithData:(NSString *)data
-                      amount:(NSString *)amount
-                   channelId:(NSString *)channelId
-                isProduction:(NSString *)isProduction
-                merchantName:(NSString *)merchantName;
+- (instancetype)initWithData: (NSString *)data
+                      amount: (NSString *)amount
+                   channelId: (NSString *)channelId
+                isProduction: (NSString *)isProduction
+                merchantName: (NSString *)merchantName;
 
 @end
 
