@@ -30,6 +30,8 @@ static int const kHeaderSectionTag = 6900;
 @property (nonatomic,strong) NSString *dataResponse;
 @property (nonatomic,strong) NSString *amount;
 @property (nonatomic,strong) NSString *merchantName;
+@property (weak, nonatomic) IBOutlet UIView *viewOrder;
+@property (weak, nonatomic) IBOutlet UIButton *btnOrder;
 
 @end
 
@@ -56,6 +58,21 @@ static int const kHeaderSectionTag = 6900;
     self.tableViewAccordion.rowHeight = UITableViewAutomaticDimension;
     self.tableViewAccordion.estimatedRowHeight = 100;
     self.expandedSectionHeaderNumber = -1;
+    
+    
+
+    
+    CAShapeLayer * maskLayerView = [CAShapeLayer layer];
+    maskLayerView.path = [UIBezierPath bezierPathWithRoundedRect: self.viewOrder.bounds byRoundingCorners: UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii: (CGSize){10.0, 10.}].CGPath;
+    self.viewOrder.layer.mask = maskLayerView;
+    
+    
+    CAShapeLayer * maskLayerBtnDetail = [CAShapeLayer layer];
+      maskLayerBtnDetail.path = [UIBezierPath bezierPathWithRoundedRect: self.btnOrder.bounds byRoundingCorners: UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii: (CGSize){10.0, 10.}].CGPath;
+      self.btnOrder.layer.mask = maskLayerBtnDetail;
+    
+    
+    
 }
 
 - (void) setTitle {

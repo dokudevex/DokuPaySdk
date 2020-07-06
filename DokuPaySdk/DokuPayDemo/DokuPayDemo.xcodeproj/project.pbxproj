@@ -50,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		338B8795F6804AA5A5915458 /* Pods-DokuPayDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokuPayDemo.release.xcconfig"; path = "Target Support Files/Pods-DokuPayDemo/Pods-DokuPayDemo.release.xcconfig"; sourceTree = "<group>"; };
+		5A64115324B3105500A88DD0 /* dinnbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dinnbold.ttf; path = ../../../../../../../../../Downloads/dinnbold.ttf; sourceTree = "<group>"; };
+		5A64115424B3105500A88DD0 /* dinnmedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dinnmedium.ttf; path = ../../../../../../../../../Downloads/dinnmedium.ttf; sourceTree = "<group>"; };
+		5A64115524B3105500A88DD0 /* dinnregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dinnregular.ttf; path = ../../../../../../../../../Downloads/dinnregular.ttf; sourceTree = "<group>"; };
 		C081C4D2AB786719A041CD5D /* Pods-DokuPayDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokuPayDemo.debug.xcconfig"; path = "Target Support Files/Pods-DokuPayDemo/Pods-DokuPayDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C308A6B024AD814C00E5BA3A /* ResultPageDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultPageDemoViewController.h; sourceTree = "<group>"; };
 		C308A6B124AD814C00E5BA3A /* ResultPageDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultPageDemoViewController.m; sourceTree = "<group>"; };
@@ -123,6 +126,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A64115224B3103B00A88DD0 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				5A64115324B3105500A88DD0 /* dinnbold.ttf */,
+				5A64115424B3105500A88DD0 /* dinnmedium.ttf */,
+				5A64115524B3105500A88DD0 /* dinnregular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		5C0F00E5256100CE5E00EDB2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +180,7 @@
 		C3366EB424938FAF0040C86C /* DokuPayDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5A64115224B3103B00A88DD0 /* Font */,
 				C308A6FC24ADBF3000E5BA3A /* Model */,
 				C3631EA324AA87710021A36C /* Constants */,
 				C3DB302B24A9E4F100992C32 /* Extension */,

@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "IDR 1,000,000"; ObjectID = "7IB-vZ-A6Y"; */
+"7IB-vZ-A6Y.text" = "IDR 1,000,000";
+
+/* Class = "UIButton"; normalTitle = "DETAILS"; ObjectID = "Cnl-Nt-o2i"; */
+"Cnl-Nt-o2i.normalTitle" = "DETAILS";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "HAT-bm-JaX"; */
+"HAT-bm-JaX.text" = "Title";
+
+/* Class = "UILabel"; text = "Total Payment"; ObjectID = "f9Q-Nb-Yee"; */
+"f9Q-Nb-Yee.text" = "Total Payment";
+
+/* Class = "UILabel"; text = "COPY"; ObjectID = "m4J-88-T6z"; */
+"m4J-88-T6z.text" = "COPY";
+
+/* Class = "UILabel"; text = "Order Id 123456790"; ObjectID = "r3k-b0-nQK"; */
+"r3k-b0-nQK.text" = "Order Id 123456790";
