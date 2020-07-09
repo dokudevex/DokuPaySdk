@@ -33,7 +33,7 @@
     NSString * data = [[NSString alloc] initWithData: jsonDataParam
                                             encoding: NSUTF8StringEncoding];
     NSDictionary *dict = [DokuPayUtils nsDataToDictionary: jsonDataParam];
-    NSLog(@"params json Mandiri Syariah Va %@",data);
+    NSLog(@"params json Mandiri Syariah Va %@", data);
 
     [manager POST: url
        parameters: dict
@@ -41,7 +41,7 @@
          progress: nil
           success: ^(NSURLSessionDataTask *task, id responseObject) {
         
-        NSMutableDictionary *response = [[NSMutableDictionary alloc] initWithDictionary:responseObject];
+        NSMutableDictionary *response = [[NSMutableDictionary alloc] initWithDictionary: responseObject];
         NSData *jsonDataResponse = [DokuPayUtils nsMutableDictionayToNsData: response];
         NSString *data = [[NSString alloc] initWithData: jsonDataResponse
                                                encoding: NSUTF8StringEncoding];

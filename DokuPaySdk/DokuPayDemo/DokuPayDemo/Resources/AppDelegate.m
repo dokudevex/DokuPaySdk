@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +16,19 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    [self createToDoView];
     return YES;
+}
+
+- (void)createToDoView {
+    self.window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName: @"Main"
+                                                         bundle: nil];
+    ViewController *viewController = [storyboard instantiateViewControllerWithIdentifier: @"ViewController"];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: viewController];
+    self.window.rootViewController = navigationController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
 }
 
 

@@ -23,7 +23,7 @@
     [ApiResultPage getHowToInstruction: url
                              ifSucceed: ^(NSString *response) {
         [self.output successResponse: response];
-    } ifFailed:^(NSError *error) {
+    } ifFailed: ^(NSError *error) {
         [self.output errorResponse: error.localizedDescription];
     }];
 }

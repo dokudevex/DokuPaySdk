@@ -41,7 +41,7 @@
          progress: nil
           success: ^(NSURLSessionDataTask *task, id responseObject) {
         
-        NSMutableDictionary *response = [[NSMutableDictionary alloc] initWithDictionary:responseObject];
+        NSMutableDictionary *response = [[NSMutableDictionary alloc] initWithDictionary: responseObject];
         NSData *jsonDataResponse = [DokuPayUtils nsMutableDictionayToNsData: response];
         NSString *data = [[NSString alloc] initWithData: jsonDataResponse
                                                encoding: NSUTF8StringEncoding];

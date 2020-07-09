@@ -6,27 +6,23 @@
 //  Copyright © 2020 Doku. All rights reserved.
 //
 
-#import "DokuView.h"
-#import "DokuTextField.h"
-#import "DokuAlertButton.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SettingPageViewController: DokuView <DokuTextFieldDelegate>
+@interface SettingPageViewController: UIViewController <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (weak, nonatomic) IBOutlet DokuAlertButton *buttonSubmit;
-@property (weak, nonatomic) IBOutlet DokuTextField *textFieldMerchantName;
-@property (weak, nonatomic) IBOutlet DokuTextField *textFieldClientId;
-@property (weak, nonatomic) IBOutlet DokuTextField *textFieldSharedkey;
-@property (weak, nonatomic) IBOutlet DokuTextField *textFieldEnvironmentServer;
-@property (weak, nonatomic) IBOutlet DokuTextField *textFieldActiveResultPage;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldMerchantName;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldClientId;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldSharedkey;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldEnvironmentServer;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldActiveResultPage;
+@property (weak, nonatomic) IBOutlet UIView *viewMain;
 
 @property (nonatomic, strong) NSArray *environmentServer;
 @property (nonatomic, strong) NSArray *activePageResult;
 @property (nonatomic, assign) NSInteger selectedEnvironmentServerIndex;
 @property (nonatomic, assign) NSInteger selectedActivePageResultIndex;
-
-- (void)show;
 
 @end
 

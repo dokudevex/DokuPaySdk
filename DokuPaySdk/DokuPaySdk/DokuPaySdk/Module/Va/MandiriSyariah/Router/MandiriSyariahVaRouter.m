@@ -18,7 +18,7 @@
 + (UIViewController *)createModule: (MandiriVaParams *)data {
     UIStoryboard *mandiriSyariahVaStoryboard = [UIStoryboard storyboardWithName: @"MandiriSyariahStoryboard"
                                                                          bundle: [NSBundle bundleForClass: MandiriSyariahVaViewController.class]];
-    MandiriSyariahVaViewController *viewController = [mandiriSyariahVaStoryboard instantiateViewControllerWithIdentifier:@"MandiriSyariahVaViewController"];
+    MandiriSyariahVaViewController *viewController = [mandiriSyariahVaStoryboard instantiateViewControllerWithIdentifier: @"MandiriSyariahVaViewController"];
     
     MandiriSyariahVaInteractor *interactor = [[MandiriSyariahVaInteractor alloc] init];
     

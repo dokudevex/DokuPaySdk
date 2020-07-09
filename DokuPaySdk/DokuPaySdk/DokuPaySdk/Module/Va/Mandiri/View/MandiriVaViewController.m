@@ -27,13 +27,13 @@
     [self.presenter initData];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewWillAppear: (BOOL)animated {
+    [super viewWillAppear: animated];
     [SVProgressHUD show];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+- (void)viewWillDisappear: (BOOL)animated {
+    [super viewWillDisappear: animated];
     [self.labelViewInfo setText: @""];
     [SVProgressHUD dismiss];
 }
@@ -44,7 +44,8 @@
     [SVProgressHUD dismiss];
     if ([self.mandiriVaParams.usePageResult isEqualToString: @"no"]) {
         [[DokuPaySdk sharedInstance] sendData: item];
-        [[[DokuPaySdk sharedInstance] delegate] dismissViewControllerAnimated:YES completion:nil];
+        [[[DokuPaySdk sharedInstance] delegate] dismissViewControllerAnimated: YES
+                                                                   completion: nil];
     } else if ([self.mandiriVaParams.usePageResult isEqualToString: @"yes"]) {
         MandiriVaResponse *data = [[MandiriVaResponse alloc] initWithData: item
                                                                    amount: self.mandiriVaParams.amount
@@ -65,8 +66,11 @@
                        animated: YES
                      completion: nil];
     
-    [alertControl addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [[[DokuPaySdk sharedInstance] delegate] dismissViewControllerAnimated:YES completion:nil];
+    [alertControl addAction:[UIAlertAction actionWithTitle: @"OK"
+                                                     style: UIAlertActionStyleCancel
+                                                   handler: ^(UIAlertAction * _Nonnull action) {
+        [[[DokuPaySdk sharedInstance] delegate] dismissViewControllerAnimated: YES
+                                                                   completion: nil];
     }]];
     
 }
@@ -76,12 +80,13 @@
     NSString * url;
     
     if ([self.mandiriVaParams.isProduction isEqualToString: @"yes"]) {
-        url = [NSString stringWithFormat:@"%@%@", ApiBaseUrlProduction, UrlVaMandiri];
+        url = [NSString stringWithFormat: @"%@%@", ApiBaseUrlProduction, UrlVaMandiri];
     } else if ([self.mandiriVaParams.isProduction isEqualToString: @"no"]) {
-        url = [NSString stringWithFormat:@"%@%@", ApiBaseUrlSandbox, UrlVaMandiri];
+        url = [NSString stringWithFormat: @"%@%@", ApiBaseUrlSandbox, UrlVaMandiri];
     }
     
-    [self.presenter getPaymentCode:self.mandiriVaParams url: url];
+    [self.presenter getPaymentCode: self.mandiriVaParams
+                               url: url];
 }
 
 @end

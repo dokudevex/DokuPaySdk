@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MandiriVaResponse.h"
+#import "MandiriVaDataResponse.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

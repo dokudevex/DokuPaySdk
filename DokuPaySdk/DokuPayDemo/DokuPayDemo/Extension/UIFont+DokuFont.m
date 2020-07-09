@@ -10,13 +10,18 @@
 
 @implementation UIFont (DokuFont)
 
-+ (UIFont *)dokuLightFontWithSize: (CGFloat)size {
-    return [UIFont fontWithName: @"DIN-Light"
++ (UIFont *)dokuDINNextLTProMediumFontWithSize: (CGFloat)size {
+    return [UIFont fontWithName: @"DINNextLTPro-Medium"
                            size: size];
 }
 
-+ (UIFont *)dokuRegularFontWithSize: (CGFloat)size {
++ (UIFont *)dokuDINNextLTProRegularFontWithSize: (CGFloat)size {
     return [UIFont fontWithName: @"DINNextLTPro-Regular"
+                           size: size];
+}
+
++ (UIFont *)dokuDINNextLTProBoldFontWithSize: (CGFloat)size {
+    return [UIFont fontWithName: @"DINNextLTPro-Bold"
                            size: size];
 }
 

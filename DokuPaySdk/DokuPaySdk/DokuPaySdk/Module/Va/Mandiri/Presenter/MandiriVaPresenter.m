@@ -15,10 +15,8 @@
 - (instancetype)initWithInterface: (id<ToDoMandiriVaViewProtocol>)interface
                        interactor: (id<ToDoMandiriVaInteractorInputProtocol>)interactor
                            router: (id<ToDoMandiriVaWireframeProtocol>)router
-                             data: (MandiriVaParams *)data;
-{
-    if (self = [super init])
-    {
+                             data: (MandiriVaParams *)data {
+    if (self = [super init]) {
         self.view = interface;
         self.interactor = interactor;
         self.router = router;
@@ -30,7 +28,8 @@
 
 - (void)getPaymentCode: (MandiriVaParams *)item
                    url: (NSString *) url {
-    [self.interactor getPaymentCode: item url: url];
+    [self.interactor getPaymentCode: item
+                                url: url];
 }
 
 #pragma mark - ToDoInteractorOutputProtocol

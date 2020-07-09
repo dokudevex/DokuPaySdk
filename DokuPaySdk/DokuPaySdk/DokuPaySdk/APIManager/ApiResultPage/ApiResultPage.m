@@ -18,15 +18,14 @@
                    ifFailed: (void (^)(NSError *))failed {
     
     APIManager *manager = [APIManager sharedManager];
-    NSLog(@"Result Page URL %@",url);
-    [manager GET:url
+    [manager GET: url
       parameters: nil
          headers: nil
         progress: nil
          success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSError *error;
-        NSMutableDictionary *response = [[NSMutableDictionary alloc] initWithDictionary:responseObject];
+        NSMutableDictionary *response = [[NSMutableDictionary alloc] initWithDictionary: responseObject];
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject: response
                                                            options: NSJSONWritingPrettyPrinted
                                                              error: &error];

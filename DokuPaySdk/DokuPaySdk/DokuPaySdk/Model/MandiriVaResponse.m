@@ -19,7 +19,7 @@
     
     if (self = [super init]) {
         NSData *nsData = [data dataUsingEncoding:NSUTF8StringEncoding];
-        NSDictionary* dictionary = [DokuPayUtils nsDataToDictionary: nsData];
+        NSDictionary *dictionary = [DokuPayUtils nsDataToDictionary: nsData];
         
         NSDictionary *order = [dictionary objectForKey:@"order"];
         NSDictionary *client = [dictionary objectForKey:@"client"];

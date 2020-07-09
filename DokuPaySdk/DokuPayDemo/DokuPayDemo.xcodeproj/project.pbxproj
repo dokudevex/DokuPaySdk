@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A47466C50E5CAE978328FE85 /* libPods-DokuPayDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC94A8E6FB1F5375514D21E8 /* libPods-DokuPayDemo.a */; };
 		C308A6B224AD814C00E5BA3A /* ResultPageDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C308A6B124AD814C00E5BA3A /* ResultPageDemoViewController.m */; };
-		C308A70224ADBF9000E5BA3A /* MandiriVaResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C308A70124ADBF9000E5BA3A /* MandiriVaResponse.m */; };
+		C308A70224ADBF9000E5BA3A /* MandiriVaDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C308A70124ADBF9000E5BA3A /* MandiriVaDataResponse.m */; };
+		C3296CA224B5C40A00BA569E /* ListViewCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3296CA124B5C40A00BA569E /* ListViewCellTableViewCell.m */; };
+		C3296CA624B5C92E00BA569E /* TableViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3296CA424B5C92E00BA569E /* TableViewHeaderCell.m */; };
+		C3296CA724B5C92E00BA569E /* TableViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3296CA524B5C92E00BA569E /* TableViewHeaderCell.xib */; };
 		C3366EB724938FAF0040C86C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EB624938FAF0040C86C /* AppDelegate.m */; };
 		C3366EBD24938FAF0040C86C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EBC24938FAF0040C86C /* ViewController.m */; };
 		C3366EC024938FAF0040C86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3366EBE24938FAF0040C86C /* Main.storyboard */; };
@@ -20,15 +22,26 @@
 		C3366EDD24938FB20040C86C /* DokuPayDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EDC24938FB20040C86C /* DokuPayDemoUITests.m */; };
 		C3366F03249391550040C86C /* DokuPaySdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3366F02249391550040C86C /* DokuPaySdk.framework */; };
 		C33D668324A5FC3D00FF776A /* SettingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D668124A5FC3D00FF776A /* SettingPageViewController.m */; };
-		C33D668424A5FC3D00FF776A /* SettingPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33D668224A5FC3D00FF776A /* SettingPageViewController.xib */; };
+		C352B1AD24B70AE2006A3C93 /* STPopupLeftBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B19E24B70AE1006A3C93 /* STPopupLeftBarItem.m */; };
+		C352B1AE24B70AE2006A3C93 /* STPopupControllerTransitioningFade.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1A124B70AE1006A3C93 /* STPopupControllerTransitioningFade.m */; };
+		C352B1AF24B70AE2006A3C93 /* STPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1A224B70AE1006A3C93 /* STPopupController.m */; };
+		C352B1B024B70AE2006A3C93 /* UIResponder+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1A324B70AE1006A3C93 /* UIResponder+STPopup.m */; };
+		C352B1B124B70AE2006A3C93 /* STPopupControllerTransitioningSlideVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1A624B70AE1006A3C93 /* STPopupControllerTransitioningSlideVertical.m */; };
+		C352B1B224B70AE2006A3C93 /* STPopupNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1A824B70AE2006A3C93 /* STPopupNavigationBar.m */; };
+		C352B1B324B70AE2006A3C93 /* UIViewController+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1AA24B70AE2006A3C93 /* UIViewController+STPopup.m */; };
+		C352B1C024B71461006A3C93 /* BottomSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1BF24B71461006A3C93 /* BottomSheetViewController.m */; };
+		C352B1C424B7178F006A3C93 /* BottomSheetViewControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C352B1C324B7178F006A3C93 /* BottomSheetViewControllerStoryboard.storyboard */; };
 		C3631EA624AA87A00021A36C /* DokuConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C3631EA524AA87A00021A36C /* DokuConstants.m */; };
 		C3691ABD24A5140A00AC1DE5 /* DokuUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C3691ABC24A5140A00AC1DE5 /* DokuUtils.m */; };
-		C3DB301824A9C67100992C32 /* DokuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301224A9C67000992C32 /* DokuView.m */; };
-		C3DB301924A9C67100992C32 /* DokuLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301424A9C67000992C32 /* DokuLabel.m */; };
-		C3DB301A24A9C67100992C32 /* DokuTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301624A9C67100992C32 /* DokuTextField.m */; };
+		C36A3AA024BA83AA0067E80B /* doku.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C36A3A9B24BA83AA0067E80B /* doku.ttf */; };
+		C36A3AA124BA83AA0067E80B /* dinbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C36A3A9C24BA83AA0067E80B /* dinbold.ttf */; };
+		C36A3AA224BA83AA0067E80B /* dinmedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C36A3A9D24BA83AA0067E80B /* dinmedium.ttf */; };
+		C36A3AA324BA83AA0067E80B /* robotobold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C36A3A9E24BA83AA0067E80B /* robotobold.ttf */; };
+		C36A3AA424BA83AA0067E80B /* dokuregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C36A3A9F24BA83AA0067E80B /* dokuregular.ttf */; };
+		C36A7F5924B9726E008E3543 /* DokuStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C36A7F5824B9726E008E3543 /* DokuStyle.m */; };
+		C372DEC324B84E2D000AAB3E /* SettingPageViewControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C372DEC224B84E2D000AAB3E /* SettingPageViewControllerStoryboard.storyboard */; };
 		C3DB301F24A9C6D500992C32 /* UIColor+DokuColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301B24A9C6D400992C32 /* UIColor+DokuColor.m */; };
 		C3DB302024A9C6D500992C32 /* UIFont+DokuFont.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301C24A9C6D400992C32 /* UIFont+DokuFont.m */; };
-		C3DB302824A9D52600992C32 /* DokuAlertButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB302724A9D52600992C32 /* DokuAlertButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,15 +62,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		338B8795F6804AA5A5915458 /* Pods-DokuPayDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokuPayDemo.release.xcconfig"; path = "Target Support Files/Pods-DokuPayDemo/Pods-DokuPayDemo.release.xcconfig"; sourceTree = "<group>"; };
-		5A64115324B3105500A88DD0 /* dinnbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dinnbold.ttf; path = ../../../../../../../../../Downloads/dinnbold.ttf; sourceTree = "<group>"; };
-		5A64115424B3105500A88DD0 /* dinnmedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dinnmedium.ttf; path = ../../../../../../../../../Downloads/dinnmedium.ttf; sourceTree = "<group>"; };
-		5A64115524B3105500A88DD0 /* dinnregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = dinnregular.ttf; path = ../../../../../../../../../Downloads/dinnregular.ttf; sourceTree = "<group>"; };
-		C081C4D2AB786719A041CD5D /* Pods-DokuPayDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokuPayDemo.debug.xcconfig"; path = "Target Support Files/Pods-DokuPayDemo/Pods-DokuPayDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C308A6B024AD814C00E5BA3A /* ResultPageDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultPageDemoViewController.h; sourceTree = "<group>"; };
 		C308A6B124AD814C00E5BA3A /* ResultPageDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultPageDemoViewController.m; sourceTree = "<group>"; };
-		C308A70024ADBF9000E5BA3A /* MandiriVaResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriVaResponse.h; sourceTree = "<group>"; };
-		C308A70124ADBF9000E5BA3A /* MandiriVaResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaResponse.m; sourceTree = "<group>"; };
+		C308A70024ADBF9000E5BA3A /* MandiriVaDataResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriVaDataResponse.h; sourceTree = "<group>"; };
+		C308A70124ADBF9000E5BA3A /* MandiriVaDataResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaDataResponse.m; sourceTree = "<group>"; };
+		C3296CA024B5C40A00BA569E /* ListViewCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewCellTableViewCell.h; sourceTree = "<group>"; };
+		C3296CA124B5C40A00BA569E /* ListViewCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewCellTableViewCell.m; sourceTree = "<group>"; };
+		C3296CA324B5C92E00BA569E /* TableViewHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewHeaderCell.h; sourceTree = "<group>"; };
+		C3296CA424B5C92E00BA569E /* TableViewHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewHeaderCell.m; sourceTree = "<group>"; };
+		C3296CA524B5C92E00BA569E /* TableViewHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewHeaderCell.xib; sourceTree = "<group>"; };
 		C3366EB224938FAF0040C86C /* DokuPayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DokuPayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3366EB524938FAF0040C86C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C3366EB624938FAF0040C86C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,26 +90,42 @@
 		C3366F02249391550040C86C /* DokuPaySdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DokuPaySdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33D668024A5FC3D00FF776A /* SettingPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingPageViewController.h; sourceTree = "<group>"; };
 		C33D668124A5FC3D00FF776A /* SettingPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingPageViewController.m; sourceTree = "<group>"; };
-		C33D668224A5FC3D00FF776A /* SettingPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingPageViewController.xib; sourceTree = "<group>"; };
+		C352B19E24B70AE1006A3C93 /* STPopupLeftBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupLeftBarItem.m; sourceTree = "<group>"; };
+		C352B19F24B70AE1006A3C93 /* STPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupController.h; sourceTree = "<group>"; };
+		C352B1A024B70AE1006A3C93 /* STPopupControllerTransitioningSlideVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupControllerTransitioningSlideVertical.h; sourceTree = "<group>"; };
+		C352B1A124B70AE1006A3C93 /* STPopupControllerTransitioningFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupControllerTransitioningFade.m; sourceTree = "<group>"; };
+		C352B1A224B70AE1006A3C93 /* STPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupController.m; sourceTree = "<group>"; };
+		C352B1A324B70AE1006A3C93 /* UIResponder+STPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+STPopup.m"; sourceTree = "<group>"; };
+		C352B1A424B70AE1006A3C93 /* UIViewController+STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STPopup.h"; sourceTree = "<group>"; };
+		C352B1A524B70AE1006A3C93 /* STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopup.h; sourceTree = "<group>"; };
+		C352B1A624B70AE1006A3C93 /* STPopupControllerTransitioningSlideVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupControllerTransitioningSlideVertical.m; sourceTree = "<group>"; };
+		C352B1A724B70AE2006A3C93 /* STPopupNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupNavigationBar.h; sourceTree = "<group>"; };
+		C352B1A824B70AE2006A3C93 /* STPopupNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupNavigationBar.m; sourceTree = "<group>"; };
+		C352B1A924B70AE2006A3C93 /* STPopupLeftBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupLeftBarItem.h; sourceTree = "<group>"; };
+		C352B1AA24B70AE2006A3C93 /* UIViewController+STPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STPopup.m"; sourceTree = "<group>"; };
+		C352B1AB24B70AE2006A3C93 /* UIResponder+STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+STPopup.h"; sourceTree = "<group>"; };
+		C352B1AC24B70AE2006A3C93 /* STPopupControllerTransitioningFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupControllerTransitioningFade.h; sourceTree = "<group>"; };
+		C352B1BE24B71461006A3C93 /* BottomSheetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomSheetViewController.h; sourceTree = "<group>"; };
+		C352B1BF24B71461006A3C93 /* BottomSheetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomSheetViewController.m; sourceTree = "<group>"; };
+		C352B1C324B7178F006A3C93 /* BottomSheetViewControllerStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BottomSheetViewControllerStoryboard.storyboard; sourceTree = "<group>"; };
 		C3631EA424AA87A00021A36C /* DokuConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DokuConstants.h; sourceTree = "<group>"; };
 		C3631EA524AA87A00021A36C /* DokuConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuConstants.m; sourceTree = "<group>"; };
 		C3691ABB24A5140A00AC1DE5 /* DokuUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DokuUtils.h; sourceTree = "<group>"; };
 		C3691ABC24A5140A00AC1DE5 /* DokuUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuUtils.m; sourceTree = "<group>"; };
 		C3691ABE24A516EA00AC1DE5 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		C3691ABF24A516FB00AC1DE5 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
-		C3DB301224A9C67000992C32 /* DokuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DokuView.m; sourceTree = "<group>"; };
-		C3DB301324A9C67000992C32 /* DokuLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DokuLabel.h; sourceTree = "<group>"; };
-		C3DB301424A9C67000992C32 /* DokuLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DokuLabel.m; sourceTree = "<group>"; };
-		C3DB301524A9C67100992C32 /* DokuTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DokuTextField.h; sourceTree = "<group>"; };
-		C3DB301624A9C67100992C32 /* DokuTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DokuTextField.m; sourceTree = "<group>"; };
-		C3DB301724A9C67100992C32 /* DokuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DokuView.h; sourceTree = "<group>"; };
+		C36A3A9B24BA83AA0067E80B /* doku.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = doku.ttf; sourceTree = "<group>"; };
+		C36A3A9C24BA83AA0067E80B /* dinbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dinbold.ttf; sourceTree = "<group>"; };
+		C36A3A9D24BA83AA0067E80B /* dinmedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dinmedium.ttf; sourceTree = "<group>"; };
+		C36A3A9E24BA83AA0067E80B /* robotobold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = robotobold.ttf; sourceTree = "<group>"; };
+		C36A3A9F24BA83AA0067E80B /* dokuregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dokuregular.ttf; sourceTree = "<group>"; };
+		C36A7F5724B9726E008E3543 /* DokuStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DokuStyle.h; sourceTree = "<group>"; };
+		C36A7F5824B9726E008E3543 /* DokuStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuStyle.m; sourceTree = "<group>"; };
+		C372DEC224B84E2D000AAB3E /* SettingPageViewControllerStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingPageViewControllerStoryboard.storyboard; sourceTree = "<group>"; };
 		C3DB301B24A9C6D400992C32 /* UIColor+DokuColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DokuColor.m"; sourceTree = "<group>"; };
 		C3DB301C24A9C6D400992C32 /* UIFont+DokuFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+DokuFont.m"; sourceTree = "<group>"; };
 		C3DB301D24A9C6D400992C32 /* UIColor+DokuColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DokuColor.h"; sourceTree = "<group>"; };
 		C3DB301E24A9C6D500992C32 /* UIFont+DokuFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+DokuFont.h"; sourceTree = "<group>"; };
-		C3DB302624A9D52600992C32 /* DokuAlertButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DokuAlertButton.h; sourceTree = "<group>"; };
-		C3DB302724A9D52600992C32 /* DokuAlertButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DokuAlertButton.m; sourceTree = "<group>"; };
-		CC94A8E6FB1F5375514D21E8 /* libPods-DokuPayDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DokuPayDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3366F03249391550040C86C /* DokuPaySdk.framework in Frameworks */,
-				A47466C50E5CAE978328FE85 /* libPods-DokuPayDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,31 +154,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5A64115224B3103B00A88DD0 /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				5A64115324B3105500A88DD0 /* dinnbold.ttf */,
-				5A64115424B3105500A88DD0 /* dinnmedium.ttf */,
-				5A64115524B3105500A88DD0 /* dinnregular.ttf */,
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
-		5C0F00E5256100CE5E00EDB2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C081C4D2AB786719A041CD5D /* Pods-DokuPayDemo.debug.xcconfig */,
-				338B8795F6804AA5A5915458 /* Pods-DokuPayDemo.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
 		C308A6FC24ADBF3000E5BA3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C308A70024ADBF9000E5BA3A /* MandiriVaResponse.h */,
-				C308A70124ADBF9000E5BA3A /* MandiriVaResponse.m */,
+				C308A70024ADBF9000E5BA3A /* MandiriVaDataResponse.h */,
+				C308A70124ADBF9000E5BA3A /* MandiriVaDataResponse.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,7 +171,6 @@
 				C3366EDB24938FB20040C86C /* DokuPayDemoUITests */,
 				C3366EB324938FAF0040C86C /* Products */,
 				C3366EF92493912B0040C86C /* Frameworks */,
-				5C0F00E5256100CE5E00EDB2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,7 +187,8 @@
 		C3366EB424938FAF0040C86C /* DokuPayDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5A64115224B3103B00A88DD0 /* Font */,
+				C36A3A9024BA82230067E80B /* Fonts */,
+				C352B19C24B70A3A006A3C93 /* Library */,
 				C308A6FC24ADBF3000E5BA3A /* Model */,
 				C3631EA324AA87710021A36C /* Constants */,
 				C3DB302B24A9E4F100992C32 /* Extension */,
@@ -216,9 +224,38 @@
 				C3691ABF24A516FB00AC1DE5 /* libicucore.A.tbd */,
 				C3691ABE24A516EA00AC1DE5 /* libicucore.tbd */,
 				C3366F02249391550040C86C /* DokuPaySdk.framework */,
-				CC94A8E6FB1F5375514D21E8 /* libPods-DokuPayDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C352B19C24B70A3A006A3C93 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C352B19D24B70AB3006A3C93 /* STPopup */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		C352B19D24B70AB3006A3C93 /* STPopup */ = {
+			isa = PBXGroup;
+			children = (
+				C352B1A524B70AE1006A3C93 /* STPopup.h */,
+				C352B19F24B70AE1006A3C93 /* STPopupController.h */,
+				C352B1A224B70AE1006A3C93 /* STPopupController.m */,
+				C352B1AC24B70AE2006A3C93 /* STPopupControllerTransitioningFade.h */,
+				C352B1A124B70AE1006A3C93 /* STPopupControllerTransitioningFade.m */,
+				C352B1A024B70AE1006A3C93 /* STPopupControllerTransitioningSlideVertical.h */,
+				C352B1A624B70AE1006A3C93 /* STPopupControllerTransitioningSlideVertical.m */,
+				C352B1A924B70AE2006A3C93 /* STPopupLeftBarItem.h */,
+				C352B19E24B70AE1006A3C93 /* STPopupLeftBarItem.m */,
+				C352B1A724B70AE2006A3C93 /* STPopupNavigationBar.h */,
+				C352B1A824B70AE2006A3C93 /* STPopupNavigationBar.m */,
+				C352B1AB24B70AE2006A3C93 /* UIResponder+STPopup.h */,
+				C352B1A324B70AE1006A3C93 /* UIResponder+STPopup.m */,
+				C352B1A424B70AE1006A3C93 /* UIViewController+STPopup.h */,
+				C352B1AA24B70AE2006A3C93 /* UIViewController+STPopup.m */,
+			);
+			path = STPopup;
 			sourceTree = "<group>";
 		};
 		C361463524A59AD700FD64BF /* Views */ = {
@@ -226,7 +263,13 @@
 			children = (
 				C33D668024A5FC3D00FF776A /* SettingPageViewController.h */,
 				C33D668124A5FC3D00FF776A /* SettingPageViewController.m */,
-				C33D668224A5FC3D00FF776A /* SettingPageViewController.xib */,
+				C372DEC224B84E2D000AAB3E /* SettingPageViewControllerStoryboard.storyboard */,
+				C3296CA324B5C92E00BA569E /* TableViewHeaderCell.h */,
+				C3296CA424B5C92E00BA569E /* TableViewHeaderCell.m */,
+				C3296CA524B5C92E00BA569E /* TableViewHeaderCell.xib */,
+				C352B1BE24B71461006A3C93 /* BottomSheetViewController.h */,
+				C352B1BF24B71461006A3C93 /* BottomSheetViewController.m */,
+				C352B1C324B7178F006A3C93 /* BottomSheetViewControllerStoryboard.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,6 +292,18 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		C36A3A9024BA82230067E80B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C36A3A9C24BA83AA0067E80B /* dinbold.ttf */,
+				C36A3A9D24BA83AA0067E80B /* dinmedium.ttf */,
+				C36A3A9B24BA83AA0067E80B /* doku.ttf */,
+				C36A3A9F24BA83AA0067E80B /* dokuregular.ttf */,
+				C36A3A9E24BA83AA0067E80B /* robotobold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C3DB302924A9E48800992C32 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +324,8 @@
 				C3366EBC24938FAF0040C86C /* ViewController.m */,
 				C308A6B024AD814C00E5BA3A /* ResultPageDemoViewController.h */,
 				C308A6B124AD814C00E5BA3A /* ResultPageDemoViewController.m */,
+				C3296CA024B5C40A00BA569E /* ListViewCellTableViewCell.h */,
+				C3296CA124B5C40A00BA569E /* ListViewCellTableViewCell.m */,
 				C3366EBE24938FAF0040C86C /* Main.storyboard */,
 			);
 			path = Main;
@@ -277,18 +334,12 @@
 		C3DB302B24A9E4F100992C32 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				C3DB302624A9D52600992C32 /* DokuAlertButton.h */,
-				C3DB302724A9D52600992C32 /* DokuAlertButton.m */,
 				C3DB301D24A9C6D400992C32 /* UIColor+DokuColor.h */,
 				C3DB301B24A9C6D400992C32 /* UIColor+DokuColor.m */,
 				C3DB301E24A9C6D500992C32 /* UIFont+DokuFont.h */,
 				C3DB301C24A9C6D400992C32 /* UIFont+DokuFont.m */,
-				C3DB301324A9C67000992C32 /* DokuLabel.h */,
-				C3DB301424A9C67000992C32 /* DokuLabel.m */,
-				C3DB301524A9C67100992C32 /* DokuTextField.h */,
-				C3DB301624A9C67100992C32 /* DokuTextField.m */,
-				C3DB301724A9C67100992C32 /* DokuView.h */,
-				C3DB301224A9C67000992C32 /* DokuView.m */,
+				C36A7F5724B9726E008E3543 /* DokuStyle.h */,
+				C36A7F5824B9726E008E3543 /* DokuStyle.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -300,7 +351,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3366EE124938FB20040C86C /* Build configuration list for PBXNativeTarget "DokuPayDemo" */;
 			buildPhases = (
-				6EA0644EE9F29EFF47FEE7AB /* [CP] Check Pods Manifest.lock */,
 				C3366EAE24938FAF0040C86C /* Sources */,
 				C3366EAF24938FAF0040C86C /* Frameworks */,
 				C3366EB024938FAF0040C86C /* Resources */,
@@ -398,8 +448,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3366EC524938FB20040C86C /* LaunchScreen.storyboard in Resources */,
-				C33D668424A5FC3D00FF776A /* SettingPageViewController.xib in Resources */,
+				C36A3AA424BA83AA0067E80B /* dokuregular.ttf in Resources */,
+				C36A3AA024BA83AA0067E80B /* doku.ttf in Resources */,
+				C36A3AA324BA83AA0067E80B /* robotobold.ttf in Resources */,
+				C372DEC324B84E2D000AAB3E /* SettingPageViewControllerStoryboard.storyboard in Resources */,
+				C36A3AA124BA83AA0067E80B /* dinbold.ttf in Resources */,
+				C36A3AA224BA83AA0067E80B /* dinmedium.ttf in Resources */,
+				C352B1C424B7178F006A3C93 /* BottomSheetViewControllerStoryboard.storyboard in Resources */,
 				C3366EC224938FB20040C86C /* Assets.xcassets in Resources */,
+				C3296CA724B5C92E00BA569E /* TableViewHeaderCell.xib in Resources */,
 				C3366EC024938FAF0040C86C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,49 +477,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		6EA0644EE9F29EFF47FEE7AB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DokuPayDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		C3366EAE24938FAF0040C86C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C308A70224ADBF9000E5BA3A /* MandiriVaResponse.m in Sources */,
+				C352B1B124B70AE2006A3C93 /* STPopupControllerTransitioningSlideVertical.m in Sources */,
+				C308A70224ADBF9000E5BA3A /* MandiriVaDataResponse.m in Sources */,
+				C352B1AD24B70AE2006A3C93 /* STPopupLeftBarItem.m in Sources */,
+				C352B1C024B71461006A3C93 /* BottomSheetViewController.m in Sources */,
 				C3DB301F24A9C6D500992C32 /* UIColor+DokuColor.m in Sources */,
-				C3DB301924A9C67100992C32 /* DokuLabel.m in Sources */,
-				C3DB302824A9D52600992C32 /* DokuAlertButton.m in Sources */,
 				C3366EBD24938FAF0040C86C /* ViewController.m in Sources */,
 				C33D668324A5FC3D00FF776A /* SettingPageViewController.m in Sources */,
+				C352B1AE24B70AE2006A3C93 /* STPopupControllerTransitioningFade.m in Sources */,
+				C352B1AF24B70AE2006A3C93 /* STPopupController.m in Sources */,
 				C3DB302024A9C6D500992C32 /* UIFont+DokuFont.m in Sources */,
 				C3631EA624AA87A00021A36C /* DokuConstants.m in Sources */,
+				C3296CA224B5C40A00BA569E /* ListViewCellTableViewCell.m in Sources */,
+				C352B1B224B70AE2006A3C93 /* STPopupNavigationBar.m in Sources */,
 				C308A6B224AD814C00E5BA3A /* ResultPageDemoViewController.m in Sources */,
 				C3366EB724938FAF0040C86C /* AppDelegate.m in Sources */,
-				C3DB301824A9C67100992C32 /* DokuView.m in Sources */,
+				C3296CA624B5C92E00BA569E /* TableViewHeaderCell.m in Sources */,
 				C3366EC824938FB20040C86C /* main.m in Sources */,
-				C3DB301A24A9C67100992C32 /* DokuTextField.m in Sources */,
+				C352B1B324B70AE2006A3C93 /* UIViewController+STPopup.m in Sources */,
+				C36A7F5924B9726E008E3543 /* DokuStyle.m in Sources */,
+				C352B1B024B70AE2006A3C93 /* UIResponder+STPopup.m in Sources */,
 				C3691ABD24A5140A00AC1DE5 /* DokuUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,7 +669,6 @@
 		};
 		C3366EE224938FB20040C86C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C081C4D2AB786719A041CD5D /* Pods-DokuPayDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -650,7 +688,6 @@
 		};
 		C3366EE324938FB20040C86C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 338B8795F6804AA5A5915458 /* Pods-DokuPayDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -6,9 +6,11 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>dinnbold.ttf</string>
-		<string>dinnmedium.ttf</string>
-		<string>dinnregular.ttf</string>
+		<string>dokuregular.ttf</string>
+		<string>robotobold.ttf</string>
+		<string>dinbold.ttf</string>
+		<string>dinmedium.ttf</string>
+		<string>doku.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
@@ -35,8 +37,6 @@
 	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

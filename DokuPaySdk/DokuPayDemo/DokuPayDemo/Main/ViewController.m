@@ -9,29 +9,38 @@
 #import "ViewController.h"
 #import <DokuPaySdk/DokuPaySdk.h>
 #import "SettingPageViewController.h"
-#import <ActionSheetPicker.h>
 #import "DokuUtils.h"
 #import "DokuConstants.h"
 #import "ResultPageDemoViewController.h"
-
-static int const kHeaderSectionTag = 6900;
+#import "ListViewCellTableViewCell.h"
+#import "TableViewHeaderCell.h"
+#import "STPopup.h"
+#import "BottomSheetViewController.h"
+#import "DokuStyle.h"
+#import "UIColor+DokuColor.h"
+#import "UIFont+DokuFont.h"
+#import "AppDelegate.h"
 
 @interface ViewController () <DokuPaySdkDelegate>
 
 @property (assign) NSInteger expandedSectionHeaderNumber;
-@property (assign) UITableViewHeaderFooterView *expandedSectionHeader;
-@property (strong) NSArray *sectionItems;
-@property (strong) NSArray *sectionNames;
-@property (nonatomic, copy) NSString *invoiceNumber;
-@property (strong, nonatomic) SettingPageViewController *settingPageViewController;
-@property (weak, nonatomic) IBOutlet UITableView *tableViewAccordion;
-@property (weak, nonatomic) IBOutlet UILabel *labelViewOrderId;
-@property (weak, nonatomic) IBOutlet UILabel *labelViewAmount;
-@property (nonatomic,strong) NSString *dataResponse;
-@property (nonatomic,strong) NSString *amount;
-@property (nonatomic,strong) NSString *merchantName;
-@property (weak, nonatomic) IBOutlet UIView *viewOrder;
-@property (weak, nonatomic) IBOutlet UIButton *btnOrder;
+@property (assign) TableViewHeaderCell * expandedSectionHeader;
+@property (strong) NSArray * sectionItems;
+@property (strong) NSArray * sectionItemsImages;
+@property (strong) NSArray * sectionNames;
+@property (strong) NSArray * sectionNamesImages;
+@property (nonatomic, copy) NSString * invoiceNumber;
+@property (strong, nonatomic) SettingPageViewController * settingPageViewController;
+@property (weak, nonatomic) IBOutlet UITableView * tableViewAccordion;
+@property (weak, nonatomic) IBOutlet UILabel * labelViewOrderId;
+@property (weak, nonatomic) IBOutlet UILabel * labelViewAmount;
+@property (nonatomic,strong) NSString * dataResponse;
+@property (nonatomic,strong) NSString * amount;
+@property (nonatomic,strong) NSString * merchantName;
+@property (weak, nonatomic) IBOutlet UIView * viewOrder;
+@property (weak, nonatomic) IBOutlet UIButton * buttonDetails;
+@property (strong, nonatomic) IBOutlet UIView *viewMain;
+@property (weak, nonatomic) IBOutlet UIView *viewPowerBy;
 
 @end
 
@@ -46,54 +55,79 @@ static int const kHeaderSectionTag = 6900;
                            @"Convenience Store",
                            @"Internet Banking",
                            @"Personal Financing"];
-    self.sectionItems = @[ @[@""],
-                           @[@""],
+    
+    self.sectionNamesImages = @[ @"icon_cc",
+                                 @"icon_emoney",
+                                 @"icon_transfer_va",
+                                 @"icon_convenience_store",
+                                 @"icon_internet_banking",
+                                 @"icon_personal_financing"];
+    
+    self.sectionItems = @[ @[@" "],
+                           @[@" "],
                            @[@"Mandiri", @"Mandiri Syariah"],
-                           @[@""],
-                           @[@""],
-                           @[@""]
-                         ];
+                           @[@" "],
+                           @[@" "],
+                           @[@" "]];
+    
+    self.sectionItemsImages = @[ @[@" "],
+                                 @[@" "],
+                                 @[@"icon_mandiri", @"icon_mandiri_syariah"],
+                                 @[@" "],
+                                 @[@" "],
+                                 @[@" "]];
     
     self.tableViewAccordion.tableFooterView = [[UIView alloc] initWithFrame: CGRectZero];
+    [self.tableViewAccordion registerNib: [UINib nibWithNibName:@"TableViewHeaderCell"
+                                                         bundle:nil]
+                  forCellReuseIdentifier: @"HeaderCell"];
+    
     self.tableViewAccordion.rowHeight = UITableViewAutomaticDimension;
     self.tableViewAccordion.estimatedRowHeight = 100;
     self.expandedSectionHeaderNumber = -1;
     
+    [self setupForm];
     
+}
 
+- (IBAction)buttonDetails:(id)sender {
     
-    CAShapeLayer * maskLayerView = [CAShapeLayer layer];
-    maskLayerView.path = [UIBezierPath bezierPathWithRoundedRect: self.viewOrder.bounds byRoundingCorners: UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii: (CGSize){10.0, 10.}].CGPath;
-    self.viewOrder.layer.mask = maskLayerView;
+    STPopupController *popupController = [[STPopupController alloc]
+                                          initWithRootViewController: [[UIStoryboard storyboardWithName: @"BottomSheetViewControllerStoryboard"
+                                                                                                 bundle: nil]
+                                                                       instantiateViewControllerWithIdentifier: @"BottomSheetViewController"]];
+    popupController.style = STPopupStyleBottomSheet;
+    popupController.navigationBarHidden = true;
+    [popupController.backgroundView addGestureRecognizer: [[UITapGestureRecognizer alloc] initWithTarget: self
+                                                                                                  action: @selector(handleSingleTap:)]];
+    [popupController presentInViewController: self];
     
+}
+
+- (void) setupForm {
+    [DokuStyle DokuButonRoundedTopLeftRight: self.buttonDetails];
     
-    CAShapeLayer * maskLayerBtnDetail = [CAShapeLayer layer];
-      maskLayerBtnDetail.path = [UIBezierPath bezierPathWithRoundedRect: self.btnOrder.bounds byRoundingCorners: UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii: (CGSize){10.0, 10.}].CGPath;
-      self.btnOrder.layer.mask = maskLayerBtnDetail;
+    self.viewOrder.layer.borderWidth = 1;
+    self.viewOrder.layer.cornerRadius = 10;
+    self.viewOrder.layer.borderColor = [UIColor dokuSeparator].CGColor;
     
+    self.viewPowerBy.layer.borderWidth = 1;
+    self.viewPowerBy.layer.cornerRadius = 10;
+    self.viewPowerBy.layer.borderColor = [UIColor dokuSeparator].CGColor;
     
+    self.tableViewAccordion.layer.borderWidth = 1;
+    self.tableViewAccordion.layer.cornerRadius = 10;
+    self.tableViewAccordion.layer.borderColor = [UIColor dokuSeparator].CGColor;
     
+}
+
+- (void)handleSingleTap: (UITapGestureRecognizer *)recognizer {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) setTitle {
-    NSString *getMerchantName = [DokuUtils getValueFromNSUserDefaultForKey:merchantName];
+    NSString *getMerchantName = [DokuUtils getValueFromNSUserDefaultForKey: merchantName];
     self.navigationController.navigationBar.topItem.title = getMerchantName;
-}
-
-- (void)SubmitTapped:(id)sender {
-    NSString *dataClientId = self.settingPageViewController.textFieldClientId.text;
-    NSString *dataMerchantName = self.settingPageViewController.textFieldMerchantName.text;
-    NSString *dataSharedKey = self.settingPageViewController.textFieldSharedkey.text;
-    NSString *dataEnvironmentServer = self.settingPageViewController.textFieldEnvironmentServer.text;
-    NSString *dataActivePageResult = self.settingPageViewController.textFieldActiveResultPage.text;
-    
-    [DokuUtils saveValueAtNSUserDefault: dataClientId forKey:clientId];
-    [DokuUtils saveValueAtNSUserDefault: dataMerchantName forKey:merchantName];
-    [DokuUtils saveValueAtNSUserDefault: dataSharedKey forKey:sharedKey];
-    [DokuUtils saveValueAtNSUserDefault: dataEnvironmentServer forKey:environmentServer];
-    [DokuUtils saveValueAtNSUserDefault: dataActivePageResult forKey:activePageResult];
-    
-    [self setTitle];
 }
 
 - (void) alert: (NSString *) message {
@@ -104,11 +138,14 @@ static int const kHeaderSectionTag = 6900;
     UIAlertAction *ok = [UIAlertAction actionWithTitle: @"OK"
                                                  style: UIAlertActionStyleDefault
                                                handler: ^(UIAlertAction * _Nonnull action) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated: YES
+                                 completion: nil];
     }];
 
     [alert addAction:ok];
-    [self presentViewController:alert animated:YES completion:nil];
+    [self presentViewController: alert
+                       animated: YES
+                     completion: nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -121,26 +158,47 @@ static int const kHeaderSectionTag = 6900;
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle: @"SET"
                                                                     style: UIBarButtonItemStyleDone
                                                                    target: self
-                                                                   action: @selector(ActionSet)];
+                                                                   action: @selector(actionSet)];
+    [rightButton setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIFont dokuDINNextLTProMediumFontWithSize: 14.0],
+                                          NSFontAttributeName,
+                                          [UIColor blackColor],
+                                          NSForegroundColorAttributeName, nil]
+                               forState: UIControlStateNormal];
+    
     self.navigationItem.rightBarButtonItem = rightButton;
     
+    UIImage *leftImage = [[UIImage imageNamed:@"CloseAlert.png"] imageWithRenderingMode: UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage: leftImage
+                                                                   style: UIBarButtonItemStylePlain
+                                                                  target: self
+                                                                  action: @selector(actionClose)];
+    
+    self.navigationItem.leftBarButtonItem = leftButton;
+    
     self.invoiceNumber = [NSString stringWithFormat:@"%@%@",@"DEMOSDK-", [DokuUtils getRandomInvoiceNumbertring: 10]];
-    NSString * createInvoice = [NSString stringWithFormat:@"%@%@",@"Order Id ", self.invoiceNumber ];
+    NSString * createInvoice = [NSString stringWithFormat:@"%@%@",@"Order ID : ", self.invoiceNumber ];
     [self.labelViewOrderId setText: createInvoice];
+    [self setTitle];
 }
 
-- (IBAction)ActionSet {
-    self.settingPageViewController = [[SettingPageViewController alloc] init];
-    [self.settingPageViewController.buttonSubmit addTarget: self
-                                                    action: @selector(SubmitTapped:)
-                                          forControlEvents: UIControlEventTouchUpInside];
-    [self.settingPageViewController show];
+- (IBAction)actionClose {
+    NSLog(@"Close Form");
+}
+
+- (IBAction)actionSet {
+    STPopupController *popupController = [[STPopupController alloc]
+                                          initWithRootViewController: [[UIStoryboard storyboardWithName: @"SettingPageViewControllerStoryboard"
+                                                                                                 bundle: nil]
+                                                                       instantiateViewControllerWithIdentifier: @"SettingPageViewController"]];
+    [popupController.backgroundView addGestureRecognizer: [[UITapGestureRecognizer alloc] initWithTarget: self
+    action: @selector(handleSingleTap:)]];
+    popupController.navigationBarHidden = true;
+    [popupController presentInViewController: self];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView: (UITableView *)tableView {
-    
     if (self.sectionNames.count > 0) {
         self.tableViewAccordion.backgroundView = nil;
         return self.sectionNames.count;
@@ -150,8 +208,7 @@ static int const kHeaderSectionTag = 6900;
         messageLabel.text = @"Retrieving data.\nPlease wait.";
         messageLabel.numberOfLines = 0;
         messageLabel.textAlignment = NSTextAlignmentCenter;
-        messageLabel.font = [UIFont fontWithName: @"Helvetica Neue"
-                                            size: 20];
+        messageLabel.font = [UIFont dokuDINNextLTProRegularFontWithSize: 20];
         [messageLabel sizeToFit];
         self.tableViewAccordion.backgroundView = messageLabel;
         
@@ -181,43 +238,50 @@ titleForHeaderInSection: (NSInteger)section {
 
 - (CGFloat)tableView: (UITableView *)tableView
 heightForHeaderInSection: (NSInteger)section; {
-    return 44.0;
+    return 55.0;
 }
 
-- (void)tableView: (UITableView *)tableView
-willDisplayHeaderView: (UIView *)view
-       forSection: (NSInteger)section {
+- (CGFloat)tableView: (UITableView *)tableView
+heightForRowAtIndexPath: (NSIndexPath *)indexPath {
+    return 53;
+}
+
+- (UIView*) tableView: (UITableView*) tableView viewForHeaderInSection: (NSInteger) section
+{
+    TableViewHeaderCell *cellHeader = [tableView dequeueReusableCellWithIdentifier: @"HeaderCell"];
+    NSString *headerTitle = [self.sectionNames objectAtIndex: section];
+    NSString *sectionHeaderImage = [self.sectionNamesImages objectAtIndex: section];
+   
+    UIImage *image = [UIImage imageNamed: sectionHeaderImage
+                                inBundle: [NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
     
-    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
-    header.contentView.backgroundColor = [UIColor whiteColor];
-    header.textLabel.textColor = [UIColor grayColor];
-    UIImageView *viewWithTag = [self.view viewWithTag: kHeaderSectionTag + section];
+    cellHeader.labelViewTItle.text = headerTitle;
     
-    if (viewWithTag) {
-        [viewWithTag removeFromSuperview];
-    }
+    [cellHeader.imageViewIcon setImage: image];
     
-    CGSize headerFrame = self.view.frame.size;
-    UIImageView *theImageView = [[UIImageView alloc] initWithFrame: CGRectMake(headerFrame.width - 32, 13, 18, 18)];
-    theImageView.image = [UIImage imageNamed:@"Chevron-Dn-Wht"];
-    theImageView.tag = kHeaderSectionTag + section;
-    [header addSubview: theImageView];
-    
-    header.tag = section;
+    cellHeader.contentView.tag = section;
     UITapGestureRecognizer *headerTapGesture = [[UITapGestureRecognizer alloc] initWithTarget: self
                                                                                        action: @selector(sectionHeaderWasTouched:)];
-    [header addGestureRecognizer: headerTapGesture];
+    [cellHeader.contentView addGestureRecognizer: headerTapGesture];
+    
+    return cellHeader.contentView;
 }
 
 - (UITableViewCell *)tableView: (UITableView *)tableView
          cellForRowAtIndexPath: (NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"tableCell"
-                                                            forIndexPath: indexPath];
-    NSArray *section = [self.sectionItems objectAtIndex: indexPath.section];
+    ListViewCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"tableCell"
+                                                                      forIndexPath: indexPath];
     
-    cell.textLabel.textColor = [UIColor blackColor];
-    cell.textLabel.text = [section objectAtIndex: indexPath.row];
+    NSArray *section = [self.sectionItems objectAtIndex: indexPath.section];
+    NSArray *sectionImage = [self.sectionItemsImages objectAtIndex: indexPath.section];
+    
+    UIImage *image = [UIImage imageNamed: [sectionImage objectAtIndex: indexPath.row]
+                                inBundle: [NSBundle bundleForClass: self.class]compatibleWithTraitCollection: nil];
+    
+    cell.labelViewTitleMenu.text = [section objectAtIndex: indexPath.row];
+    
+    [cell.imageViewIconMenu setImage: image];
     
     return cell;
 }
@@ -239,6 +303,7 @@ didSelectRowAtIndexPath: (NSIndexPath *)indexPath {
     
     NSString *getClientId = [DokuUtils getValueFromNSUserDefaultForKey: clientId];
     NSString *getMerchantName = [DokuUtils getValueFromNSUserDefaultForKey: merchantName];
+    
     self.merchantName = getMerchantName;
     NSString *getSharedKey = [DokuUtils getValueFromNSUserDefaultForKey: sharedKey];
     
@@ -299,19 +364,14 @@ didSelectRowAtIndexPath: (NSIndexPath *)indexPath {
     }
 }
 
-- (void)updateTableViewRowDisplay: (NSArray *)arrayOfIndexPaths {
-    [self.tableViewAccordion beginUpdates];
-    [self.tableViewAccordion deleteRowsAtIndexPaths: arrayOfIndexPaths
-                                   withRowAnimation: UITableViewRowAnimationFade];
-    [self.tableViewAccordion endUpdates];
-}
-
 #pragma mark - Expand / Collapse Methods
 
 - (void)sectionHeaderWasTouched: (UITapGestureRecognizer *)sender {
-    UITableViewHeaderFooterView *headerView = (UITableViewHeaderFooterView *)sender.view;
+    UIImageView *eImageViewOld = (UIImageView *)[self.expandedSectionHeader viewWithTag: 200];
+    [self removeArrowIcon: eImageViewOld];
+    TableViewHeaderCell *headerView = (TableViewHeaderCell *)sender.view;
     NSInteger section = headerView.tag;
-    UIImageView *eImageView = (UIImageView *)[headerView viewWithTag: kHeaderSectionTag + section];
+    UIImageView *eImageView = (UIImageView *)[headerView viewWithTag: 200];
     self.expandedSectionHeader = headerView;
     
     if (self.expandedSectionHeaderNumber == -1) {
@@ -324,12 +384,19 @@ didSelectRowAtIndexPath: (NSIndexPath *)indexPath {
                                 withImage: eImageView];
             self.expandedSectionHeader = nil;
         } else {
-            UIImageView *cImageView  = (UIImageView *)[self.view viewWithTag:kHeaderSectionTag + self.expandedSectionHeaderNumber];
-            [self tableViewCollapeSection: self.expandedSectionHeaderNumber withImage: cImageView];
+            [self tableViewCollapeSection: self.expandedSectionHeaderNumber
+                                withImage: eImageView];
             [self tableViewExpandSection: section
                                withImage: eImageView];
         }
     }
+}
+
+- (void) removeArrowIcon:(UIImageView *)imageView {
+    [UIView animateWithDuration: 0.4
+                     animations: ^ {
+        imageView.transform = CGAffineTransformMakeRotation((0.0 * M_PI) / 180.0);
+    }];
 }
 
 - (void)tableViewCollapeSection: (NSInteger)section

@@ -64,14 +64,14 @@
 + (UIImage*)getIcon: (NSString*)channelCode {
     UIImage *image = nil;
     
-    if ([channelCode isEqualToString:@"1"]) {
+    if ([channelCode isEqualToString: @"1"]) {
         image = [UIImage imageNamed: @"icon_mandiri"
                            inBundle: [NSBundle bundleForClass:self.class]
-        compatibleWithTraitCollection:nil];
-    } else if ([channelCode isEqualToString:@"2"]) {
+      compatibleWithTraitCollection: nil];
+    } else if ([channelCode isEqualToString: @"2"]) {
         image = [UIImage imageNamed: @"icon_mandiri_syariah"
                            inBundle: [NSBundle bundleForClass:self.class]
-        compatibleWithTraitCollection:nil];
+      compatibleWithTraitCollection: nil];
     }
     return image;
 }

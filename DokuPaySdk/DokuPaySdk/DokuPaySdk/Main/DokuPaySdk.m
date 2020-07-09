@@ -32,7 +32,7 @@ static DokuPaySdk *sharedInstance = nil;
     
     MandiriVaParams * mandiriVaParams = [[MandiriVaParams alloc] initWithText: clientId
                                                                  merchantName: merchantName
-                                                                    channelId: [NSString stringWithFormat:@"%i", paymentChannel]
+                                                                    channelId: [NSString stringWithFormat: @"%i", paymentChannel]
                                                                  isProduction: isProduction
                                                                        amount: dataAmount
                                                                 invoiceNumber: invoiceNumber

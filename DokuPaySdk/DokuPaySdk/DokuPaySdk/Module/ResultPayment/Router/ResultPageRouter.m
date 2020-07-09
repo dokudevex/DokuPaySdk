@@ -17,7 +17,7 @@
 + (UIViewController *)createModule: (MandiriVaResponse *)data {
     UIStoryboard *resultPageViewControllerStoryboard = [UIStoryboard storyboardWithName: @"ResultPageViewControllerStoryboard"
                                                                                  bundle: [NSBundle bundleForClass: ResultPageViewController.class]];
-    ResultPageViewController *viewController = [resultPageViewControllerStoryboard instantiateViewControllerWithIdentifier:@"ResultPageViewController"];
+    ResultPageViewController *viewController = [resultPageViewControllerStoryboard instantiateViewControllerWithIdentifier: @"ResultPageViewController"];
     
     ResultPageInteractor *interactor = [[ResultPageInteractor alloc] init];
     

@@ -15,10 +15,8 @@
 - (instancetype)initWithInterface: (id<ToDoResultPageViewProtocol>)interface
                        interactor: (id<ToDoResultPageInteractorInputProtocol>)interactor
                            router: (id<ToDoResultPageWireframeProtocol>)router
-                             data: (MandiriVaResponse *)data
-{
-    if (self = [super init])
-    {
+                             data: (MandiriVaResponse *)data {
+    if (self = [super init]) {
         self.view = interface;
         self.interactor = interactor;
         self.router = router;

@@ -20,7 +20,8 @@
     return self.output;
 }
 
-- (void)getPaymentCode:(MandiriVaParams *)item url:(NSString *)url {
+- (void)getPaymentCode: (MandiriVaParams *)item
+                   url: (NSString *)url {
     [ApiMandiriSyariahVa getPaymentCode: item
                                     url: (NSString *) url
                               ifSucceed: ^(NSString *response) {

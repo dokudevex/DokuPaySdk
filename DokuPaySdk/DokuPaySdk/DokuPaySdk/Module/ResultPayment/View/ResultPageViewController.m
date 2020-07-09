@@ -34,7 +34,7 @@ static int const kHeaderSectionTag = 6900;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableViewInstruction.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.tableViewInstruction.tableFooterView = [[UIView alloc] initWithFrame: CGRectZero];
     self.tableViewInstruction.rowHeight = UITableViewAutomaticDimension;
     self.tableViewInstruction.estimatedRowHeight = 100;
     self.expandedSectionHeaderNumber = -1;
@@ -42,11 +42,12 @@ static int const kHeaderSectionTag = 6900;
 }
 
 - (IBAction)buttonClose:(id)sender {
-    UIViewController *vc = self.presentingViewController;
-    while (vc.presentingViewController) {
-        vc = vc.presentingViewController;
+    UIViewController *viewController = self.presentingViewController;
+    while (viewController.presentingViewController) {
+        viewController = viewController.presentingViewController;
     }
-    [vc dismissViewControllerAnimated:YES completion:NULL];
+    [viewController dismissViewControllerAnimated: YES
+                                       completion: NULL];
 }
 
 #pragma mark - Table view data source
@@ -84,13 +85,13 @@ static int const kHeaderSectionTag = 6900;
 titleForHeaderInSection: (NSInteger)section {
     
     if (self.sectionNames.count) {
-        return [self.sectionNames objectAtIndex:section];
+        return [self.sectionNames objectAtIndex: section];
     }
     return @"";
 }
 
 - (CGFloat)tableView: (UITableView *)tableView
-heightForHeaderInSection: (NSInteger)section; {
+heightForHeaderInSection: (NSInteger)section {
     
     return 44.0;
 }
@@ -102,7 +103,7 @@ willDisplayHeaderView:(UIView *)view
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
     header.contentView.backgroundColor = [UIColor whiteColor];
     header.textLabel.textColor = [UIColor grayColor];
-    UIImageView *viewWithTag = [self.view viewWithTag:kHeaderSectionTag + section];
+    UIImageView *viewWithTag = [self.view viewWithTag: kHeaderSectionTag + section];
     
     if (viewWithTag) {
         [viewWithTag removeFromSuperview];
@@ -115,12 +116,13 @@ willDisplayHeaderView:(UIView *)view
     [header addSubview: theImageView];
     
     header.tag = section;
-    UITapGestureRecognizer *headerTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                       action:@selector(sectionHeaderWasTouched:)];
+    UITapGestureRecognizer *headerTapGesture = [[UITapGestureRecognizer alloc] initWithTarget: self
+                                                                                       action: @selector(sectionHeaderWasTouched:)];
     [header addGestureRecognizer:headerTapGesture];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath: (NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView: (UITableView *)tableView
+         cellForRowAtIndexPath: (NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"tableCell"
                                                             forIndexPath: indexPath];
     NSArray *section = [self.sectionItems objectAtIndex: indexPath.section];
@@ -131,7 +133,8 @@ willDisplayHeaderView:(UIView *)view
     return cell;
 }
 
-- (void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath {
+- (void)tableView: (UITableView *)tableView
+didSelectRowAtIndexPath: (NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath: indexPath animated:YES];
 }
 
@@ -152,10 +155,12 @@ willDisplayHeaderView:(UIView *)view
     
     if (self.expandedSectionHeaderNumber == -1) {
         self.expandedSectionHeaderNumber = section;
-        [self tableViewExpandSection:section withImage: eImageView];
+        [self tableViewExpandSection: section
+                           withImage: eImageView];
     } else {
         if (self.expandedSectionHeaderNumber == section) {
-            [self tableViewCollapeSection:section withImage: eImageView];
+            [self tableViewCollapeSection: section
+                                withImage: eImageView];
             self.expandedSectionHeader = nil;
         } else {
             UIImageView *cImageView  = (UIImageView *)[self.view viewWithTag:kHeaderSectionTag + self.expandedSectionHeaderNumber];
@@ -172,7 +177,7 @@ willDisplayHeaderView:(UIView *)view
 - (void)tableViewCollapeSection: (NSInteger)section
                       withImage: (UIImageView *)imageView {
     
-    NSArray *sectionData = [self.sectionItems objectAtIndex:section];
+    NSArray *sectionData = [self.sectionItems objectAtIndex: section];
     
     self.expandedSectionHeaderNumber = -1;
     if (sectionData.count == 0) {
@@ -202,7 +207,7 @@ willDisplayHeaderView:(UIView *)view
         self.expandedSectionHeaderNumber = -1;
         return;
     } else {
-        [UIView animateWithDuration:0.4 animations:^{
+        [UIView animateWithDuration: 0.4 animations: ^{
             imageView.transform = CGAffineTransformMakeRotation((180.0 * M_PI) / 180.0);
         }];
         NSMutableArray *arrayOfIndexPaths = [NSMutableArray array];
