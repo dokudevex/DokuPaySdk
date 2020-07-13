@@ -79,7 +79,7 @@
     
     self.tableViewAccordion.tableFooterView = [[UIView alloc] initWithFrame: CGRectZero];
     [self.tableViewAccordion registerNib: [UINib nibWithNibName:@"TableViewHeaderCell"
-                                                         bundle:nil]
+                                                         bundle: [NSBundle bundleForClass:self.class]]
                   forCellReuseIdentifier: @"HeaderCell"];
     
     self.tableViewAccordion.rowHeight = UITableViewAutomaticDimension;
@@ -91,10 +91,9 @@
 }
 
 - (IBAction)buttonDetails:(id)sender {
-    
     STPopupController *popupController = [[STPopupController alloc]
                                           initWithRootViewController: [[UIStoryboard storyboardWithName: @"BottomSheetViewControllerStoryboard"
-                                                                                                 bundle: nil]
+                                                                                                 bundle: [NSBundle bundleForClass:self.class]]
                                                                        instantiateViewControllerWithIdentifier: @"BottomSheetViewController"]];
     popupController.style = STPopupStyleBottomSheet;
     popupController.navigationBarHidden = true;
@@ -188,7 +187,7 @@
 - (IBAction)actionSet {
     STPopupController *popupController = [[STPopupController alloc]
                                           initWithRootViewController: [[UIStoryboard storyboardWithName: @"SettingPageViewControllerStoryboard"
-                                                                                                 bundle: nil]
+                                                                                                 bundle: [NSBundle bundleForClass:self.class]]
                                                                        instantiateViewControllerWithIdentifier: @"SettingPageViewController"]];
     [popupController.backgroundView addGestureRecognizer: [[UITapGestureRecognizer alloc] initWithTarget: self
     action: @selector(handleSingleTap:)]];

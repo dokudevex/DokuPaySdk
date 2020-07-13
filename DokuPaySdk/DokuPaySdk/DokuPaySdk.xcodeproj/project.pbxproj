@@ -40,6 +40,9 @@
 		C3750C71249739AE00A34F6B /* MandiriSyariahVaRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = C3750C6F249739AE00A34F6B /* MandiriSyariahVaRouter.h */; };
 		C3750C72249739AE00A34F6B /* MandiriSyariahVaRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C3750C70249739AE00A34F6B /* MandiriSyariahVaRouter.m */; };
 		C3750C742497745400A34F6B /* DokuPaySdk.m in Sources */ = {isa = PBXBuildFile; fileRef = C3750C732497745400A34F6B /* DokuPaySdk.m */; };
+		C37EE19424BD1FE4002F2622 /* TableHeaderCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C37EE19124BD1FE3002F2622 /* TableHeaderCell.h */; };
+		C37EE19524BD1FE4002F2622 /* TableHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C37EE19224BD1FE3002F2622 /* TableHeaderCell.m */; };
+		C37EE19624BD1FE4002F2622 /* TableHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37EE19324BD1FE3002F2622 /* TableHeaderCell.xib */; };
 		C384DE942494BD9200EE124F /* MandiriSyariahStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C384DE932494BD9200EE124F /* MandiriSyariahStoryboard.storyboard */; };
 		C384DE962494BE5200EE124F /* MandiriStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C384DE952494BE5200EE124F /* MandiriStoryboard.storyboard */; };
 		C384DE9E2494C8FE00EE124F /* MandiriVaPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = C384DE9C2494C8FE00EE124F /* MandiriVaPresenter.h */; };
@@ -48,6 +51,35 @@
 		C384DEA924958D8D00EE124F /* MandiriVaRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C384DEA724958D8D00EE124F /* MandiriVaRouter.m */; };
 		C384DEAC24958F6700EE124F /* MandiriVaInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C384DEAA24958F6700EE124F /* MandiriVaInteractor.h */; };
 		C384DEAD24958F6700EE124F /* MandiriVaInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = C384DEAB24958F6700EE124F /* MandiriVaInteractor.m */; };
+		C388569524BC55FC007FDF43 /* STPopupLeftBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C388568624BC55FA007FDF43 /* STPopupLeftBarItem.h */; };
+		C388569624BC55FC007FDF43 /* STPopupNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C388568724BC55FA007FDF43 /* STPopupNavigationBar.m */; };
+		C388569724BC55FC007FDF43 /* UIViewController+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = C388568824BC55FA007FDF43 /* UIViewController+STPopup.m */; };
+		C388569824BC55FC007FDF43 /* STPopupController.h in Headers */ = {isa = PBXBuildFile; fileRef = C388568924BC55FB007FDF43 /* STPopupController.h */; };
+		C388569924BC55FC007FDF43 /* STPopupControllerTransitioningFade.h in Headers */ = {isa = PBXBuildFile; fileRef = C388568A24BC55FB007FDF43 /* STPopupControllerTransitioningFade.h */; };
+		C388569A24BC55FC007FDF43 /* STPopupControllerTransitioningSlideVertical.h in Headers */ = {isa = PBXBuildFile; fileRef = C388568B24BC55FB007FDF43 /* STPopupControllerTransitioningSlideVertical.h */; };
+		C388569B24BC55FC007FDF43 /* UIViewController+STPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = C388568C24BC55FB007FDF43 /* UIViewController+STPopup.h */; };
+		C388569C24BC55FC007FDF43 /* UIResponder+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = C388568D24BC55FB007FDF43 /* UIResponder+STPopup.m */; };
+		C388569D24BC55FC007FDF43 /* STPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = C388568E24BC55FB007FDF43 /* STPopup.h */; };
+		C388569E24BC55FC007FDF43 /* STPopupControllerTransitioningSlideVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = C388568F24BC55FB007FDF43 /* STPopupControllerTransitioningSlideVertical.m */; };
+		C388569F24BC55FC007FDF43 /* STPopupNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = C388569024BC55FB007FDF43 /* STPopupNavigationBar.h */; };
+		C38856A024BC55FC007FDF43 /* UIResponder+STPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = C388569124BC55FB007FDF43 /* UIResponder+STPopup.h */; };
+		C38856A124BC55FC007FDF43 /* STPopupControllerTransitioningFade.m in Sources */ = {isa = PBXBuildFile; fileRef = C388569224BC55FB007FDF43 /* STPopupControllerTransitioningFade.m */; };
+		C38856A224BC55FC007FDF43 /* STPopupLeftBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C388569324BC55FB007FDF43 /* STPopupLeftBarItem.m */; };
+		C38856A324BC55FC007FDF43 /* STPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = C388569424BC55FB007FDF43 /* STPopupController.m */; };
+		C38856AF24BC571E007FDF43 /* BottomSheetViewControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38856AC24BC571E007FDF43 /* BottomSheetViewControllerStoryboard.storyboard */; };
+		C38856B024BC571E007FDF43 /* BottomSheetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C38856AD24BC571E007FDF43 /* BottomSheetViewController.h */; };
+		C38856B124BC571E007FDF43 /* BottomSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38856AE24BC571E007FDF43 /* BottomSheetViewController.m */; };
+		C38856B824BC5F43007FDF43 /* dokuregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C38856B324BC5F43007FDF43 /* dokuregular.ttf */; };
+		C38856B924BC5F43007FDF43 /* dinbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C38856B424BC5F43007FDF43 /* dinbold.ttf */; };
+		C38856BA24BC5F43007FDF43 /* dinmedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C38856B524BC5F43007FDF43 /* dinmedium.ttf */; };
+		C38856BB24BC5F43007FDF43 /* robotobold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C38856B624BC5F43007FDF43 /* robotobold.ttf */; };
+		C38856BC24BC5F43007FDF43 /* doku.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C38856B724BC5F43007FDF43 /* doku.ttf */; };
+		C38856C424BC600D007FDF43 /* UIColor+DokuColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C38856BE24BC600C007FDF43 /* UIColor+DokuColor.m */; };
+		C38856C524BC600D007FDF43 /* DokuStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C38856BF24BC600C007FDF43 /* DokuStyle.m */; };
+		C38856C624BC600D007FDF43 /* UIColor+DokuColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C38856C024BC600C007FDF43 /* UIColor+DokuColor.h */; };
+		C38856C724BC600D007FDF43 /* UIFont+DokuFont.h in Headers */ = {isa = PBXBuildFile; fileRef = C38856C124BC600C007FDF43 /* UIFont+DokuFont.h */; };
+		C38856C824BC600D007FDF43 /* DokuStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = C38856C224BC600C007FDF43 /* DokuStyle.h */; };
+		C38856C924BC600D007FDF43 /* UIFont+DokuFont.m in Sources */ = {isa = PBXBuildFile; fileRef = C38856C324BC600D007FDF43 /* UIFont+DokuFont.m */; };
 		C38D044C24A316BB00C83F34 /* MandiriVaResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = C38D044A24A316BB00C83F34 /* MandiriVaResponse.h */; };
 		C38D044D24A316BB00C83F34 /* MandiriVaResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C38D044B24A316BB00C83F34 /* MandiriVaResponse.m */; };
 		C38D044F24A34C3800C83F34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38D044E24A34C3800C83F34 /* Assets.xcassets */; };
@@ -137,6 +169,9 @@
 		C3750C6F249739AE00A34F6B /* MandiriSyariahVaRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriSyariahVaRouter.h; sourceTree = "<group>"; };
 		C3750C70249739AE00A34F6B /* MandiriSyariahVaRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriSyariahVaRouter.m; sourceTree = "<group>"; };
 		C3750C732497745400A34F6B /* DokuPaySdk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuPaySdk.m; sourceTree = "<group>"; };
+		C37EE19124BD1FE3002F2622 /* TableHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableHeaderCell.h; sourceTree = "<group>"; };
+		C37EE19224BD1FE3002F2622 /* TableHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableHeaderCell.m; sourceTree = "<group>"; };
+		C37EE19324BD1FE3002F2622 /* TableHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableHeaderCell.xib; sourceTree = "<group>"; };
 		C384DE932494BD9200EE124F /* MandiriSyariahStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MandiriSyariahStoryboard.storyboard; sourceTree = "<group>"; };
 		C384DE952494BE5200EE124F /* MandiriStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MandiriStoryboard.storyboard; sourceTree = "<group>"; };
 		C384DE9B2494C83C00EE124F /* MandiriVaContract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriVaContract.h; sourceTree = "<group>"; };
@@ -146,6 +181,35 @@
 		C384DEA724958D8D00EE124F /* MandiriVaRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaRouter.m; sourceTree = "<group>"; };
 		C384DEAA24958F6700EE124F /* MandiriVaInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriVaInteractor.h; sourceTree = "<group>"; };
 		C384DEAB24958F6700EE124F /* MandiriVaInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaInteractor.m; sourceTree = "<group>"; };
+		C388568624BC55FA007FDF43 /* STPopupLeftBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupLeftBarItem.h; sourceTree = "<group>"; };
+		C388568724BC55FA007FDF43 /* STPopupNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupNavigationBar.m; sourceTree = "<group>"; };
+		C388568824BC55FA007FDF43 /* UIViewController+STPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STPopup.m"; sourceTree = "<group>"; };
+		C388568924BC55FB007FDF43 /* STPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupController.h; sourceTree = "<group>"; };
+		C388568A24BC55FB007FDF43 /* STPopupControllerTransitioningFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupControllerTransitioningFade.h; sourceTree = "<group>"; };
+		C388568B24BC55FB007FDF43 /* STPopupControllerTransitioningSlideVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupControllerTransitioningSlideVertical.h; sourceTree = "<group>"; };
+		C388568C24BC55FB007FDF43 /* UIViewController+STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STPopup.h"; sourceTree = "<group>"; };
+		C388568D24BC55FB007FDF43 /* UIResponder+STPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+STPopup.m"; sourceTree = "<group>"; };
+		C388568E24BC55FB007FDF43 /* STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopup.h; sourceTree = "<group>"; };
+		C388568F24BC55FB007FDF43 /* STPopupControllerTransitioningSlideVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupControllerTransitioningSlideVertical.m; sourceTree = "<group>"; };
+		C388569024BC55FB007FDF43 /* STPopupNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupNavigationBar.h; sourceTree = "<group>"; };
+		C388569124BC55FB007FDF43 /* UIResponder+STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+STPopup.h"; sourceTree = "<group>"; };
+		C388569224BC55FB007FDF43 /* STPopupControllerTransitioningFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupControllerTransitioningFade.m; sourceTree = "<group>"; };
+		C388569324BC55FB007FDF43 /* STPopupLeftBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupLeftBarItem.m; sourceTree = "<group>"; };
+		C388569424BC55FB007FDF43 /* STPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupController.m; sourceTree = "<group>"; };
+		C38856AC24BC571E007FDF43 /* BottomSheetViewControllerStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BottomSheetViewControllerStoryboard.storyboard; sourceTree = "<group>"; };
+		C38856AD24BC571E007FDF43 /* BottomSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomSheetViewController.h; sourceTree = "<group>"; };
+		C38856AE24BC571E007FDF43 /* BottomSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomSheetViewController.m; sourceTree = "<group>"; };
+		C38856B324BC5F43007FDF43 /* dokuregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dokuregular.ttf; sourceTree = "<group>"; };
+		C38856B424BC5F43007FDF43 /* dinbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dinbold.ttf; sourceTree = "<group>"; };
+		C38856B524BC5F43007FDF43 /* dinmedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = dinmedium.ttf; sourceTree = "<group>"; };
+		C38856B624BC5F43007FDF43 /* robotobold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = robotobold.ttf; sourceTree = "<group>"; };
+		C38856B724BC5F43007FDF43 /* doku.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = doku.ttf; sourceTree = "<group>"; };
+		C38856BE24BC600C007FDF43 /* UIColor+DokuColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DokuColor.m"; sourceTree = "<group>"; };
+		C38856BF24BC600C007FDF43 /* DokuStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DokuStyle.m; sourceTree = "<group>"; };
+		C38856C024BC600C007FDF43 /* UIColor+DokuColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DokuColor.h"; sourceTree = "<group>"; };
+		C38856C124BC600C007FDF43 /* UIFont+DokuFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+DokuFont.h"; sourceTree = "<group>"; };
+		C38856C224BC600C007FDF43 /* DokuStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DokuStyle.h; sourceTree = "<group>"; };
+		C38856C324BC600D007FDF43 /* UIFont+DokuFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+DokuFont.m"; sourceTree = "<group>"; };
 		C38D044A24A316BB00C83F34 /* MandiriVaResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriVaResponse.h; sourceTree = "<group>"; };
 		C38D044B24A316BB00C83F34 /* MandiriVaResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriVaResponse.m; sourceTree = "<group>"; };
 		C38D044E24A34C3800C83F34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -239,6 +303,8 @@
 		C3366E9124938F6E0040C86C /* DokuPaySdk */ = {
 			isa = PBXGroup;
 			children = (
+				C38856BD24BC5FDE007FDF43 /* Extension */,
+				C38856B224BC5F15007FDF43 /* Fonts */,
 				C39AC5CB249F191A008CC641 /* Model */,
 				C39AC5B5249F1523008CC641 /* Utils */,
 				C39AC5B0249F07F0008CC641 /* Constant */,
@@ -264,6 +330,7 @@
 		C3366EEA2493904B0040C86C /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				C38856A424BC568E007FDF43 /* BottomSheet */,
 				C35FD5B024A08DA60083F47A /* ResultPayment */,
 				C3366EEB2493906F0040C86C /* Va */,
 			);
@@ -376,6 +443,9 @@
 				C35FD5B624A096E90083F47A /* ResultPageViewController.h */,
 				C35FD5B724A096E90083F47A /* ResultPageViewController.m */,
 				C35FD5BA24A097160083F47A /* ResultPageViewControllerStoryboard.storyboard */,
+				C37EE19124BD1FE3002F2622 /* TableHeaderCell.h */,
+				C37EE19224BD1FE3002F2622 /* TableHeaderCell.m */,
+				C37EE19324BD1FE3002F2622 /* TableHeaderCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,6 +529,71 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		C388566724BC5580007FDF43 /* STPopup */ = {
+			isa = PBXGroup;
+			children = (
+				C388568E24BC55FB007FDF43 /* STPopup.h */,
+				C388568924BC55FB007FDF43 /* STPopupController.h */,
+				C388569424BC55FB007FDF43 /* STPopupController.m */,
+				C388568A24BC55FB007FDF43 /* STPopupControllerTransitioningFade.h */,
+				C388569224BC55FB007FDF43 /* STPopupControllerTransitioningFade.m */,
+				C388568B24BC55FB007FDF43 /* STPopupControllerTransitioningSlideVertical.h */,
+				C388568F24BC55FB007FDF43 /* STPopupControllerTransitioningSlideVertical.m */,
+				C388568624BC55FA007FDF43 /* STPopupLeftBarItem.h */,
+				C388569324BC55FB007FDF43 /* STPopupLeftBarItem.m */,
+				C388569024BC55FB007FDF43 /* STPopupNavigationBar.h */,
+				C388568724BC55FA007FDF43 /* STPopupNavigationBar.m */,
+				C388569124BC55FB007FDF43 /* UIResponder+STPopup.h */,
+				C388568D24BC55FB007FDF43 /* UIResponder+STPopup.m */,
+				C388568C24BC55FB007FDF43 /* UIViewController+STPopup.h */,
+				C388568824BC55FA007FDF43 /* UIViewController+STPopup.m */,
+			);
+			path = STPopup;
+			sourceTree = "<group>";
+		};
+		C38856A424BC568E007FDF43 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				C38856A524BC56A7007FDF43 /* View */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		C38856A524BC56A7007FDF43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C38856AD24BC571E007FDF43 /* BottomSheetViewController.h */,
+				C38856AE24BC571E007FDF43 /* BottomSheetViewController.m */,
+				C38856AC24BC571E007FDF43 /* BottomSheetViewControllerStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C38856B224BC5F15007FDF43 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C38856B424BC5F43007FDF43 /* dinbold.ttf */,
+				C38856B524BC5F43007FDF43 /* dinmedium.ttf */,
+				C38856B724BC5F43007FDF43 /* doku.ttf */,
+				C38856B324BC5F43007FDF43 /* dokuregular.ttf */,
+				C38856B624BC5F43007FDF43 /* robotobold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C38856BD24BC5FDE007FDF43 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C38856C224BC600C007FDF43 /* DokuStyle.h */,
+				C38856BF24BC600C007FDF43 /* DokuStyle.m */,
+				C38856C024BC600C007FDF43 /* UIColor+DokuColor.h */,
+				C38856BE24BC600C007FDF43 /* UIColor+DokuColor.m */,
+				C38856C124BC600C007FDF43 /* UIFont+DokuFont.h */,
+				C38856C324BC600D007FDF43 /* UIFont+DokuFont.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		C39AC57F249EF714008CC641 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +606,7 @@
 		C39AC587249F0347008CC641 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				C388566724BC5580007FDF43 /* STPopup */,
 				C308A70324ADEBDC00E5BA3A /* AFNetworkActivityLogger */,
 				C39AC5B6249F1598008CC641 /* SVProgressHUD */,
 				C39AC58A249F0499008CC641 /* AFNetworking */,
@@ -588,12 +724,17 @@
 				C35FD5B824A096E90083F47A /* ResultPageViewController.h in Headers */,
 				C35FD5CA24A09AB30083F47A /* ResultPageRouter.h in Headers */,
 				C397DED524A43DB5002C6E93 /* MandiriVaHowToInstruction.h in Headers */,
+				C37EE19424BD1FE4002F2622 /* TableHeaderCell.h in Headers */,
 				C39AC5AE249F0707008CC641 /* APIManager.h in Headers */,
 				C39AC59A249F04DE008CC641 /* AFURLRequestSerialization.h in Headers */,
+				C388569D24BC55FC007FDF43 /* STPopup.h in Headers */,
+				C388569924BC55FC007FDF43 /* STPopupControllerTransitioningFade.h in Headers */,
 				C308A70D24ADEBF100E5BA3A /* AFNetworkActivityLoggerProtocol.h in Headers */,
 				C39AC5D9249F427C008CC641 /* ApiMandiriSyariahVa.h in Headers */,
 				C38D044C24A316BB00C83F34 /* MandiriVaResponse.h in Headers */,
 				C3750C71249739AE00A34F6B /* MandiriSyariahVaRouter.h in Headers */,
+				C388569824BC55FC007FDF43 /* STPopupController.h in Headers */,
+				C38856A024BC55FC007FDF43 /* UIResponder+STPopup.h in Headers */,
 				C39AC5B3249F0806008CC641 /* APIConstant.h in Headers */,
 				C39AC5CE249F19EB008CC641 /* MandiriVaParams.h in Headers */,
 				C3366EF7249390F10040C86C /* MandiriSyariahVaViewController.h in Headers */,
@@ -603,22 +744,30 @@
 				C384DEA824958D8D00EE124F /* MandiriVaRouter.h in Headers */,
 				C39AC5C4249F15B3008CC641 /* SVRadialGradientLayer.h in Headers */,
 				C35FD5BE24A099BB0083F47A /* ResultPageContract.h in Headers */,
+				C388569F24BC55FC007FDF43 /* STPopupNavigationBar.h in Headers */,
 				C3750C6824971B5F00A34F6B /* MandiriSyariahVaPresenter.h in Headers */,
+				C388569524BC55FC007FDF43 /* STPopupLeftBarItem.h in Headers */,
 				C308A70924ADEBF100E5BA3A /* AFNetworkActivityLogger.h in Headers */,
 				C35FD5C224A09A730083F47A /* ResultPageInteractor.h in Headers */,
 				C35FD5AE24A069020083F47A /* DokuPayUtils.h in Headers */,
+				C38856C724BC600D007FDF43 /* UIFont+DokuFont.h in Headers */,
+				C38856C824BC600D007FDF43 /* DokuStyle.h in Headers */,
 				C39AC5A4249F04DE008CC641 /* AFURLResponseSerialization.h in Headers */,
+				C38856B024BC571E007FDF43 /* BottomSheetViewController.h in Headers */,
 				C39AC5C2249F15B3008CC641 /* SVProgressHUD.h in Headers */,
 				C3366EA024938F6E0040C86C /* DokuPaySdk.h in Headers */,
 				C39AC59E249F04DE008CC641 /* AFSecurityPolicy.h in Headers */,
 				C3366EF2249390D40040C86C /* MandiriVaViewController.h in Headers */,
 				C39AC5C9249F15B3008CC641 /* SVProgressAnimatedView.h in Headers */,
+				C388569A24BC55FC007FDF43 /* STPopupControllerTransitioningSlideVertical.h in Headers */,
+				C38856C624BC600D007FDF43 /* UIColor+DokuColor.h in Headers */,
 				C308A70C24ADEBF100E5BA3A /* AFNetworkActivityConsoleLogger.h in Headers */,
 				C39AC5A5249F04DE008CC641 /* AFHTTPSessionManager.h in Headers */,
 				C39AC5A2249F04DE008CC641 /* AFNetworkReachabilityManager.h in Headers */,
 				C384DEAC24958F6700EE124F /* MandiriVaInteractor.h in Headers */,
 				C39AC59B249F04DE008CC641 /* AFNetworking.h in Headers */,
 				C35FD5CF24A0ADE30083F47A /* ApiResultPage.h in Headers */,
+				C388569B24BC55FC007FDF43 /* UIViewController+STPopup.h in Headers */,
 				C39AC5D3249F35D4008CC641 /* ApiMandiriVa.h in Headers */,
 				C39AC5CA249F15B3008CC641 /* SVIndefiniteAnimatedView.h in Headers */,
 				C39AC5C5249F15B3008CC641 /* SVProgressHUD-Prefix.pch in Headers */,
@@ -708,10 +857,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38856BC24BC5F43007FDF43 /* doku.ttf in Resources */,
 				C35FD5BB24A097160083F47A /* ResultPageViewControllerStoryboard.storyboard in Resources */,
+				C38856AF24BC571E007FDF43 /* BottomSheetViewControllerStoryboard.storyboard in Resources */,
+				C38856BB24BC5F43007FDF43 /* robotobold.ttf in Resources */,
 				C384DE962494BE5200EE124F /* MandiriStoryboard.storyboard in Resources */,
+				C37EE19624BD1FE4002F2622 /* TableHeaderCell.xib in Resources */,
+				C38856B924BC5F43007FDF43 /* dinbold.ttf in Resources */,
+				C38856BA24BC5F43007FDF43 /* dinmedium.ttf in Resources */,
 				C39AC5C8249F15B3008CC641 /* SVProgressHUD.bundle in Resources */,
 				C384DE942494BD9200EE124F /* MandiriSyariahStoryboard.storyboard in Resources */,
+				C38856B824BC5F43007FDF43 /* dokuregular.ttf in Resources */,
 				C38D044F24A34C3800C83F34 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -771,6 +927,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C35FD5D024A0ADE30083F47A /* ApiResultPage.m in Sources */,
+				C37EE19524BD1FE4002F2622 /* TableHeaderCell.m in Sources */,
 				C308A70A24ADEBF100E5BA3A /* AFNetworkActivityLogger.m in Sources */,
 				C3750C742497745400A34F6B /* DokuPaySdk.m in Sources */,
 				C39AC5C1249F15B3008CC641 /* SVRadialGradientLayer.m in Sources */,
@@ -784,14 +941,23 @@
 				C35FD5AF24A069020083F47A /* DokuPayUtils.m in Sources */,
 				C39AC5CF249F19EB008CC641 /* MandiriVaParams.m in Sources */,
 				C3366EF8249390F10040C86C /* MandiriSyariahVaViewController.m in Sources */,
+				C38856C524BC600D007FDF43 /* DokuStyle.m in Sources */,
 				C39AC5A6249F04DE008CC641 /* AFURLResponseSerialization.m in Sources */,
+				C388569624BC55FC007FDF43 /* STPopupNavigationBar.m in Sources */,
+				C388569C24BC55FC007FDF43 /* UIResponder+STPopup.m in Sources */,
 				C38D044D24A316BB00C83F34 /* MandiriVaResponse.m in Sources */,
+				C38856C424BC600D007FDF43 /* UIColor+DokuColor.m in Sources */,
 				C3750C6924971B5F00A34F6B /* MandiriSyariahVaPresenter.m in Sources */,
 				C39AC5A3249F04DE008CC641 /* AFURLRequestSerialization.m in Sources */,
 				C384DE9F2494C8FE00EE124F /* MandiriVaPresenter.m in Sources */,
+				C388569724BC55FC007FDF43 /* UIViewController+STPopup.m in Sources */,
+				C38856C924BC600D007FDF43 /* UIFont+DokuFont.m in Sources */,
 				C35FD5B924A096E90083F47A /* ResultPageViewController.m in Sources */,
 				C39AC59D249F04DE008CC641 /* AFHTTPSessionManager.m in Sources */,
 				C35FD5C324A09A730083F47A /* ResultPageInteractor.m in Sources */,
+				C38856A224BC55FC007FDF43 /* STPopupLeftBarItem.m in Sources */,
+				C38856A124BC55FC007FDF43 /* STPopupControllerTransitioningFade.m in Sources */,
+				C38856B124BC571E007FDF43 /* BottomSheetViewController.m in Sources */,
 				C39AC5C6249F15B3008CC641 /* SVProgressAnimatedView.m in Sources */,
 				C3366EF3249390D40040C86C /* MandiriVaViewController.m in Sources */,
 				C39AC59C249F04DE008CC641 /* AFSecurityPolicy.m in Sources */,
@@ -802,6 +968,8 @@
 				C39AC5A0249F04DE008CC641 /* AFURLSessionManager.m in Sources */,
 				C39AC5C7249F15B3008CC641 /* SVProgressHUD.m in Sources */,
 				C3750C6524971B4800A34F6B /* MandiriSyariahVaInteractor.m in Sources */,
+				C388569E24BC55FC007FDF43 /* STPopupControllerTransitioningSlideVertical.m in Sources */,
+				C38856A324BC55FC007FDF43 /* STPopupController.m in Sources */,
 				C39AC5B4249F0806008CC641 /* APIConstant.m in Sources */,
 				C3750C72249739AE00A34F6B /* MandiriSyariahVaRouter.m in Sources */,
 			);

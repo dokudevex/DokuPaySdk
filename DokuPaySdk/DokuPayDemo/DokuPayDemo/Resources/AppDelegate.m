@@ -23,14 +23,12 @@
 - (void)createToDoView {
     self.window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName: @"Main"
-                                                         bundle: nil];
+                                                         bundle: [NSBundle bundleForClass:self.class]];
     ViewController *viewController = [storyboard instantiateViewControllerWithIdentifier: @"ViewController"];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: viewController];
     self.window.rootViewController = navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 }
-
-
 
 @end

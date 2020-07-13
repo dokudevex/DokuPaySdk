@@ -35,6 +35,7 @@
 
 - (void)gotoResultPage:(MandiriVaResponse *)responseData {
     ResultPageViewController *todoViewController = (ResultPageViewController *) [ResultPageRouter createModule: responseData];
+    todoViewController.modalPresentationStyle = UIModalPresentationFullScreen;
     [self.viewController presentViewController: todoViewController
                                       animated: YES
                                     completion: nil];

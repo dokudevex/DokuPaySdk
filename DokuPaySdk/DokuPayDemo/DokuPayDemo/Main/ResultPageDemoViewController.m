@@ -8,6 +8,10 @@
 
 #import "ResultPageDemoViewController.h"
 #import "DokuUtils.h"
+#import "DokuStyle.h"
+#import "UIColor+DokuColor.h"
+#import "UIFont+DokuFont.h"
+#import "STPopup.h"
 
 @interface ResultPageDemoViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelViewOrderId;
@@ -15,6 +19,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelViewVaChannel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewIconChannel;
 @property (weak, nonatomic) IBOutlet UILabel *labelViewNoVa;
+@property (weak, nonatomic) IBOutlet UIView *viewOrder;
+@property (weak, nonatomic) IBOutlet UIButton *buttonDetails;
+@property (weak, nonatomic) IBOutlet UIView *viewPleaseTransfer;
+@property (weak, nonatomic) IBOutlet UIView *viewPowerBy;
 
 @end
 
@@ -22,6 +30,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupForm];
+}
+
+- (IBAction)buttonBack:(id)sender {
+    [self dismissViewControllerAnimated: YES
+                             completion: nil];
+    
+}
+
+- (IBAction)buttonDetails:(id)sender {
+    STPopupController *popupController = [[STPopupController alloc]
+                                          initWithRootViewController: [[UIStoryboard storyboardWithName: @"BottomSheetViewControllerStoryboard"
+                                                                                                 bundle: [NSBundle bundleForClass:self.class]]
+                                                                       instantiateViewControllerWithIdentifier: @"BottomSheetViewController"]];
+    popupController.style = STPopupStyleBottomSheet;
+    popupController.navigationBarHidden = true;
+    [popupController.backgroundView addGestureRecognizer: [[UITapGestureRecognizer alloc] initWithTarget: self
+                                                                                                  action: @selector(handleSingleTap:)]];
+    [popupController presentInViewController: self];
+}
+
+- (void)handleSingleTap: (UITapGestureRecognizer *)recognizer {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) setupForm {
+    [DokuStyle DokuButonRoundedTopLeftRight: self.buttonDetails];
+    
+    self.viewOrder.layer.borderWidth = 1;
+    self.viewOrder.layer.cornerRadius = 10;
+    self.viewOrder.layer.borderColor = [UIColor dokuSeparator].CGColor;
+    
+    self.viewPowerBy.layer.borderWidth = 1;
+    self.viewPowerBy.layer.cornerRadius = 10;
+    self.viewPowerBy.layer.borderColor = [UIColor dokuSeparator].CGColor;
+    
+    self.viewPleaseTransfer.layer.borderWidth = 1;
+    self.viewPleaseTransfer.layer.cornerRadius = 10;
+    self.viewPleaseTransfer.layer.borderColor = [UIColor dokuSeparator].CGColor;
+    
 }
 
 - (void)viewWillAppear: (BOOL)animated {
@@ -36,7 +84,9 @@
     
     self.navigationController.navigationBar.topItem.title = self.merchantName;
     
-    [self.labelViewOrderId setText: [order objectForKey:@"invoice_number"]];
+    NSString * createInvoice = [NSString stringWithFormat:@"%@%@",@"Order ID : ", [order objectForKey:@"invoice_number"]];
+    
+    [self.labelViewOrderId setText: createInvoice];
     
     [self.labelViewAmount setText: self.amount];
     

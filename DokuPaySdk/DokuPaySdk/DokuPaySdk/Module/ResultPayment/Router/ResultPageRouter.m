@@ -19,6 +19,8 @@
                                                                                  bundle: [NSBundle bundleForClass: ResultPageViewController.class]];
     ResultPageViewController *viewController = [resultPageViewControllerStoryboard instantiateViewControllerWithIdentifier: @"ResultPageViewController"];
     
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: viewController];
+    
     ResultPageInteractor *interactor = [[ResultPageInteractor alloc] init];
     
     ResultPageRouter *router = [[ResultPageRouter alloc] init];
@@ -30,6 +32,6 @@
     
     viewController.presenter = presenter;
     router.viewController = viewController;
-    return viewController;
+    return navigationController;
 }
 @end
