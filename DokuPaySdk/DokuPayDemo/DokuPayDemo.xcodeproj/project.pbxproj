@@ -20,7 +20,6 @@
 		C3366EC824938FB20040C86C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EC724938FB20040C86C /* main.m */; };
 		C3366ED224938FB20040C86C /* DokuPayDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366ED124938FB20040C86C /* DokuPayDemoTests.m */; };
 		C3366EDD24938FB20040C86C /* DokuPayDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EDC24938FB20040C86C /* DokuPayDemoUITests.m */; };
-		C3366F03249391550040C86C /* DokuPaySdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3366F02249391550040C86C /* DokuPaySdk.framework */; };
 		C33D668324A5FC3D00FF776A /* SettingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D668124A5FC3D00FF776A /* SettingPageViewController.m */; };
 		C352B1AD24B70AE2006A3C93 /* STPopupLeftBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B19E24B70AE1006A3C93 /* STPopupLeftBarItem.m */; };
 		C352B1AE24B70AE2006A3C93 /* STPopupControllerTransitioningFade.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1A124B70AE1006A3C93 /* STPopupControllerTransitioningFade.m */; };
@@ -40,6 +39,8 @@
 		C36A3AA424BA83AA0067E80B /* dokuregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C36A3A9F24BA83AA0067E80B /* dokuregular.ttf */; };
 		C36A7F5924B9726E008E3543 /* DokuStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C36A7F5824B9726E008E3543 /* DokuStyle.m */; };
 		C372DEC324B84E2D000AAB3E /* SettingPageViewControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C372DEC224B84E2D000AAB3E /* SettingPageViewControllerStoryboard.storyboard */; };
+		C37EE19724BD4171002F2622 /* DokuPaySdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3366F02249391550040C86C /* DokuPaySdk.framework */; };
+		C37EE19824BD4171002F2622 /* DokuPaySdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3366F02249391550040C86C /* DokuPaySdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C3DB301F24A9C6D500992C32 /* UIColor+DokuColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301B24A9C6D400992C32 /* UIColor+DokuColor.m */; };
 		C3DB302024A9C6D500992C32 /* UIFont+DokuFont.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301C24A9C6D400992C32 /* UIFont+DokuFont.m */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,20 @@
 			remoteInfo = DokuPayDemo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C37EE19924BD4171002F2622 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C37EE19824BD4171002F2622 /* DokuPaySdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C308A6B024AD814C00E5BA3A /* ResultPageDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultPageDemoViewController.h; sourceTree = "<group>"; };
@@ -133,7 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3366F03249391550040C86C /* DokuPaySdk.framework in Frameworks */,
+				C37EE19724BD4171002F2622 /* DokuPaySdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +369,7 @@
 				C3366EAE24938FAF0040C86C /* Sources */,
 				C3366EAF24938FAF0040C86C /* Frameworks */,
 				C3366EB024938FAF0040C86C /* Resources */,
+				C37EE19924BD4171002F2622 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
