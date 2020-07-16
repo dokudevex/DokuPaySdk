@@ -21,13 +21,6 @@
 		C3366ED224938FB20040C86C /* DokuPayDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366ED124938FB20040C86C /* DokuPayDemoTests.m */; };
 		C3366EDD24938FB20040C86C /* DokuPayDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3366EDC24938FB20040C86C /* DokuPayDemoUITests.m */; };
 		C33D668324A5FC3D00FF776A /* SettingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33D668124A5FC3D00FF776A /* SettingPageViewController.m */; };
-		C352B1AD24B70AE2006A3C93 /* STPopupLeftBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B19E24B70AE1006A3C93 /* STPopupLeftBarItem.m */; };
-		C352B1AE24B70AE2006A3C93 /* STPopupControllerTransitioningFade.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1A124B70AE1006A3C93 /* STPopupControllerTransitioningFade.m */; };
-		C352B1AF24B70AE2006A3C93 /* STPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1A224B70AE1006A3C93 /* STPopupController.m */; };
-		C352B1B024B70AE2006A3C93 /* UIResponder+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1A324B70AE1006A3C93 /* UIResponder+STPopup.m */; };
-		C352B1B124B70AE2006A3C93 /* STPopupControllerTransitioningSlideVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1A624B70AE1006A3C93 /* STPopupControllerTransitioningSlideVertical.m */; };
-		C352B1B224B70AE2006A3C93 /* STPopupNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1A824B70AE2006A3C93 /* STPopupNavigationBar.m */; };
-		C352B1B324B70AE2006A3C93 /* UIViewController+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1AA24B70AE2006A3C93 /* UIViewController+STPopup.m */; };
 		C352B1C024B71461006A3C93 /* BottomSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C352B1BF24B71461006A3C93 /* BottomSheetViewController.m */; };
 		C352B1C424B7178F006A3C93 /* BottomSheetViewControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C352B1C324B7178F006A3C93 /* BottomSheetViewControllerStoryboard.storyboard */; };
 		C3631EA624AA87A00021A36C /* DokuConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C3631EA524AA87A00021A36C /* DokuConstants.m */; };
@@ -39,6 +32,13 @@
 		C36A3AA424BA83AA0067E80B /* dokuregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C36A3A9F24BA83AA0067E80B /* dokuregular.ttf */; };
 		C36A7F5924B9726E008E3543 /* DokuStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C36A7F5824B9726E008E3543 /* DokuStyle.m */; };
 		C372DEC324B84E2D000AAB3E /* SettingPageViewControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C372DEC224B84E2D000AAB3E /* SettingPageViewControllerStoryboard.storyboard */; };
+		C37ED9BF24BEA0060019D3C4 /* STPopupControllerTransitioningFade.m in Sources */ = {isa = PBXBuildFile; fileRef = C37ED9B124BEA0040019D3C4 /* STPopupControllerTransitioningFade.m */; };
+		C37ED9C024BEA0060019D3C4 /* STPopupLeftBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C37ED9B224BEA0040019D3C4 /* STPopupLeftBarItem.m */; };
+		C37ED9C124BEA0060019D3C4 /* STPopupNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C37ED9B724BEA0040019D3C4 /* STPopupNavigationBar.m */; };
+		C37ED9C224BEA0060019D3C4 /* UIResponder+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = C37ED9B924BEA0050019D3C4 /* UIResponder+STPopup.m */; };
+		C37ED9C324BEA0060019D3C4 /* STPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37ED9BC24BEA0050019D3C4 /* STPopupController.m */; };
+		C37ED9C424BEA0060019D3C4 /* UIViewController+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = C37ED9BD24BEA0050019D3C4 /* UIViewController+STPopup.m */; };
+		C37ED9C524BEA0060019D3C4 /* STPopupControllerTransitioningSlideVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = C37ED9BE24BEA0050019D3C4 /* STPopupControllerTransitioningSlideVertical.m */; };
 		C37EE19724BD4171002F2622 /* DokuPaySdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3366F02249391550040C86C /* DokuPaySdk.framework */; };
 		C37EE19824BD4171002F2622 /* DokuPaySdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3366F02249391550040C86C /* DokuPaySdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C3DB301F24A9C6D500992C32 /* UIColor+DokuColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DB301B24A9C6D400992C32 /* UIColor+DokuColor.m */; };
@@ -105,21 +105,6 @@
 		C3366F02249391550040C86C /* DokuPaySdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DokuPaySdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33D668024A5FC3D00FF776A /* SettingPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingPageViewController.h; sourceTree = "<group>"; };
 		C33D668124A5FC3D00FF776A /* SettingPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingPageViewController.m; sourceTree = "<group>"; };
-		C352B19E24B70AE1006A3C93 /* STPopupLeftBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupLeftBarItem.m; sourceTree = "<group>"; };
-		C352B19F24B70AE1006A3C93 /* STPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupController.h; sourceTree = "<group>"; };
-		C352B1A024B70AE1006A3C93 /* STPopupControllerTransitioningSlideVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupControllerTransitioningSlideVertical.h; sourceTree = "<group>"; };
-		C352B1A124B70AE1006A3C93 /* STPopupControllerTransitioningFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupControllerTransitioningFade.m; sourceTree = "<group>"; };
-		C352B1A224B70AE1006A3C93 /* STPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupController.m; sourceTree = "<group>"; };
-		C352B1A324B70AE1006A3C93 /* UIResponder+STPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+STPopup.m"; sourceTree = "<group>"; };
-		C352B1A424B70AE1006A3C93 /* UIViewController+STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STPopup.h"; sourceTree = "<group>"; };
-		C352B1A524B70AE1006A3C93 /* STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopup.h; sourceTree = "<group>"; };
-		C352B1A624B70AE1006A3C93 /* STPopupControllerTransitioningSlideVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupControllerTransitioningSlideVertical.m; sourceTree = "<group>"; };
-		C352B1A724B70AE2006A3C93 /* STPopupNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupNavigationBar.h; sourceTree = "<group>"; };
-		C352B1A824B70AE2006A3C93 /* STPopupNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupNavigationBar.m; sourceTree = "<group>"; };
-		C352B1A924B70AE2006A3C93 /* STPopupLeftBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupLeftBarItem.h; sourceTree = "<group>"; };
-		C352B1AA24B70AE2006A3C93 /* UIViewController+STPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STPopup.m"; sourceTree = "<group>"; };
-		C352B1AB24B70AE2006A3C93 /* UIResponder+STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+STPopup.h"; sourceTree = "<group>"; };
-		C352B1AC24B70AE2006A3C93 /* STPopupControllerTransitioningFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupControllerTransitioningFade.h; sourceTree = "<group>"; };
 		C352B1BE24B71461006A3C93 /* BottomSheetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomSheetViewController.h; sourceTree = "<group>"; };
 		C352B1BF24B71461006A3C93 /* BottomSheetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomSheetViewController.m; sourceTree = "<group>"; };
 		C352B1C324B7178F006A3C93 /* BottomSheetViewControllerStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BottomSheetViewControllerStoryboard.storyboard; sourceTree = "<group>"; };
@@ -137,6 +122,21 @@
 		C36A7F5724B9726E008E3543 /* DokuStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DokuStyle.h; sourceTree = "<group>"; };
 		C36A7F5824B9726E008E3543 /* DokuStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuStyle.m; sourceTree = "<group>"; };
 		C372DEC224B84E2D000AAB3E /* SettingPageViewControllerStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingPageViewControllerStoryboard.storyboard; sourceTree = "<group>"; };
+		C37ED9B024BEA0030019D3C4 /* STPopupControllerTransitioningSlideVertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupControllerTransitioningSlideVertical.h; sourceTree = "<group>"; };
+		C37ED9B124BEA0040019D3C4 /* STPopupControllerTransitioningFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupControllerTransitioningFade.m; sourceTree = "<group>"; };
+		C37ED9B224BEA0040019D3C4 /* STPopupLeftBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupLeftBarItem.m; sourceTree = "<group>"; };
+		C37ED9B324BEA0040019D3C4 /* UIViewController+STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+STPopup.h"; sourceTree = "<group>"; };
+		C37ED9B424BEA0040019D3C4 /* STPopupControllerTransitioningFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupControllerTransitioningFade.h; sourceTree = "<group>"; };
+		C37ED9B524BEA0040019D3C4 /* STPopupNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupNavigationBar.h; sourceTree = "<group>"; };
+		C37ED9B624BEA0040019D3C4 /* STPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupController.h; sourceTree = "<group>"; };
+		C37ED9B724BEA0040019D3C4 /* STPopupNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupNavigationBar.m; sourceTree = "<group>"; };
+		C37ED9B824BEA0040019D3C4 /* UIResponder+STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+STPopup.h"; sourceTree = "<group>"; };
+		C37ED9B924BEA0050019D3C4 /* UIResponder+STPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+STPopup.m"; sourceTree = "<group>"; };
+		C37ED9BA24BEA0050019D3C4 /* STPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopup.h; sourceTree = "<group>"; };
+		C37ED9BB24BEA0050019D3C4 /* STPopupLeftBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPopupLeftBarItem.h; sourceTree = "<group>"; };
+		C37ED9BC24BEA0050019D3C4 /* STPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupController.m; sourceTree = "<group>"; };
+		C37ED9BD24BEA0050019D3C4 /* UIViewController+STPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+STPopup.m"; sourceTree = "<group>"; };
+		C37ED9BE24BEA0050019D3C4 /* STPopupControllerTransitioningSlideVertical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPopupControllerTransitioningSlideVertical.m; sourceTree = "<group>"; };
 		C3DB301B24A9C6D400992C32 /* UIColor+DokuColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DokuColor.m"; sourceTree = "<group>"; };
 		C3DB301C24A9C6D400992C32 /* UIFont+DokuFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+DokuFont.m"; sourceTree = "<group>"; };
 		C3DB301D24A9C6D400992C32 /* UIColor+DokuColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DokuColor.h"; sourceTree = "<group>"; };
@@ -202,8 +202,8 @@
 		C3366EB424938FAF0040C86C /* DokuPayDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C37ED9AE24BE9FC10019D3C4 /* Library */,
 				C36A3A9024BA82230067E80B /* Fonts */,
-				C352B19C24B70A3A006A3C93 /* Library */,
 				C308A6FC24ADBF3000E5BA3A /* Model */,
 				C3631EA324AA87710021A36C /* Constants */,
 				C3DB302B24A9E4F100992C32 /* Extension */,
@@ -241,36 +241,6 @@
 				C3366F02249391550040C86C /* DokuPaySdk.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C352B19C24B70A3A006A3C93 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				C352B19D24B70AB3006A3C93 /* STPopup */,
-			);
-			path = Library;
-			sourceTree = "<group>";
-		};
-		C352B19D24B70AB3006A3C93 /* STPopup */ = {
-			isa = PBXGroup;
-			children = (
-				C352B1A524B70AE1006A3C93 /* STPopup.h */,
-				C352B19F24B70AE1006A3C93 /* STPopupController.h */,
-				C352B1A224B70AE1006A3C93 /* STPopupController.m */,
-				C352B1AC24B70AE2006A3C93 /* STPopupControllerTransitioningFade.h */,
-				C352B1A124B70AE1006A3C93 /* STPopupControllerTransitioningFade.m */,
-				C352B1A024B70AE1006A3C93 /* STPopupControllerTransitioningSlideVertical.h */,
-				C352B1A624B70AE1006A3C93 /* STPopupControllerTransitioningSlideVertical.m */,
-				C352B1A924B70AE2006A3C93 /* STPopupLeftBarItem.h */,
-				C352B19E24B70AE1006A3C93 /* STPopupLeftBarItem.m */,
-				C352B1A724B70AE2006A3C93 /* STPopupNavigationBar.h */,
-				C352B1A824B70AE2006A3C93 /* STPopupNavigationBar.m */,
-				C352B1AB24B70AE2006A3C93 /* UIResponder+STPopup.h */,
-				C352B1A324B70AE1006A3C93 /* UIResponder+STPopup.m */,
-				C352B1A424B70AE1006A3C93 /* UIViewController+STPopup.h */,
-				C352B1AA24B70AE2006A3C93 /* UIViewController+STPopup.m */,
-			);
-			path = STPopup;
 			sourceTree = "<group>";
 		};
 		C361463524A59AD700FD64BF /* Views */ = {
@@ -317,6 +287,36 @@
 				C36A3A9E24BA83AA0067E80B /* robotobold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C37ED9AE24BE9FC10019D3C4 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C37ED9AF24BE9FCB0019D3C4 /* STPopup */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		C37ED9AF24BE9FCB0019D3C4 /* STPopup */ = {
+			isa = PBXGroup;
+			children = (
+				C37ED9BA24BEA0050019D3C4 /* STPopup.h */,
+				C37ED9B624BEA0040019D3C4 /* STPopupController.h */,
+				C37ED9BC24BEA0050019D3C4 /* STPopupController.m */,
+				C37ED9B424BEA0040019D3C4 /* STPopupControllerTransitioningFade.h */,
+				C37ED9B124BEA0040019D3C4 /* STPopupControllerTransitioningFade.m */,
+				C37ED9B024BEA0030019D3C4 /* STPopupControllerTransitioningSlideVertical.h */,
+				C37ED9BE24BEA0050019D3C4 /* STPopupControllerTransitioningSlideVertical.m */,
+				C37ED9BB24BEA0050019D3C4 /* STPopupLeftBarItem.h */,
+				C37ED9B224BEA0040019D3C4 /* STPopupLeftBarItem.m */,
+				C37ED9B524BEA0040019D3C4 /* STPopupNavigationBar.h */,
+				C37ED9B724BEA0040019D3C4 /* STPopupNavigationBar.m */,
+				C37ED9B824BEA0040019D3C4 /* UIResponder+STPopup.h */,
+				C37ED9B924BEA0050019D3C4 /* UIResponder+STPopup.m */,
+				C37ED9B324BEA0040019D3C4 /* UIViewController+STPopup.h */,
+				C37ED9BD24BEA0050019D3C4 /* UIViewController+STPopup.m */,
+			);
+			path = STPopup;
 			sourceTree = "<group>";
 		};
 		C3DB302924A9E48800992C32 /* Resources */ = {
@@ -498,27 +498,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C352B1B124B70AE2006A3C93 /* STPopupControllerTransitioningSlideVertical.m in Sources */,
+				C37ED9C524BEA0060019D3C4 /* STPopupControllerTransitioningSlideVertical.m in Sources */,
+				C37ED9C424BEA0060019D3C4 /* UIViewController+STPopup.m in Sources */,
 				C308A70224ADBF9000E5BA3A /* MandiriVaDataResponse.m in Sources */,
-				C352B1AD24B70AE2006A3C93 /* STPopupLeftBarItem.m in Sources */,
+				C37ED9BF24BEA0060019D3C4 /* STPopupControllerTransitioningFade.m in Sources */,
 				C352B1C024B71461006A3C93 /* BottomSheetViewController.m in Sources */,
 				C3DB301F24A9C6D500992C32 /* UIColor+DokuColor.m in Sources */,
 				C3366EBD24938FAF0040C86C /* ViewController.m in Sources */,
 				C33D668324A5FC3D00FF776A /* SettingPageViewController.m in Sources */,
-				C352B1AE24B70AE2006A3C93 /* STPopupControllerTransitioningFade.m in Sources */,
-				C352B1AF24B70AE2006A3C93 /* STPopupController.m in Sources */,
 				C3DB302024A9C6D500992C32 /* UIFont+DokuFont.m in Sources */,
 				C3631EA624AA87A00021A36C /* DokuConstants.m in Sources */,
+				C37ED9C324BEA0060019D3C4 /* STPopupController.m in Sources */,
+				C37ED9C224BEA0060019D3C4 /* UIResponder+STPopup.m in Sources */,
 				C3296CA224B5C40A00BA569E /* ListViewCellTableViewCell.m in Sources */,
-				C352B1B224B70AE2006A3C93 /* STPopupNavigationBar.m in Sources */,
+				C37ED9C024BEA0060019D3C4 /* STPopupLeftBarItem.m in Sources */,
 				C308A6B224AD814C00E5BA3A /* ResultPageDemoViewController.m in Sources */,
 				C3366EB724938FAF0040C86C /* AppDelegate.m in Sources */,
 				C3296CA624B5C92E00BA569E /* TableViewHeaderCell.m in Sources */,
 				C3366EC824938FB20040C86C /* main.m in Sources */,
-				C352B1B324B70AE2006A3C93 /* UIViewController+STPopup.m in Sources */,
 				C36A7F5924B9726E008E3543 /* DokuStyle.m in Sources */,
-				C352B1B024B70AE2006A3C93 /* UIResponder+STPopup.m in Sources */,
 				C3691ABD24A5140A00AC1DE5 /* DokuUtils.m in Sources */,
+				C37ED9C124BEA0060019D3C4 /* STPopupNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,9 +696,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.0.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.doku.ios.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -718,6 +720,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.doku.ios.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};

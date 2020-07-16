@@ -18,7 +18,11 @@
         NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData: nsData
                                                                  options: kNilOptions
                                                                    error: &error];
+        
         NSArray *fetchedData = [jsonData objectForKey:@"payment_instruction"];
+        NSDictionary *virtual_account_info = [jsonData objectForKey:@"virtual_account_info"];
+        
+        self.expiredTime = [virtual_account_info objectForKey:@"expired_date"];
         self.howToPay = fetchedData;
     }
     return self;

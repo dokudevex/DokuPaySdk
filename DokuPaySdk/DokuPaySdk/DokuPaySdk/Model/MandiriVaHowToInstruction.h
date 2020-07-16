@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MandiriVaHowToInstruction: NSObject
 
 @property (nonatomic) NSArray *howToPay;
+@property (nonatomic) NSString *expiredTime;
 
 - (instancetype)initWithData: (NSString *)data;
 

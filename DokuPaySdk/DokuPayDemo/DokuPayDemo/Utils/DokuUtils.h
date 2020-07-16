@@ -13,19 +13,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DokuUtils : NSObject
 
-+ (NSString*)sha256HashFor:(NSString*)input;
++ (NSString *)sha256HashFor: (NSString *)input;
 
-+ (void)saveValueAtNSUserDefault:(NSString *)value forKey:(NSString *)key;
++ (void) saveValueAtNSUserDefault: (NSString *)value forKey: (NSString *)key;
 
-+ (id)getValueFromNSUserDefaultForKey:(NSString *)key;
++ (id) getValueFromNSUserDefaultForKey: (NSString *)key;
 
-+ (void)removeValueFromNSUserDefaultForKey:(NSString *)key;
++ (void) removeValueFromNSUserDefaultForKey: (NSString *)key;
 
-+ (NSString *)getRandomInvoiceNumbertring:(NSInteger)length;
++ (NSString *) getRandomInvoiceNumbertring: (NSInteger)length;
 
-+ (NSDictionary *)nsDataToDictionary: (NSData *)data;
++ (NSDictionary *) nsDataToDictionary: (NSData *)data;
 
-+ (UIImage*)getIcon: (NSString*)channelCode;
++ (UIImage *) getIcon: (NSString*)channelCode;
+
++ (NSDate *) stringDateToDate: (NSString *)date dateFormat: (NSString *)dateFormat;
+
++ (NSString *) formatDatetoString: (NSDate *)date dateFormat: (NSString *)dateFormat;
+
 
 @end
 

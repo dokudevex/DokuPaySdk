@@ -40,6 +40,8 @@
 		C3750C71249739AE00A34F6B /* MandiriSyariahVaRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = C3750C6F249739AE00A34F6B /* MandiriSyariahVaRouter.h */; };
 		C3750C72249739AE00A34F6B /* MandiriSyariahVaRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C3750C70249739AE00A34F6B /* MandiriSyariahVaRouter.m */; };
 		C3750C742497745400A34F6B /* DokuPaySdk.m in Sources */ = {isa = PBXBuildFile; fileRef = C3750C732497745400A34F6B /* DokuPaySdk.m */; };
+		C37ED9C824BEDC890019D3C4 /* ListDataTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = C37ED9C624BEDC890019D3C4 /* ListDataTableView.h */; };
+		C37ED9C924BEDC890019D3C4 /* ListVDataTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C37ED9C724BEDC890019D3C4 /* ListVDataTableView.m */; };
 		C37EE19424BD1FE4002F2622 /* TableHeaderCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C37EE19124BD1FE3002F2622 /* TableHeaderCell.h */; };
 		C37EE19524BD1FE4002F2622 /* TableHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C37EE19224BD1FE3002F2622 /* TableHeaderCell.m */; };
 		C37EE19624BD1FE4002F2622 /* TableHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37EE19324BD1FE3002F2622 /* TableHeaderCell.xib */; };
@@ -169,6 +171,8 @@
 		C3750C6F249739AE00A34F6B /* MandiriSyariahVaRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MandiriSyariahVaRouter.h; sourceTree = "<group>"; };
 		C3750C70249739AE00A34F6B /* MandiriSyariahVaRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandiriSyariahVaRouter.m; sourceTree = "<group>"; };
 		C3750C732497745400A34F6B /* DokuPaySdk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DokuPaySdk.m; sourceTree = "<group>"; };
+		C37ED9C624BEDC890019D3C4 /* ListDataTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListDataTableView.h; sourceTree = "<group>"; };
+		C37ED9C724BEDC890019D3C4 /* ListVDataTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListVDataTableView.m; sourceTree = "<group>"; };
 		C37EE19124BD1FE3002F2622 /* TableHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableHeaderCell.h; sourceTree = "<group>"; };
 		C37EE19224BD1FE3002F2622 /* TableHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableHeaderCell.m; sourceTree = "<group>"; };
 		C37EE19324BD1FE3002F2622 /* TableHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableHeaderCell.xib; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 		C3366E9124938F6E0040C86C /* DokuPaySdk */ = {
 			isa = PBXGroup;
 			children = (
+				C36B725724BF5D7C003F2D51 /* View */,
 				C38856BD24BC5FDE007FDF43 /* Extension */,
 				C38856B224BC5F15007FDF43 /* Fonts */,
 				C39AC5CB249F191A008CC641 /* Model */,
@@ -330,7 +335,6 @@
 		C3366EEA2493904B0040C86C /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				C38856A424BC568E007FDF43 /* BottomSheet */,
 				C35FD5B024A08DA60083F47A /* ResultPayment */,
 				C3366EEB2493906F0040C86C /* Va */,
 			);
@@ -446,6 +450,8 @@
 				C37EE19124BD1FE3002F2622 /* TableHeaderCell.h */,
 				C37EE19224BD1FE3002F2622 /* TableHeaderCell.m */,
 				C37EE19324BD1FE3002F2622 /* TableHeaderCell.xib */,
+				C37ED9C624BEDC890019D3C4 /* ListDataTableView.h */,
+				C37ED9C724BEDC890019D3C4 /* ListVDataTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,6 +463,14 @@
 				C35FD5CE24A0ADE30083F47A /* ApiResultPage.m */,
 			);
 			path = ApiResultPage;
+			sourceTree = "<group>";
+		};
+		C36B725724BF5D7C003F2D51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C38856A424BC568E007FDF43 /* BottomSheet */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C3750C5E24971AF500A34F6B /* Interactor */ = {
@@ -756,6 +770,7 @@
 				C38856B024BC571E007FDF43 /* BottomSheetViewController.h in Headers */,
 				C39AC5C2249F15B3008CC641 /* SVProgressHUD.h in Headers */,
 				C3366EA024938F6E0040C86C /* DokuPaySdk.h in Headers */,
+				C37ED9C824BEDC890019D3C4 /* ListDataTableView.h in Headers */,
 				C39AC59E249F04DE008CC641 /* AFSecurityPolicy.h in Headers */,
 				C3366EF2249390D40040C86C /* MandiriVaViewController.h in Headers */,
 				C39AC5C9249F15B3008CC641 /* SVProgressAnimatedView.h in Headers */,
@@ -938,6 +953,7 @@
 				C39AC5D4249F35D4008CC641 /* ApiMandiriVa.m in Sources */,
 				C384DEA924958D8D00EE124F /* MandiriVaRouter.m in Sources */,
 				C39AC5DA249F427C008CC641 /* ApiMandiriSyariahVa.m in Sources */,
+				C37ED9C924BEDC890019D3C4 /* ListVDataTableView.m in Sources */,
 				C35FD5AF24A069020083F47A /* DokuPayUtils.m in Sources */,
 				C39AC5CF249F19EB008CC641 /* MandiriVaParams.m in Sources */,
 				C3366EF8249390F10040C86C /* MandiriSyariahVaViewController.m in Sources */,
@@ -1139,6 +1155,7 @@
 				STRIP_STYLE = debugging;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = 1;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -1171,6 +1188,7 @@
 				STRIP_STYLE = debugging;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = 1;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};

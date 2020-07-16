@@ -65,7 +65,7 @@
     
     self.sectionItems = @[ @[@" "],
                            @[@" "],
-                           @[@"Mandiri", @"Mandiri Syariah"],
+                           @[@"Bank Mandiri", @"Bank Mandiri Syariah"],
                            @[@" "],
                            @[@" "],
                            @[@" "]];
@@ -147,7 +147,7 @@
                      completion: nil];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear: animated];
     [self setTitle];
 }
@@ -181,7 +181,7 @@
 }
 
 - (IBAction)actionClose {
-    NSLog(@"Close Form");
+    exit(0);
 }
 
 - (IBAction)actionSet {
@@ -294,9 +294,9 @@ didSelectRowAtIndexPath: (NSIndexPath *)indexPath {
     NSArray *section = [self.sectionItems objectAtIndex: indexPath.section];
     NSString * menu = [section objectAtIndex: indexPath.row];
     
-    if ([menu isEqualToString: @"Mandiri"]) {
+    if ([menu isEqualToString: @"Bank Mandiri"]) {
         self.channelCode = MandiriVa;
-    } else if ([menu isEqualToString: @"Mandiri Syariah"]) {
+    } else if ([menu isEqualToString: @"Bank Mandiri Syariah"]) {
         self.channelCode = MandiriSyariahVa;
     }
     

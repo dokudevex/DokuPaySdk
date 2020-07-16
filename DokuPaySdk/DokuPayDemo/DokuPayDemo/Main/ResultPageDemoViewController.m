@@ -12,6 +12,7 @@
 #import "UIColor+DokuColor.h"
 #import "UIFont+DokuFont.h"
 #import "STPopup.h"
+#import "DokuUtils.h"
 
 @interface ResultPageDemoViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labelViewOrderId;
@@ -23,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonDetails;
 @property (weak, nonatomic) IBOutlet UIView *viewPleaseTransfer;
 @property (weak, nonatomic) IBOutlet UIView *viewPowerBy;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewExpiredDateTime;
 
 @end
 
@@ -34,9 +36,8 @@
 }
 
 - (IBAction)buttonBack:(id)sender {
-    [self dismissViewControllerAnimated: YES
-                             completion: nil];
-    
+    NSLog(@"Dedye Close");
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)buttonDetails:(id)sender {
@@ -81,6 +82,7 @@
     
     NSDictionary *order = [dictionary objectForKey:@"order"];
     NSDictionary *virtual_account_info = [dictionary objectForKey:@"virtual_account_info"];
+    NSString *expiredDate = [virtual_account_info objectForKey:@"expired_date"];
     
     self.navigationController.navigationBar.topItem.title = self.merchantName;
     
@@ -99,6 +101,11 @@
         [self.imageViewIconChannel setImage: [DokuUtils getIcon:[NSString stringWithFormat:@"%i", self.channelId]]];
         [self.labelViewVaChannel setText: @"Mandiri Syariah"];
     }
+    
+    NSString * formatDateTimeExpired = [DokuUtils formatDatetoString: [DokuUtils stringDateToDate: expiredDate
+                                                                                       dateFormat: @"yyyyMMddHHmmss"]
+                                                             dateFormat: @"dd MMMM yyyy HH:mm"];
+    [self.labelViewExpiredDateTime setText: formatDateTimeExpired];
 }
 
 @end

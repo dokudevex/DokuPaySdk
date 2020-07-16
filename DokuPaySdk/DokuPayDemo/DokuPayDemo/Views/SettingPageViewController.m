@@ -46,6 +46,12 @@
     self.textFieldEnvironmentServer.delegate = self;
     self.textFieldActiveResultPage.delegate = self;
     
+    [self initPickers];
+}
+
+- (void)viewWillAppear: (BOOL)animated {
+    [super viewWillAppear: animated];
+    
     NSString *getClientId = [DokuUtils getValueFromNSUserDefaultForKey: clientId];
     NSString *getMerchantName = [DokuUtils getValueFromNSUserDefaultForKey: merchantName];
     NSString *getSharedKey = [DokuUtils getValueFromNSUserDefaultForKey: sharedKey];
@@ -55,16 +61,24 @@
     [self.textFieldMerchantName setText: getMerchantName];
     [self.textFieldClientId setText: getClientId];
     [self.textFieldSharedkey setText: getSharedKey];
-    [self.textFieldEnvironmentServer setText: getEnvironmentServer];
-    [self.textFieldActiveResultPage setText: getActivePageResult];
+    
+    if (getEnvironmentServer == nil) {
+        [self.textFieldEnvironmentServer setText: self.environmentServer[0]];
+    } else {
+        [self.textFieldEnvironmentServer setText: getEnvironmentServer];
+    }
+    
+    if (getActivePageResult == nil) {
+        [self.textFieldActiveResultPage setText: self.activePageResult[0]];
+    } else {
+        [self.textFieldActiveResultPage setText: getActivePageResult];
+    }
     
     [DokuStyle dokuTextField: self.textFieldMerchantName];
     [DokuStyle dokuTextField: self.textFieldClientId];
     [DokuStyle dokuTextField: self.textFieldSharedkey];
     [DokuStyle dokuTextField: self.textFieldEnvironmentServer];
     [DokuStyle dokuTextField: self.textFieldActiveResultPage];
-    
-    [self initPickers];
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -176,7 +190,7 @@
                             completion: nil];
 }
 
-- (IBAction)buttonClose:(id)sender {
+- (IBAction)buttonClose: (id)sender {
     [self dismissViewControllerAnimated: YES
                              completion: nil];
 }
@@ -187,8 +201,8 @@
     return 1;
 }
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row
-      inComponent:(NSInteger)component {
+- (void)pickerView: (UIPickerView *)pickerView didSelectRow: (NSInteger)row
+       inComponent: (NSInteger)component {
         if (pickerView == self.pickerViewEnvironment) {
             self.textFieldEnvironmentServer.text = self.environmentServer[row];
             self.selectedEnvironmentIndex = row;
@@ -212,8 +226,8 @@ numberOfRowsInComponent: (NSInteger)component {
 
 - (NSString*)pickerView: (UIPickerView *)pickerView
             titleForRow: (NSInteger)row
-           forComponent: (NSInteger)component
-{
+           forComponent: (NSInteger)component {
+    
     NSString *data;
     if (pickerView == self.pickerViewEnvironment) {
         data = self.environmentServer[row];

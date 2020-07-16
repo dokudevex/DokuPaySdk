@@ -16,6 +16,8 @@
 #import "TableHeaderCell.h"
 #import "DokuStyle.h"
 #import "STPopup.h"
+#import "ListDataTableView.h"
+#import <Foundation/Foundation.h>
 
 @interface ResultPageViewController ()
 
@@ -33,6 +35,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonDetails;
 @property (weak, nonatomic) IBOutlet UIView *viewTransfer;
 @property (weak, nonatomic) IBOutlet UIView *viewPowerBy;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewMainHeightConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewExpiredTime;
 
 @end
 
@@ -45,7 +50,7 @@
                                            bundle:[NSBundle bundleForClass:self.class]]
     forCellReuseIdentifier: @"HeaderCell"];
     self.tableViewInstruction.rowHeight = UITableViewAutomaticDimension;
-    self.tableViewInstruction.estimatedRowHeight = 100;
+    self.tableViewInstruction.estimatedRowHeight = UITableViewAutomaticDimension;
     self.expandedSectionHeaderNumber = -1;
     [self.presenter initData];
     [self setupForm];
@@ -94,7 +99,8 @@
         viewController = viewController.presentingViewController;
     }
     [viewController dismissViewControllerAnimated: YES
-                                       completion: NULL];}
+                                       completion: NULL];
+}
 
 - (void)viewWillAppear: (BOOL)animated {
     [super viewWillAppear: animated];
@@ -178,7 +184,7 @@ heightForHeaderInSection: (NSInteger)section; {
 
 - (CGFloat)tableView: (UITableView *)tableView
 heightForRowAtIndexPath: (NSIndexPath *)indexPath {
-    return 53;
+    return UITableViewAutomaticDimension;
 }
 
 - (UIView*) tableView: (UITableView*) tableView viewForHeaderInSection: (NSInteger) section
@@ -198,12 +204,19 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath {
 
 - (UITableViewCell *)tableView: (UITableView *)tableView
          cellForRowAtIndexPath: (NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"tableCell"
+    ListDataTableView *cell = [tableView dequeueReusableCellWithIdentifier: @"tableCell"
                                                             forIndexPath: indexPath];
     NSArray *section = [self.sectionItems objectAtIndex: indexPath.section];
+    NSString *title = [section objectAtIndex: indexPath.row];
+    NSString * titleWithNumber = [NSString stringWithFormat:@"%@%@", @"- ", title ];
     
-    cell.textLabel.textColor = [UIColor blackColor];
-    cell.textLabel.text = [section objectAtIndex: indexPath.row];
+    NSMutableAttributedString* attrString = [[NSMutableAttributedString  alloc] initWithString: titleWithNumber];
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    [style setLineSpacing: 12];
+    [attrString addAttribute: NSParagraphStyleAttributeName
+                       value: style
+                       range: NSMakeRange(0, title.length)];
+    [cell.labelViewInstruction setAttributedText: attrString];
     
     return cell;
 }
@@ -211,13 +224,6 @@ heightForRowAtIndexPath: (NSIndexPath *)indexPath {
 - (void)tableView: (UITableView *)tableView
 didSelectRowAtIndexPath: (NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath: indexPath animated:YES];
-}
-
-- (void)updateTableViewRowDisplay: (NSArray *)arrayOfIndexPaths {
-    [self.tableViewInstruction beginUpdates];
-    [self.tableViewInstruction deleteRowsAtIndexPaths: arrayOfIndexPaths
-                                     withRowAnimation: UITableViewRowAnimationFade];
-    [self.tableViewInstruction endUpdates];
 }
 
 #pragma mark - Expand / Collapse Methods
@@ -228,19 +234,24 @@ didSelectRowAtIndexPath: (NSIndexPath *)indexPath {
     TableHeaderCell *headerView = (TableHeaderCell *)sender.view;
     NSInteger section = headerView.tag;
     UIImageView *eImageView = (UIImageView *)[headerView viewWithTag: 200];
-    NSLog(@"Dedye eImageView %@",eImageView);
     self.expandedSectionHeader = headerView;
     
     if (self.expandedSectionHeaderNumber == -1) {
+        self.tableViewHeightConstraint.constant = 500;
+        self.viewMainHeightConstraint.constant = 1283;
         self.expandedSectionHeaderNumber = section;
         [self tableViewExpandSection: section
                            withImage: eImageView];
     } else {
         if (self.expandedSectionHeaderNumber == section) {
+            self.tableViewHeightConstraint.constant = 167;
+            self.viewMainHeightConstraint.constant = 950;
             [self tableViewCollapeSection: section
                                 withImage: eImageView];
             self.expandedSectionHeader = nil;
         } else {
+            self.tableViewHeightConstraint.constant = 500;
+            self.viewMainHeightConstraint.constant = 1283;
             [self tableViewCollapeSection: self.expandedSectionHeaderNumber
                                 withImage: eImageView];
             [self tableViewExpandSection: section
@@ -328,6 +339,11 @@ didSelectRowAtIndexPath: (NSIndexPath *)indexPath {
         [listSectionName addObject: [item objectForKey:@"channel"]];
         [listSectionItem addObject: [item objectForKey:@"step"]];
     }
+    
+    NSString * formatDateTimeExpired = [DokuPayUtils formatDatetoString: [DokuPayUtils stringDateToDate: data.expiredTime
+                                                                                             dateFormat: @"yyyyMMddHHmmss"]
+                                                             dateFormat: @"dd MMMM yyyy HH:mm"];
+    [self.labelViewExpiredTime setText: formatDateTimeExpired];
     self.sectionNames = listSectionName;
     self.sectionItems = listSectionItem;
     [self.tableViewInstruction reloadData];
