@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57F71CC6D97BFD2353E61141 /* Pods_DokuPaySdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7584BCB46B90C1D1717344 /* Pods_DokuPaySdk.framework */; };
+		9C413C318FEB8EBCA7C778A2 /* Pods_DokuPaySdk_DokuPaySdkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484956487EBB0B24A92F505D /* Pods_DokuPaySdk_DokuPaySdkTests.framework */; };
 		C308A70924ADEBF100E5BA3A /* AFNetworkActivityLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = C308A70424ADEBF000E5BA3A /* AFNetworkActivityLogger.h */; };
 		C308A70A24ADEBF100E5BA3A /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C308A70524ADEBF000E5BA3A /* AFNetworkActivityLogger.m */; };
 		C308A70B24ADEBF100E5BA3A /* AFNetworkActivityConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C308A70624ADEBF000E5BA3A /* AFNetworkActivityConsoleLogger.m */; };
@@ -134,6 +136,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E014F094BDCC6CAAFA72FD2 /* Pods-DokuPaySdk-DokuPaySdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokuPaySdk-DokuPaySdkTests.debug.xcconfig"; path = "Target Support Files/Pods-DokuPaySdk-DokuPaySdkTests/Pods-DokuPaySdk-DokuPaySdkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		484956487EBB0B24A92F505D /* Pods_DokuPaySdk_DokuPaySdkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DokuPaySdk_DokuPaySdkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B7584BCB46B90C1D1717344 /* Pods_DokuPaySdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DokuPaySdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88BD70A80E5500EC13E6801A /* Pods-DokuPaySdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokuPaySdk.release.xcconfig"; path = "Target Support Files/Pods-DokuPaySdk/Pods-DokuPaySdk.release.xcconfig"; sourceTree = "<group>"; };
 		C308A70424ADEBF000E5BA3A /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityLogger.h; sourceTree = "<group>"; };
 		C308A70524ADEBF000E5BA3A /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityLogger.m; sourceTree = "<group>"; };
 		C308A70624ADEBF000E5BA3A /* AFNetworkActivityConsoleLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityConsoleLogger.m; sourceTree = "<group>"; };
@@ -253,6 +259,8 @@
 		C39AC5D2249F35D4008CC641 /* ApiMandiriVa.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiMandiriVa.m; sourceTree = "<group>"; };
 		C39AC5D7249F427C008CC641 /* ApiMandiriSyariahVa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiMandiriSyariahVa.h; sourceTree = "<group>"; };
 		C39AC5D8249F427C008CC641 /* ApiMandiriSyariahVa.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiMandiriSyariahVa.m; sourceTree = "<group>"; };
+		C6AF33F689319B527EA9E438 /* Pods-DokuPaySdk-DokuPaySdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokuPaySdk-DokuPaySdkTests.release.xcconfig"; path = "Target Support Files/Pods-DokuPaySdk-DokuPaySdkTests/Pods-DokuPaySdk-DokuPaySdkTests.release.xcconfig"; sourceTree = "<group>"; };
+		D71B5CD4F0E0866874B6429B /* Pods-DokuPaySdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DokuPaySdk.debug.xcconfig"; path = "Target Support Files/Pods-DokuPaySdk/Pods-DokuPaySdk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +268,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F71CC6D97BFD2353E61141 /* Pods_DokuPaySdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,12 +277,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3366E9924938F6E0040C86C /* DokuPaySdk.framework in Frameworks */,
+				9C413C318FEB8EBCA7C778A2 /* Pods_DokuPaySdk_DokuPaySdkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0311624AA8FFF9B53C8A9654 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D71B5CD4F0E0866874B6429B /* Pods-DokuPaySdk.debug.xcconfig */,
+				88BD70A80E5500EC13E6801A /* Pods-DokuPaySdk.release.xcconfig */,
+				3E014F094BDCC6CAAFA72FD2 /* Pods-DokuPaySdk-DokuPaySdkTests.debug.xcconfig */,
+				C6AF33F689319B527EA9E438 /* Pods-DokuPaySdk-DokuPaySdkTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		516BBBD6324AC51998F1007A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B7584BCB46B90C1D1717344 /* Pods_DokuPaySdk.framework */,
+				484956487EBB0B24A92F505D /* Pods_DokuPaySdk_DokuPaySdkTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C308A70324ADEBDC00E5BA3A /* AFNetworkActivityLogger */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +323,8 @@
 				C3366E9124938F6E0040C86C /* DokuPaySdk */,
 				C3366E9C24938F6E0040C86C /* DokuPaySdkTests */,
 				C3366E9024938F6E0040C86C /* Products */,
+				0311624AA8FFF9B53C8A9654 /* Pods */,
+				516BBBD6324AC51998F1007A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -797,6 +830,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3366EA324938F6E0040C86C /* Build configuration list for PBXNativeTarget "DokuPaySdk" */;
 			buildPhases = (
+				AC8CEC6C5B04A5C921D1F30D /* [CP] Check Pods Manifest.lock */,
 				C3366E8A24938F6E0040C86C /* Headers */,
 				C3366E8B24938F6E0040C86C /* Sources */,
 				C3366E8C24938F6E0040C86C /* Frameworks */,
@@ -817,6 +851,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3366EA624938F6E0040C86C /* Build configuration list for PBXNativeTarget "DokuPaySdkTests" */;
 			buildPhases = (
+				A5E219FB7D3AD6059F62A8C1 /* [CP] Check Pods Manifest.lock */,
 				C3366E9424938F6E0040C86C /* Sources */,
 				C3366E9524938F6E0040C86C /* Frameworks */,
 				C3366E9624938F6E0040C86C /* Resources */,
@@ -897,6 +932,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		A5E219FB7D3AD6059F62A8C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DokuPaySdk-DokuPaySdkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC8CEC6C5B04A5C921D1F30D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DokuPaySdk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C35F451624AEA37400CD5028 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -912,8 +991,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 		C35F451924AEA47E00CD5028 /* Build Framework */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -931,8 +1009,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1128,6 +1205,7 @@
 		};
 		C3366EA424938F6E0040C86C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D71B5CD4F0E0866874B6429B /* Pods-DokuPaySdk.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1161,6 +1239,7 @@
 		};
 		C3366EA524938F6E0040C86C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88BD70A80E5500EC13E6801A /* Pods-DokuPaySdk.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1194,6 +1273,7 @@
 		};
 		C3366EA724938F6E0040C86C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E014F094BDCC6CAAFA72FD2 /* Pods-DokuPaySdk-DokuPaySdkTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DokuPaySdkTests/Info.plist;
@@ -1210,6 +1290,7 @@
 		};
 		C3366EA824938F6E0040C86C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6AF33F689319B527EA9E438 /* Pods-DokuPaySdk-DokuPaySdkTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DokuPaySdkTests/Info.plist;
