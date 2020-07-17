@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mandiri Va View Controller-->
+        <scene sceneID="hKa-W3-ijq">
+            <objects>
+                <viewController storyboardIdentifier="MandiriVaViewController" modalPresentationStyle="fullScreen" id="IWB-j6-47V" customClass="MandiriVaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="At2-ay-3M2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJ6-Jk-ugf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsE-e2-CLd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Wait" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYK-Ve-ky4">
+                                                <rect key="frame" x="162.5" y="399" width="89" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="mYK-Ve-ky4" firstAttribute="centerX" secondItem="KsE-e2-CLd" secondAttribute="centerX" id="2wZ-6x-FSQ"/>
+                                            <constraint firstItem="mYK-Ve-ky4" firstAttribute="centerY" secondItem="KsE-e2-CLd" secondAttribute="centerY" id="6Od-Fr-pTO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="KsE-e2-CLd" firstAttribute="leading" secondItem="IJ6-Jk-ugf" secondAttribute="leading" id="Hv2-em-hZl"/>
+                                    <constraint firstAttribute="bottom" secondItem="KsE-e2-CLd" secondAttribute="bottom" id="bOa-CE-SXe"/>
+                                    <constraint firstAttribute="trailing" secondItem="KsE-e2-CLd" secondAttribute="trailing" id="fh5-iF-ppe"/>
+                                    <constraint firstItem="KsE-e2-CLd" firstAttribute="height" secondItem="IJ6-Jk-ugf" secondAttribute="height" id="rDV-O6-78L"/>
+                                    <constraint firstItem="KsE-e2-CLd" firstAttribute="width" secondItem="IJ6-Jk-ugf" secondAttribute="width" id="seg-bx-BSf"/>
+                                    <constraint firstItem="KsE-e2-CLd" firstAttribute="top" secondItem="IJ6-Jk-ugf" secondAttribute="top" id="yk0-ok-eTM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IJ6-Jk-ugf" firstAttribute="leading" secondItem="SBF-by-Q28" secondAttribute="leading" id="BKA-Vz-19o"/>
+                            <constraint firstItem="SBF-by-Q28" firstAttribute="trailing" secondItem="IJ6-Jk-ugf" secondAttribute="trailing" id="DuF-eD-vuX"/>
+                            <constraint firstItem="IJ6-Jk-ugf" firstAttribute="top" secondItem="SBF-by-Q28" secondAttribute="top" id="hMY-2C-Ppz"/>
+                            <constraint firstItem="SBF-by-Q28" firstAttribute="bottom" secondItem="IJ6-Jk-ugf" secondAttribute="bottom" id="yaP-vR-btJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SBF-by-Q28"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aHQ-24-LCN"/>
+                    <connections>
+                        <outlet property="labelViewInfo" destination="mYK-Ve-ky4" id="FmG-M4-vYX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2u-Vb-VAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="16.741071428571427"/>
+        </scene>
+    </scenes>
+</document>
