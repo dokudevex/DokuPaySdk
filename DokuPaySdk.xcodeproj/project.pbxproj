@@ -1152,9 +1152,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.doku.implementsdk;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				STRIP_STYLE = debugging;
+				STRIP_STYLE = all;
 				SUPPORTS_MACCATALYST = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
@@ -1185,9 +1185,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.doku.implementsdk;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				STRIP_STYLE = debugging;
+				STRIP_STYLE = all;
 				SUPPORTS_MACCATALYST = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
