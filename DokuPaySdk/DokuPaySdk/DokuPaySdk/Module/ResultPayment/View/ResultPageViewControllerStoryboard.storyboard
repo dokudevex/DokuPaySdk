@@ -39,8 +39,8 @@
                                                         <color key="textColor" red="0.61099201439999995" green="0.64548456669999998" blue="0.75876295569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COPY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIz-MT-jga">
-                                                        <rect key="frame" x="304.5" y="29.5" width="44.5" height="19"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIz-MT-jga">
+                                                        <rect key="frame" x="349" y="39" width="0.0" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="DINNextLTPro-Regular" family="DIN Next LT Pro" pointSize="16"/>
                                                         <color key="textColor" red="0.61099201439999995" green="0.64548456669999998" blue="0.75876295569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -393,6 +393,7 @@
                         <outlet property="labelViewOrder" destination="vi1-9V-w8c" id="Nhr-da-Gal"/>
                         <outlet property="labelViewVaChannel" destination="OmV-jU-bzS" id="WsJ-rj-qUd"/>
                         <outlet property="labelViewVaNumber" destination="Z6X-zE-jIe" id="5c2-zL-mIo"/>
+                        <outlet property="labelViewVirtualAccount" destination="9ET-gO-mbc" id="5Od-05-wtN"/>
                         <outlet property="tableViewHeightConstraint" destination="9To-X5-Ndc" id="ELn-Lt-GJn"/>
                         <outlet property="tableViewInstruction" destination="ef6-ad-0z3" id="HCz-HK-MIh"/>
                         <outlet property="viewMainHeightConstraint" destination="TmA-eg-U7q" id="YtN-Bw-Kom"/>

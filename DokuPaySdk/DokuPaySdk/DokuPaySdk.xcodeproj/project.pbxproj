@@ -69,7 +69,6 @@
 		C38856A224BC55FC007FDF43 /* STPopupLeftBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C388569324BC55FB007FDF43 /* STPopupLeftBarItem.m */; };
 		C38856A324BC55FC007FDF43 /* STPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = C388569424BC55FB007FDF43 /* STPopupController.m */; };
 		C38856AF24BC571E007FDF43 /* BottomSheetViewControllerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38856AC24BC571E007FDF43 /* BottomSheetViewControllerStoryboard.storyboard */; };
-		C38856B024BC571E007FDF43 /* BottomSheetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C38856AD24BC571E007FDF43 /* BottomSheetViewController.h */; };
 		C38856B124BC571E007FDF43 /* BottomSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38856AE24BC571E007FDF43 /* BottomSheetViewController.m */; };
 		C38856B824BC5F43007FDF43 /* dokuregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C38856B324BC5F43007FDF43 /* dokuregular.ttf */; };
 		C38856B924BC5F43007FDF43 /* dinbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C38856B424BC5F43007FDF43 /* dinbold.ttf */; };
@@ -121,6 +120,7 @@
 		C39AC5D4249F35D4008CC641 /* ApiMandiriVa.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC5D2249F35D4008CC641 /* ApiMandiriVa.m */; };
 		C39AC5D9249F427C008CC641 /* ApiMandiriSyariahVa.h in Headers */ = {isa = PBXBuildFile; fileRef = C39AC5D7249F427C008CC641 /* ApiMandiriSyariahVa.h */; };
 		C39AC5DA249F427C008CC641 /* ApiMandiriSyariahVa.m in Sources */ = {isa = PBXBuildFile; fileRef = C39AC5D8249F427C008CC641 /* ApiMandiriSyariahVa.m */; };
+		C3C2CB5D24C1932C005937CE /* BottomSheetViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C38856AD24BC571E007FDF43 /* BottomSheetViewController.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -735,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C39AC59F249F04DE008CC641 /* AFURLSessionManager.h in Headers */,
+				C3C2CB5D24C1932C005937CE /* BottomSheetViewController.h in Headers */,
 				C35FD5B824A096E90083F47A /* ResultPageViewController.h in Headers */,
 				C35FD5CA24A09AB30083F47A /* ResultPageRouter.h in Headers */,
 				C397DED524A43DB5002C6E93 /* MandiriVaHowToInstruction.h in Headers */,
@@ -767,7 +768,6 @@
 				C38856C724BC600D007FDF43 /* UIFont+DokuFont.h in Headers */,
 				C38856C824BC600D007FDF43 /* DokuStyle.h in Headers */,
 				C39AC5A4249F04DE008CC641 /* AFURLResponseSerialization.h in Headers */,
-				C38856B024BC571E007FDF43 /* BottomSheetViewController.h in Headers */,
 				C39AC5C2249F15B3008CC641 /* SVProgressHUD.h in Headers */,
 				C3366EA024938F6E0040C86C /* DokuPaySdk.h in Headers */,
 				C37ED9C824BEDC890019D3C4 /* ListDataTableView.h in Headers */,
@@ -1061,7 +1061,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1116,7 +1116,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

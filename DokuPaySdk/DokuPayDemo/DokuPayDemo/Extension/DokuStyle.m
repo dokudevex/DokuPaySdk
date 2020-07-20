@@ -31,7 +31,7 @@
     CAShapeLayer * maskLayerView = [CAShapeLayer layer];
     maskLayerView.path = [UIBezierPath bezierPathWithRoundedRect: DokuViewRoundedTopLeftRight.bounds
                                                byRoundingCorners: UIRectCornerTopLeft | UIRectCornerTopRight
-                                                     cornerRadii: (CGSize){10.0, 10.}].CGPath;
+                                                     cornerRadii: (CGSize){10.0, 10.0}].CGPath;
     DokuViewRoundedTopLeftRight.layer.mask = maskLayerView;
     return DokuViewRoundedTopLeftRight;
 }
@@ -40,7 +40,7 @@
     CAShapeLayer * maskLayerView = [CAShapeLayer layer];
     maskLayerView.path = [UIBezierPath bezierPathWithRoundedRect: DokuButonRoundedTopLeftRight.bounds
                                                byRoundingCorners: UIRectCornerBottomLeft | UIRectCornerBottomRight
-                                                     cornerRadii: (CGSize){10.0, 10.}].CGPath;
+                                                     cornerRadii: (CGSize){10.0, 10.0}].CGPath;
     
     DokuButonRoundedTopLeftRight.layer.mask = maskLayerView;
     return DokuButonRoundedTopLeftRight;

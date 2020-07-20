@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIView *viewPleaseTransfer;
 @property (weak, nonatomic) IBOutlet UIView *viewPowerBy;
 @property (weak, nonatomic) IBOutlet UILabel *labelViewExpiredDateTime;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewVirtualAccount;
 
 @end
 
@@ -56,7 +57,16 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)userTappedOnLink:(UIGestureRecognizer*)gestureRecognizer {
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = self.labelViewNoVa.text;
+}
+
 - (void) setupForm {
+    UITapGestureRecognizer* gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTappedOnLink:)];
+    [self.labelViewVirtualAccount setUserInteractionEnabled:YES];
+    [self.labelViewVirtualAccount addGestureRecognizer:gesture];
+    
     [DokuStyle DokuButonRoundedTopLeftRight: self.buttonDetails];
     
     self.viewOrder.layer.borderWidth = 1;

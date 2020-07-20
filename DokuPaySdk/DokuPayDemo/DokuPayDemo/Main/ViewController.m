@@ -104,7 +104,9 @@
 }
 
 - (void) setupForm {
-    [DokuStyle DokuButonRoundedTopLeftRight: self.buttonDetails];
+    if ([(NSString*)[UIDevice currentDevice].model hasPrefix: @"iPad"]) {} else {
+        [DokuStyle DokuButonRoundedTopLeftRight:self.buttonDetails];
+    }
     
     self.viewOrder.layer.borderWidth = 1;
     self.viewOrder.layer.cornerRadius = 10;
